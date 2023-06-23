@@ -1,0 +1,100 @@
+GIT 
+
+##### Commande de configuration
+
+git config --global core.editor "code --wait" :
+
+	 S'il n'y a pas de message lors du commit il ouvrira le editmsg sur vscode et non pas dans le terminal.
+
+
+Git va attacher notre identité à tous nos changements:
+
+	git config --global user.name "Yousra"
+	git config --global user.email "eljilaliyousra@gmail.com"
+
+cd : 
+
+	Change directory -> Se déplacer dans les fichiers.
+
+ls : 
+
+	File listing -> Liste des fichiers et dossiers.
+
+
+git remote add origin <url> :
+
+	Faire le lien entre le local repo et le remote github qui va s'appeler origin
+	Ajoute un remote à votre git "local".
+
+git remote -v : 
+
+	Affiche les remotes.
+
+git clone <url> : 
+
+	Permet de clôner un repo remote en local.
+
+
+##### Commande d'utillisation
+
+git log :
+
+	Premet d'accèder au log.
+
+git status : 
+
+	Permet de voir l'état actuel du repo.
+
+git add <nom_du_fichier> :
+
+	Permet d'ajouter un fichier ou les changements d'un fichier dans le prochain paquet de changement traqué par Git.
+
+git restore --staged <mon_fichier> :
+
+	Enlever un fichier du paquet de changement traqué par Git.
+
+git commit -m "<commentaire>" :
+
+	Enregistre les changements dans le repo .git.
+
+git push --set-upstream origin main :
+git push -u origin master :
+	
+	Pousser les commits pour la première fois.
+
+git push :
+
+	Permet d'envoyer son travail (après l'avoir commité) sur le serveur.
+
+git pull : 
+
+	Ramène les changements depuis le serveur (mais ne change pas vos fichiers locaux).
+
+git branch <ma_branche> :
+
+	Pour créer une nouvelle branche.
+
+git switch <ma_branche> :
+
+	Pour passe sur la branche ma_branche.
+
+git switch -c <ma_branche> :
+
+	Pour créer la branche et passer dessus directement.
+
+git merge <ma_branche> :
+
+	Pour merger la branhce ma_branche dans la branche actuellement active.
+
+
+git merge --abort :
+
+	Pour arrêter le merge en cas de conflit.
+	
+
+	
+	
+
+
+
+
