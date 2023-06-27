@@ -4,7 +4,7 @@ GIT
 
 git config --global core.editor "code --wait" :
 
-	 S'il n'y a pas de message lors du commit il ouvrira le editmsg sur vscode et non pas dans le terminal.
+	 Changer l'editeur de message
 
 
 Git va attacher notre identité à tous nos changements:
@@ -90,9 +90,77 @@ git merge <ma_branche> :
 git merge --abort :
 
 	Pour arrêter le merge en cas de conflit.
-	
 
+Les différentes Branches : 
+
+	main/master - hotfixes - release branches - develop - feature branches.
+
+	main : Contient les versions "officielles", considérées comme finies.
+	develop : Branche principale, qui contient cependant toujours du code qui tourne. 
+	feature/* : Branches de travail. Un par fonctionnalité à implémenter.
+	release/*, hotfix/* : Branches temporaires.
+
+git flow init :
+
+	Initialise le répo en tant que repo utilisant Git-flow.
+
+git flow feature start <my_feature> :
+
+	Pour commencer une nouvelle feature in origin/develop.
+	il créé une branhce et Switch vers cette branche
+
+git flow feature finish <my_feature> :
+
+	Pour terminer une feature (Inutile de préciser laquelle lorsque l'on est dans la feature).
+	Il fait plusieurs actions en même temps: 
+	- Switch sur la branche main.
+
+git switch feature/<my_feature> :
+
+	Pour switch de feature.
+
+git flow feature publish :
+
+	Si le travail qui doit être effectué sur une branhce feature n'est pas terminé on peut tout de même la publié pour qu'elle soit disponible sur le remote (GitHub).	
+
+git flow release start 1.0 :
+
+	Cela va :
+		 - Création d'une nouvelle branche nommée release/1.0 depuis la branche develop.
+		 - Switch vers la branche release/1.0
+
+git push --all :
 	
+	Envoyer tous les changements au remote (GitHub).
+
+git push --tags :
+
+	Envoyer les tags au remote (GitHub).
+	
+git flow release finish <1.0> :
+
+	Cela va: 
+		- Merger les changements dans la branche Main.
+		- Créer un tag de version 1.0
+		- Merger les changements dans la branche develop
+		- Supprimer votre branche release/1.0
+	
+git tag remove <1.0> :
+
+	Supprimer un tag.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SI LE FEATURE A ETE CREE AVANT LE PULL DU DEVELOP <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+1) git switch develop
+2) git pull 
+3) git switch feature/<my_feature>
+4) git develop merge
+
+######## SUBLIME MERGE 
+
+ctrl + shift + P :
+
+	Les commandes s'effectue comme ceci.
 	
 
 
