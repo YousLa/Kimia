@@ -1,5 +1,14 @@
-<?php session_start() ?>
+<?php
 
+session_start();
+
+unset($_SESSION['pseudo']);
+
+session_destroy();
+
+header('Location: ./login.php');
+
+?>
 
 <!-- LOG OUT - SE DECONNECTER -->
 
