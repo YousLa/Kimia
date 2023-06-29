@@ -1,3 +1,5 @@
+<!-- BOUTON SE DECONNECTER -->
+
 <?php
 
 session_start();
@@ -6,10 +8,8 @@ unset($_SESSION['pseudo']);
 
 session_destroy();
 
-header('Location: ./login.php');
+header('Location: index.php?page=home');
 
 ?>
 
 <!-- LOG OUT - SE DECONNECTER -->
-
-<h1>PAGE DE DECONNEXION</h1>

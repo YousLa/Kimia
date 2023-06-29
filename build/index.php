@@ -12,8 +12,11 @@ if (isset($_GET['page'])) {
 include "./template/header.php";
 
 // NAVBAR
+#La navbar n'est affiché que si la session est initialisé
+if (isset($_SESSION['pseudo'])) {
 
-include "./template/navbar.php";
+    include "./template/navbar.php";
+}
 
 // PAGES
 

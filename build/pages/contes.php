@@ -4,9 +4,9 @@ include_once "./template/connectDB.php";
 
 $fiche = "";
 ?>
-
+<!-- HOME PAGE WHEN LOGGED IN -->
 <!-- ################## Listing des contes -->
-<!-- Le but de cette paage est de simplement afficher les différents contes disponible -->
+<!-- Le but de cette paage est de simplement afficher les différents contes disponible  -->
 
 <!DOCTYPE html>
 <html lang="en">

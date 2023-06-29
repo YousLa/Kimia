@@ -1,4 +1,5 @@
 <?php
+
 switch ($page) {
     case '':
     case 'home':

@@ -1,10 +1,20 @@
+<!-- VISIBLE WHEN LOGGED OUT -->
+
 <?php session_start();
 include_once "./template/connectDB.php";
 
-if (isset($_SESSION['pseudo'])) {
-    echo "Vous êtes bien connecté";
-}
+// if (isset($_SESSION['pseudo'])) {
+//     header("index.php?page=contes");
+// }
 ?>
-<h1>HOME</h1>
 
-<p>topics</p>
+
+
+<main>
+
+    <h1>HOME</h1>
+
+
+
+
+</main>

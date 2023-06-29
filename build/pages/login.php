@@ -40,7 +40,7 @@ if (isset($_POST['login'])) {
             $_SESSION['birthdate'] = $arrayResult[0]['birthdate'];
             $_SESSION['created_at'] = $arrayResult[0]['created_at'];
             $_SESSION['updated_at'] = $arrayResult[0]['updated_at'];
-            header('Location: index.php?page=home');
+            header('Location: index.php?page=fiche');
         } else {
             $message = "<span>Wrong Data</span>";
         }
