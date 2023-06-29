@@ -129,6 +129,20 @@ git flow release start 1.0 :
 		 - Création d'une nouvelle branche nommée release/1.0 depuis la branche develop.
 		 - Switch vers la branche release/1.0
 
+git flow release finish <1.0> :
+
+	Cela va: 
+		- Merger les changements dans la branche Main.
+		- Créer un tag de version 1.0
+		- Merger les changements dans la branche develop
+		- Supprimer votre branche release/1.0
+
+Une demande de message est envoyé dans la console :
+
+	- Il faut presser I (Insert)
+	- Entrer le message
+	- ESC qw ENTER
+
 git push --all :
 	
 	Envoyer tous les changements au remote (GitHub).
@@ -137,13 +151,6 @@ git push --tags :
 
 	Envoyer les tags au remote (GitHub).
 	
-git flow release finish <1.0> :
-
-	Cela va: 
-		- Merger les changements dans la branche Main.
-		- Créer un tag de version 1.0
-		- Merger les changements dans la branche develop
-		- Supprimer votre branche release/1.0
 	
 git tag remove <1.0> :
 

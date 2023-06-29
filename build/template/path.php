@@ -16,6 +16,9 @@ switch ($page) {
     case 'profil':
         include "pages/profil.php";
         break;
+    case 'fiche':
+        include "pages/contes.php";
+        break;
     default:
         include "pages/error404.php";
 }

@@ -4,35 +4,45 @@
 
 session_start();
 
+//var_dump($_POST);
+
 if (isset($_POST['login'])) {
-    $pseudo = trim($_POST['pseudo']);
-    $pwd = $_POST['password'];
-    if (!empty($pseudo) && !empty($pwd)) {
+
+    if (empty($_POST['pseudo']) || empty($_POST['password'])) {
+
+        $message = "<span>All fields are required</span>";
+    } else {
+        // Connexion à la base de données
         include_once "./template/connectDB.php";
-        # Vérifier si l'pseudo existe
-        $query = "SELECT pseudo FROM customer WHERE pseudo = :pseudo";
-        $object = $database->prepare($query);
-        $options = array(
-            ":pseudo" => $pseudo
+
+        // Création de la requête
+        $query = "SELECT * FROM customer WHERE pseudo = :pseudo AND password = sha2(:password, 256)";
+
+        $objet = $database->prepare($query);
+
+        $objet->execute(
+            array(
+                ":pseudo" => $_POST['pseudo'],
+                ":password" => $_POST['password']
+            )
         );
-        if ($object->execute($options)) {
-            if (count($object->fetchAll()) > 0) {
-                # pseudo est trouvée
-                $query = "SELECT * FROM customer WHERE pseudo = :pseudo AND password = sha2(:password, 256)";
-                $object = $database->prepare($query);
-                $options = array(
-                    ":pseudo" => $pseudo,
-                    ":password" => $pwd
-                );
-                if ($object->execute($options)) {
-                    $user = $object->fetchAll();
-                    if (count($user) > 0) {
-                        # pseudo et password OK
-                        $_SESSION['pseudo'] = $user[0]['pseudo'];
-                        header('Location: ./index.php?page=home');
-                    }
-                }
-            }
+
+        $count = $objet->rowCount();
+        $arrayResult = $objet->fetchAll(PDO::FETCH_ASSOC);
+
+
+        if ($count > 0) {
+
+            // Ajouter des variables session 
+
+            $_SESSION['pseudo'] = $arrayResult[0]['pseudo'];
+            $_SESSION['email'] = $arrayResult[0]['email'];
+            $_SESSION['birthdate'] = $arrayResult[0]['birthdate'];
+            $_SESSION['created_at'] = $arrayResult[0]['created_at'];
+            $_SESSION['updated_at'] = $arrayResult[0]['updated_at'];
+            header('Location: index.php?page=home');
+        } else {
+            $message = "<span>Wrong Data</span>";
         }
     }
 }
