@@ -7,13 +7,14 @@ if (isset($_GET['page'])) {
     $page = $_GET['page'];
 }
 
-// HEADER
 
-include "./template/header.php";
-
-// NAVBAR
-#La navbar n'est affiché que si la session est initialisé
+#n'est affiché que si la session est initialisé
 if (isset($_SESSION['pseudo'])) {
+
+    // HEADER
+
+    include "./template/header.php";
+    // NAVBAR
 
     include "./template/navbar.php";
 }

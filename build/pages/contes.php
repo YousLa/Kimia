@@ -20,6 +20,8 @@ $fiche = "";
 
 <body>
 
+
+
     <h1>Contes</h1>
     <!-- Création de la requête de récupération de tous les users -->
     <?php $query = "SELECT title, image FROM stream";

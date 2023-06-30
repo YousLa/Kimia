@@ -1,5 +1,7 @@
 <!-- LOG IN - SE CONNECTER -->
 
+<link rel="stylesheet" href="./assets/styles/login.css">
+
 <?php
 
 session_start();
@@ -52,6 +54,7 @@ if (isset($_POST['login'])) {
 <h1>LOG IN</h1>
 
 <form action="./index.php?page=login" method="POST">
+
 
     <label for="pseudo">Pseudo</label>
     <input type="text" name="pseudo" id="pseudo" required>

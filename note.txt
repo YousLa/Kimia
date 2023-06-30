@@ -1,0 +1,43 @@
+Database :
+
+    Contes
+
+Table session :
+
+    customer
+        customer_id
+        pseudo
+        email
+        birthdate
+        created_date
+        updated_date
+
+            profil
+                firstname
+                lastname
+                description
+                avatar
+
+
+    admin
+        admin_id
+        firstname
+        lastname
+        pseudo
+        email
+        birthdate
+        avatar
+
+        
+
+
+Table streaming :
+
+    vidéo
+        video_id
+        title
+        synopsis
+        url
+
+
+

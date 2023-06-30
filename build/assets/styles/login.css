@@ -1,0 +1,10 @@
+body {
+    width: max-content;
+    height: max-content;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
