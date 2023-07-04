@@ -1,10 +1,11 @@
-☐ Session
-    ☐ Connexion
-    ☐ Déconnexion
+## STRUCTURES PHP
+✔ Session @done(23-07-04 13:36)
+    ✔ Connexion @done(23-07-04 13:37)
+    ✔ Déconnexion @done(23-07-04 13:37)
     ✔ Inscription @done(23-06-21 16:25)
         ☐ Message lorsque le pseudo ou l'adresse mail est déjà utilisé
     ☐ Suppression
 
-☐ Streaming
-    ☐ Topics
-    ☐ Contes
+✔ Streaming @done(23-07-04 13:37)
+    ✔ Topics @done(23-07-04 13:37)
+    ✔ Contes @done(23-07-04 13:37)
