@@ -1,7 +1,7 @@
 <nav>
     <ul>
         <li><a href='?page=home'>HOME</a></li>
-        <?php if (isset($_SESSION['pseudo'])) {
+        <?php if (isset($_SESSION['email'])) {
             echo "<li><a href='?page=profil'>PROFIL</a></li>";
             echo "<li><a href='?page=contes'>CONTES</a></li>";
             echo "<li><a href='?page=logout'>DECONNEXION</a></li>";

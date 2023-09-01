@@ -10,7 +10,7 @@ if (isset($_GET['conte'])) {
     # Connexion à la base de données
     include_once "models/database.php";
     # Création de la requête
-    $query = "SELECT conte FROM conte WHERE title = :title";
+    $query = "SELECT url FROM conte WHERE title = :title";
 
     $options = array(
         ":title" => $title
@@ -23,10 +23,12 @@ if (isset($_GET['conte'])) {
         $conte = $objet->fetchAll()[0];
 
         list(
-            $stream_url
+            $url
         ) = $conte;
     }
 }
+
+print_r($url);
 
 $filename = $url;
 $direname = "assets/contes/";

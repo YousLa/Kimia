@@ -11,7 +11,7 @@
 
 $server = "mysql";
 $host = "localhost";
-$dbname = "projet1";
+$dbname = "kimiaproject";
 $charset = "utf8";
 
 $dsn = "$server:host=$host;dbname=$dbname;charset=$charset";

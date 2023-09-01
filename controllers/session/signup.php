@@ -13,8 +13,8 @@ if (isset($_POST['register'], $_POST['pseudo'], $_POST['email'], $_POST['birthda
     include_once "models/database.php";
 
     $query = "
-    INSERT INTO customer
-    VALUES (NULL, :pseudo, :email, sha2(:password, 256), :birthdate, DEFAULT, DEFAULT)
+    INSERT INTO user
+    VALUES (NULL, , , :birthdate, :email, sha2(:password, 256),DEFAULT, DEFAULT, DEFAULT)
     ";
 
     $objet = $database->prepare($query);

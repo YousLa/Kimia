@@ -1,0 +1,171 @@
+GIT 
+
+##### Commande de configuration
+
+git config --global core.editor "code --wait" :
+
+	 Changer l'editeur de message
+
+
+Git va attacher notre identité à tous nos changements:
+
+	git config --global user.name "Yousra"
+	git config --global user.email "eljilaliyousra@gmail.com"
+
+cd : 
+
+	Change directory -> Se déplacer dans les fichiers.
+
+ls : 
+
+	File listing -> Liste des fichiers et dossiers.
+
+
+git remote add origin <url> :
+
+	Faire le lien entre le local repo et le remote github qui va s'appeler origin
+	Ajoute un remote à votre git "local".
+
+git remote -v : 
+
+	Affiche les remotes.
+
+git clone <url> : 
+
+	Permet de clôner un repo remote en local.
+
+
+##### Commande d'utillisation
+
+git log :
+
+	Premet d'accèder au log.
+
+git status : 
+
+	Permet de voir l'état actuel du repo.
+
+git add <nom_du_fichier> :
+
+	Permet d'ajouter un fichier ou les changements d'un fichier dans le prochain paquet de changement traqué par Git.
+
+git restore --staged <mon_fichier> :
+
+	Enlever un fichier du paquet de changement traqué par Git.
+
+git commit -m "<commentaire>" :
+
+	Enregistre les changements dans le repo .git.
+
+git push --set-upstream origin main :
+git push -u origin master :
+	
+	Pousser les commits pour la première fois.
+
+git push :
+
+	Permet d'envoyer son travail (après l'avoir commité) sur le serveur.
+
+git pull : 
+
+	Ramène les changements depuis le serveur (mais ne change pas vos fichiers locaux).
+
+git branch <ma_branche> :
+
+	Pour créer une nouvelle branche.
+
+git switch <ma_branche> :
+
+	Pour passe sur la branche ma_branche.
+
+git switch -c <ma_branche> :
+
+	Pour créer la branche et passer dessus directement.
+
+git merge <ma_branche> :
+
+	Pour merger la branhce ma_branche dans la branche actuellement active.
+
+
+git merge --abort :
+
+	Pour arrêter le merge en cas de conflit.
+
+Les différentes Branches : 
+
+	main/master - hotfixes - release branches - develop - feature branches.
+
+	main : Contient les versions "officielles", considérées comme finies.
+	develop : Branche principale, qui contient cependant toujours du code qui tourne. 
+	feature/* : Branches de travail. Un par fonctionnalité à implémenter.
+	release/*, hotfix/* : Branches temporaires.
+
+git flow init :
+
+	Initialise le répo en tant que repo utilisant Git-flow.
+
+git flow feature start <my_feature> :
+
+	Pour commencer une nouvelle feature in origin/develop.
+	il créé une branhce et Switch vers cette branche
+
+git flow feature finish <my_feature> :
+
+	Pour terminer une feature (Inutile de préciser laquelle lorsque l'on est dans la feature).
+	Il fait plusieurs actions en même temps: 
+	- Switch sur la branche main.
+
+git switch feature/<my_feature> :
+
+	Pour switch de feature.
+
+git flow feature publish :
+
+	Si le travail qui doit être effectué sur une branhce feature n'est pas terminé on peut tout de même la publié pour qu'elle soit disponible sur le remote (GitHub).	
+
+git flow release start 1.0 :
+
+	Cela va :
+		 - Création d'une nouvelle branche nommée release/1.0 depuis la branche develop.
+		 - Switch vers la branche release/1.0
+
+git flow release finish <1.0> :
+
+	Cela va: 
+		- Merger les changements dans la branche Main.
+		- Créer un tag de version 1.0
+		- Merger les changements dans la branche develop
+		- Supprimer votre branche release/1.0
+
+Une demande de message est envoyé dans la console :
+
+	- Il faut presser I (Insert)
+	- Entrer le message
+	- ESC qw ENTER
+
+git push --all :
+	
+	Envoyer tous les changements au remote (GitHub).
+
+git push --tags :
+
+	Envoyer les tags au remote (GitHub).
+	
+	
+git tag remove <1.0> :
+
+	Supprimer un tag.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SI LE FEATURE A ETE CREE AVANT LE PULL DU DEVELOP <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+1) git switch develop
+2) git pull 
+3) git switch feature/<my_feature>
+4) git develop merge
+
+######## SUBLIME MERGE 
+
+ctrl + shift + P :
+
+	Les commandes s'effectue comme ceci.
+	
