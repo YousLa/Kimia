@@ -46,6 +46,7 @@ CREATE TABLE profil (
   , pseudo varchar(100) NOT NULL
   , description varchar(1000) DEFAULT NULL
   , avatar varchar(100) DEFAULT NULL
+  , user_id INT
 
   , created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   , updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -79,7 +80,6 @@ CREATE TABLE IF NOT EXISTS category (
     id INT AUTO_INCREMENT
     , label VARCHAR(100) NOT NULL
 
-    , conte_id INT
 
     , created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     , updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -105,9 +105,18 @@ CREATE TABLE IF NOT EXISTS conte_category (
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
+--
+-- Altération des tables
+--
+
+ALTER TABLE profil
+ADD   CONSTRAINT FK_profil_user FOREIGN KEY (user_id) REFERENCES user (id);
+
 --
 -- Remplissage des tables
 --
+
 INSERT INTO user
 VALUES (NULL, 'El Jilali', 'Yousra', '1996-05-05', 'eljilaliyousra@gmail.com', sha2('Test123=', 256), 'admin', DEFAULT, DEFAULT);
 

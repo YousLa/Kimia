@@ -1,0 +1,24 @@
+Jointures des tables profil - user :
+
+SELECT 
+	*
+FROM
+	profil
+JOIN
+	user
+ON	profil.user_id = user.id;
+
+
+Jointures des tables conte - category - conte_category
+
+SELECT
+	*
+FROM
+    	conte
+JOIN
+    	conte_category 
+ON 	conte.id = conte_category.conte_id
+JOIN
+    	category 
+ON 	conte_category.category_id = category.id;
+
