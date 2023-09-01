@@ -1,126 +1,201 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
 --
--- Base de données : Kimia Project
---
+-- Hôte : 127.0.0.1
+-- Généré le : ven. 01 sep. 2023 à 16:30
+-- Version du serveur : 10.4.27-MariaDB
+-- Version de PHP : 8.2.0
 
---
--- Création de la base de données
---
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
-DROP DATABASE IF EXISTS Kimiaproject;
 
-CREATE DATABASE IF NOT EXISTS Kimiaproject;
-
-USE Kimiaproject;
-
---
--- Création des tables
---
-
---
--- Structure de la table user
---
-
-CREATE TABLE IF NOT EXISTS user (
-  id INT AUTO_INCREMENT
-  , last_name VARCHAR(100) NOT NULL
-  , first_name varchar(100) NOT NULL
-  , birthdate DATE
-  , email varchar(100) NOT NULL
-  , password varchar(256) NOT NULL
-  , role ENUM('admin', 'user') DEFAULT 'user'
-
-  , created_at timestamp DEFAULT CURRENT_TIMESTAMP
-  , updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-
-  , CONSTRAINT PK_user PRIMARY KEY (id)
-  , CONSTRAINT UK_email UNIQUE (email)
-
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Structure de la table profil
+-- Base de données : `kimiaproject`
 --
+CREATE DATABASE IF NOT EXISTS `kimiaproject` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `kimiaproject`;
 
-CREATE TABLE profil (
-  id INT AUTO_INCREMENT
-  , pseudo varchar(100) NOT NULL
-  , description varchar(1000) DEFAULT NULL
-  , avatar varchar(100) DEFAULT NULL
-  , user_id INT
-
-  , created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-  , updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-
-  , CONSTRAINT PK_profil PRIMARY KEY (id)
-  , CONSTRAINT UK_pseudo UNIQUE (pseudo)
-
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- --------------------------------------------------------
 
 --
--- Structure de la table stream
+-- Structure de la table `category`
 --
 
-CREATE TABLE conte (
-  id INT AUTO_INCREMENT,
-  title varchar(1000) NOT NULL,
-  synopsis varchar(5000) NOT NULL,
-  url varchar(100) NOT NULL,
-  image varchar(256) NOT NULL,
-  audio varchar(256) NOT NULL
+CREATE TABLE `category` (
+  `id` int(11) NOT NULL,
+  `label` varchar(100) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-, CONSTRAINT PK_conte PRIMARY KEY (id)
-
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- --------------------------------------------------------
 
 --
--- Structure de la table category
+-- Structure de la table `conte`
 --
 
-CREATE TABLE IF NOT EXISTS category (
-    id INT AUTO_INCREMENT
-    , label VARCHAR(100) NOT NULL
-
-
-    , created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    , updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-
-    , CONSTRAINT PK_category PRIMARY KEY (id)
-
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `conte` (
+  `id` int(11) NOT NULL,
+  `title` varchar(1000) NOT NULL,
+  `synopsis` varchar(5000) NOT NULL,
+  `url` varchar(100) NOT NULL,
+  `image` varchar(256) NOT NULL,
+  `audio` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Structure de la table conte category
+-- Déchargement des données de la table `conte`
 --
-
-CREATE TABLE IF NOT EXISTS conte_category (
-    conte_id INT
-    , category_id INT
-    
-    , created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    , updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-    
-    , CONSTRAINT PK_conte_category PRIMARY KEY (conte_id, category_id)
-    , CONSTRAINT FK_conte_category_conte FOREIGN KEY (conte_id) REFERENCES conte (id)
-    , CONSTRAINT FK_conte_category_category FOREIGN KEY (category_id) REFERENCES category (id)
-
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
---
--- Altération des tables
---
-
-ALTER TABLE profil
-ADD   CONSTRAINT FK_profil_user FOREIGN KEY (user_id) REFERENCES user (id);
-
---
--- Remplissage des tables
---
-
-INSERT INTO user
-VALUES (NULL, 'El Jilali', 'Yousra', '1996-05-05', 'eljilaliyousra@gmail.com', sha2('Test123=', 256), 'admin', DEFAULT, DEFAULT);
 
 INSERT INTO `conte` (`id`, `title`, `synopsis`, `url`, `image`, `audio`) VALUES
 (1, 'Kimia : The Beginning', 'Guidée par une étoile lointaine, Kimia explore \r\nles recoins cachés de son esprit et se plonge \r\ndans des aventures imaginaires fascinantes. \r\nTout en observant les émotions et les rêves \r\ndes gens qui l\'entourent, elle cherche à \r\ncomprendre son propre cheminement \r\npersonnel et à trouver sa place dans le tissu \r\ncomplexe de la réalité.', 'Kimia_The_Beginning.mp4', 'Kimia_The_Beginning.png', 'Kimia_The_Beginning.mp3');
 
+-- --------------------------------------------------------
 
+--
+-- Structure de la table `conte_category`
+--
+
+CREATE TABLE `conte_category` (
+  `conte_id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `profil`
+--
+
+CREATE TABLE `profil` (
+  `id` int(11) NOT NULL,
+  `pseudo` varchar(100) NOT NULL,
+  `description` varchar(1000) DEFAULT NULL,
+  `avatar` varchar(100) DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `first_name` varchar(100) NOT NULL,
+  `birthdate` date DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `role` enum('admin','user') DEFAULT 'user',
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`id`, `last_name`, `first_name`, `birthdate`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES
+(1, 'El Jilali', 'Yousra', '1996-05-05', 'eljilaliyousra@gmail.com', 'eb0a16b036588a7c8a2fa2dffb8680a31f0c876107b98d494edf7fc67b31e570', 'admin', '2023-09-01 09:28:12', '2023-09-01 11:28:12');
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `conte`
+--
+ALTER TABLE `conte`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `conte_category`
+--
+ALTER TABLE `conte_category`
+  ADD PRIMARY KEY (`conte_id`,`category_id`),
+  ADD KEY `FK_conte_category_category` (`category_id`);
+
+--
+-- Index pour la table `profil`
+--
+ALTER TABLE `profil`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `UK_pseudo` (`pseudo`),
+  ADD KEY `FK_profil_user` (`user_id`);
+
+--
+-- Index pour la table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `UK_email` (`email`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `category`
+--
+ALTER TABLE `category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `conte`
+--
+ALTER TABLE `conte`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `profil`
+--
+ALTER TABLE `profil`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `conte_category`
+--
+ALTER TABLE `conte_category`
+  ADD CONSTRAINT `FK_conte_category_category` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`),
+  ADD CONSTRAINT `FK_conte_category_conte` FOREIGN KEY (`conte_id`) REFERENCES `conte` (`id`);
+
+--
+-- Contraintes pour la table `profil`
+--
+ALTER TABLE `profil`
+  ADD CONSTRAINT `FK_profil_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
