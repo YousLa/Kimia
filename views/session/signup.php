@@ -1,20 +1,26 @@
 <h1>Registration Form</h1>
 
+
+
 <?php if (!empty($error_message)) echo $error_message;  ?>
 
-<form action="?page=signup" method="POST">
+<div class="flex">
 
-    <label for="pseudo">Pseudo</label>
-    <input type="text" name="pseudo" id="pseudo">
+    <form action="?page=signup" method="POST">
 
-    <label for="email">Email adress</label>
-    <input type="email" name="email" id="email" required>
+        <label for="pseudo">Pseudo</label>
+        <input type="text" name="pseudo" id="pseudo">
 
-    <label for="birthdate">Date of birth</label>
-    <input type="date" name="birthdate" id="birthdate">
+        <label for="email">Email adress</label>
+        <input type="email" name="email" id="email" required>
 
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
+        <label for="birthdate">Date of birth</label>
+        <input type="date" name="birthdate" id="birthdate">
 
-    <button type="submit" name="register">Register</button>
-</form>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+
+        <button type="submit" name="register">Register</button>
+    </form>
+
+</div>
