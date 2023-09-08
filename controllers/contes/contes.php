@@ -9,7 +9,7 @@ $query = "SELECT title, image FROM conte";
 // Extraction des données de la requête
 $objet = $database->query($query);
 
-// Transforme l'objet d ela requête en tableau
+// Transforme l'objet de la requête en tableau
 $contes = $objet->fetchAll(PDO::FETCH_ASSOC);
 
 // Parcourir les contes dans le tableau
