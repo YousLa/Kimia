@@ -8,6 +8,7 @@
     <script src="assets/js/script.js"></script>
     <title>Template système MVC</title>
 
+    <!-- Router pages css -->
 
     <?php if (isset($_GET['page'])) {
 
