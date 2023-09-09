@@ -36,11 +36,9 @@
             case 'contes':
                 echo '<link rel="stylesheet" href="assets/css/contes.css">';
                 break;
-
-            default:
-                echo '<link rel="stylesheet" href="assets/css/style.css">';
-                break;
         }
+    } else {
+        echo '<link rel="stylesheet" href="assets/css/home.css">';
     }
     ?>
 </head>
