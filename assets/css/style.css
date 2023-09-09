@@ -1,3 +1,71 @@
+/* Font */
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway/static/Raleway-Regular.ttf);
+}
+
+/* HTML */
 * {
-    background-color: pink;
+    background-color: #221D2E;
+    font-family: 'Raleway';
+    color: #F2F2F2;
+}
+
+/* Barre de navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* #region Logo */
+#logo-header {
+    width: 10rem;
+}
+
+#logo-footer {
+    width: 5rem;
+    background-color: #F2F2F2;
+}
+
+footer {
+    bottom: 0;
+    text-align: center;
+    color: #221D2E;
+    background-color: #F2F2F2;
+}
+
+footer>div {
+    background-color: #F2F2F2;
+    font-size: xx-small;
+}
+
+footer>div>p {
+    background-color: #F2F2F2;
+    color: #221D2E;
+}
+
+/* #endregion */
+
+/* Boutons */
+button {
+    width: 8rem;
+    height: 2rem;
+    background-color: #9747FF;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+button>a {
+    text-decoration: none;
+    background-color: #9747FF;
+    font-size: 1rem;
+}
+
+/* Input */
+.input-forms {
+    width: 20rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    border: 2px solid #F2F2F2;
+    opacity: 0.6;
 }

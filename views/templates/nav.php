@@ -1,15 +1,17 @@
-<nav>
-    <ul>
-        <li><a href='?page=home'>HOME</a></li>
-        <?php if (isset($_SESSION['email'])) {
-            echo "<li><a href='?page=profil'>PROFIL</a></li>";
-            echo "<li><a href='?page=contes'>CONTES</a></li>";
-            echo "<li><a href='?page=logout'>DECONNEXION</a></li>";
-        } else {
-            echo "<li><a href='?page=login'>CONNEXION</a></li>";
-            echo "<li><a href='?page=signup'>SIGN UP</a></li>
-            ";
-        } ?>
+<div id="top">
 
-    </ul>
-</nav>
+    <nav>
+        <a href='?page=home'><img id="logo-header" src="assets/img/logo/Kimia.svg" alt=""></a>
+
+
+        <?php if (isset($_SESSION['email'])) {
+            echo "<ul>";
+            echo "<a href='?page=profil'>PROFIL</a>";
+            echo "<a href='?page=contes'>CONTES</a>";
+            echo "</ul>";
+            echo "<button id='logout'><a href='?page=login'>Se deconnecter</a></button>";
+        } else {
+            echo "<button id='login'><a href='?page=login'>S'identifier</a></button>";
+        } ?>
+    </nav>
+</div>

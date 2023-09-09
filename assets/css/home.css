@@ -1,4 +1,66 @@
-#titre {
-    color: chartreuse;
-    border: solid 1px black;
+/* #top {
+    height: 12rem;
+    background: linear-gradient(180deg, #221D2E 3.12%, rgba(34, 29, 46, 0.00));
+} */
+
+/* #section1 {
+    width: 98vw;
+    height: 100vw;
+} */
+
+/* #section1>img {
+    width: 98vw;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+} */
+
+main {
+    margin: auto;
+    text-align: center;
 }
+
+/* TODO Fixer le soucis avec le fond d'écran */
+
+.container-section1 {
+    background-image: url('../img/accueil-section1-bk.png');
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    width: 100vw;
+    /* Ajustez la hauteur selon vos besoins */
+
+}
+
+/* #region Slide accueil */
+.slideshow-container {
+    max-width: 500px;
+    /* ajustez la largeur selon vos besoins */
+    position: relative;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide>img {
+    width: 100%;
+    height: auto;
+}
+
+/* #endregion */
+
+/* #region plateforme */
+
+#plateformes {
+    display: flex;
+    flex-direction: row;
+}
+
+#plateformes>img {
+    height: 15rem;
+}
+
+/* #endregion */
