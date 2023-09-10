@@ -2,16 +2,16 @@
 
     <!-- Section 1 -->
     <div class="container-section1">
-
         <div id="section1">
+
             <p>Embarquez pour un voyage narratif avec Kimia, la plateforme de streaming de contes pour tous.</p>
 
-            <!-- <img id="section1-bk" src="assets/img/accueil-section1-bk.png" alt=""> -->
 
             <div class="commencer">
                 <input class="input-forms" type="text" placeholder="Adresse Email">
-                <button id='signup'><a href='?page='>Commencer</a></button>
+                <button id='signup'><a href='?page=signup'>Commencer</a></button>
             </div>
+
         </div>
     </div>
     <h1>Seulement sur Kimia</h1>

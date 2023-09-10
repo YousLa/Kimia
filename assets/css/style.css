@@ -4,11 +4,20 @@
     src: url(../fonts/Raleway/static/Raleway-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Raleway-thin';
+    src: url(../fonts/Raleway/static/Raleway-Thin.ttf);
+}
+
 /* HTML */
 * {
     background-color: #221D2E;
     font-family: 'Raleway';
     color: #F2F2F2;
+}
+
+#top {
+    margin: 2rem 7rem 0 7rem;
 }
 
 /* Barre de navigation */
@@ -19,7 +28,7 @@ nav {
 
 /* #region Logo */
 #logo-header {
-    width: 10rem;
+    width: 9rem;
 }
 
 #logo-footer {
@@ -28,6 +37,7 @@ nav {
 }
 
 footer {
+    padding: 0.5rem;
     bottom: 0;
     text-align: center;
     color: #221D2E;
@@ -40,6 +50,8 @@ footer>div {
 }
 
 footer>div>p {
+    margin: 0.2rem;
+    font-family: 'Raleway';
     background-color: #F2F2F2;
     color: #221D2E;
 }
