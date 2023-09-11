@@ -1,125 +1,105 @@
 main {
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: center;
 }
-
-/* TODO Fixer le soucis avec le fond d'écran */
-
-/* #region Section 1 */
 
 .container-section1 {
-    position: relative;
-    background-image: url('../img/accueil-section1-bk.png');
-    background-size: cover;
-    background-position: center;
-    width: 98.5vw;
-    height: 100vh;
-    display: flex;
-    /* Utilisez flexbox pour centrer les éléments */
-    justify-content: center;
-    /* Centre horizontalement */
-    align-items: center;
-    /* Centre verticalement */
-
+  position: relative;
+  background-image: url("../img/accueil-section1-bk.png");
+  background-size: cover;
+  background-position: center;
+  width: 98.5vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Filtre sur l'image de fond */
 .container-section1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(180deg, #221D2E 3.12%, rgba(34, 29, 46, 0.00) 29.69%, rgba(34, 29, 46, 0.76) 92.19%, #221D2E 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #221D2E 3.12%, rgba(34, 29, 46, 0) 29.69%, rgba(34, 29, 46, 0.76) 92.19%, #221D2E 100%);
 }
 
 #section1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 70vh;
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
 }
 
-/* Pour qu'il n'y ait pas de couleur de fond sur les éléments */
-#section1,
-#section1 div,
-#section1 p {
-    background-color: transparent;
+#section1 div {
+  background-color: transparent;
 }
 
-#section1 p,
-#section1 div input,
+#section1 div input {
+  position: relative;
+  z-index: 1;
+}
+
 #section1 div button {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 #section1 p {
-    margin: -1rem 15rem 0 15rem;
-    font-size: x-large;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  margin: -1rem 15rem 0 15rem;
+  font-size: x-large;
 }
 
-/* #endregion Section 1 */
-
-/* #region Section 2 */
 h1 {
-    margin: 2rem;
-    font-size: xx-large;
+  margin: 2rem;
+  font-size: xx-large;
 }
 
 h2 {
-    margin: 1.5rem;
-    font-size: x-large;
-    /* font-family: 'Raleway-thin'; */
+  margin: 1.5rem;
+  font-size: x-large;
 }
 
 #section2 p {
-    margin: 2rem;
-    font-size: large;
-    font-family: 'Raleway-thin';
+  margin: 2rem;
+  font-size: large;
+  font-family: "Raleway-thin";
 }
 
-/* #region Slide accueil */
-
 .slideshow-container {
-    width: 30rem;
-    /* ajustez la largeur selon vos besoins */
-    position: relative;
-    margin: 3rem auto;
+  width: 30rem;
+  position: relative;
+  margin: 3rem auto;
 }
 
 .slide {
-    display: none;
+  display: none;
 }
 
 .slide>img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
-
-/* #endregion */
-
-/* #region  Section 3 */
 
 .commencer {
-    margin: 2rem;
+  margin: 2rem;
 }
-
-/* #region plateforme */
 
 #plateformes {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
-
-/* TODO Créer un svg avec les images pour l'incorporer plus facilement */
 
 #plateformes>img {
-    height: 10rem;
+  height: 10rem;
 }
 
-/* #endregion */
+/*# sourceMappingURL=home.css.map */
