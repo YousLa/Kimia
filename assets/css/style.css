@@ -1,83 +1,78 @@
 /* Font */
 @font-face {
-    font-family: 'Raleway';
-    src: url(../fonts/Raleway/static/Raleway-Regular.ttf);
+  font-family: "Raleway";
+  src: url(../fonts/Raleway/static/Raleway-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'Raleway-thin';
-    src: url(../fonts/Raleway/static/Raleway-Thin.ttf);
+  font-family: "Raleway-thin";
+  src: url(../fonts/Raleway/static/Raleway-Thin.ttf);
 }
 
-/* HTML */
 * {
-    background-color: #221D2E;
-    font-family: 'Raleway';
-    color: #F2F2F2;
+  background-color: #221D2E;
+  font-family: "Raleway";
+  color: #F2F2F2;
 }
 
 #top {
-    margin: 2rem 7rem 0 7rem;
+  margin: 2rem 7rem 0 7rem;
 }
 
-/* Barre de navigation */
 nav {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* #region Logo */
 #logo-header {
-    width: 9rem;
+  width: 9rem;
 }
 
 #logo-footer {
-    width: 5rem;
-    background-color: #F2F2F2;
+  width: 5rem;
+  background-color: #F2F2F2;
 }
 
 footer {
-    padding: 0.5rem;
-    bottom: 0;
-    text-align: center;
-    color: #221D2E;
-    background-color: #F2F2F2;
+  padding: 0.5rem;
+  bottom: 0;
+  text-align: center;
+  color: #221D2E;
+  background-color: #F2F2F2;
 }
 
 footer>div {
-    background-color: #F2F2F2;
-    font-size: xx-small;
+  background-color: #F2F2F2;
+  font-size: xx-small;
 }
 
 footer>div>p {
-    margin: 0.2rem;
-    font-family: 'Raleway';
-    background-color: #F2F2F2;
-    color: #221D2E;
+  margin: 0.2rem;
+  font-family: "Raleway";
+  background-color: #F2F2F2;
+  color: #221D2E;
 }
 
-/* #endregion */
-
-/* Boutons */
 button {
-    width: 8rem;
-    height: 2rem;
-    background-color: #9747FF;
-    border-radius: 0.3rem;
-    border: none;
+  width: 8rem;
+  height: 2rem;
+  background-color: #9747FF;
+  border-radius: 0.3rem;
+  border: none;
 }
 
 button>a {
-    text-decoration: none;
-    background-color: #9747FF;
-    font-size: 1rem;
+  text-decoration: none;
+  background-color: #9747FF;
+  font-size: 1rem;
 }
 
-/* Input */
 .input-forms {
-    width: 20rem;
-    height: 2rem;
-    border-radius: 0.3rem;
-    border: 2px solid #F2F2F2;
-    opacity: 0.6;
+  width: 20rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  border: 2px solid #F2F2F2;
+  opacity: 0.6;
 }
+
+/*# sourceMappingURL=style.css.map */
