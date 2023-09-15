@@ -1,6 +1,7 @@
-$font-family_1: 'Raleway-thin';
+$font-family_1: "Raleway-thin";
 $background-color_1: transparent;
 
+/*# sourceMappingURL=home.css.map */
 main {
     margin: auto;
     text-align: center;
@@ -8,7 +9,7 @@ main {
 
 .container-section1 {
     position: relative;
-    background-image: url('../img/accueil-section1-bk.png');
+    background-image: url("../img/homepage/accueil-section1-bk.png");
     background-size: cover;
     background-position: center;
     width: 98.5vw;
@@ -24,7 +25,7 @@ main {
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(180deg, #221D2E 3.12%, rgba(34, 29, 46, 0.00) 29.69%, rgba(34, 29, 46, 0.76) 92.19%, #221D2E 100%);
+        background: linear-gradient(180deg, #221D2E 3.12%, rgba(34, 29, 46, 0) 29.69%, rgba(34, 29, 46, 0.76) 92.19%, #221D2E 100%);
     }
 }
 

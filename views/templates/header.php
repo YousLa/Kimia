@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/resetCSS.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/slide-homepage.js" defer></script>
+    <script src="assets/js/avatar.js" defer></script>
     <title>Template système MVC</title>
 
     <!-- Router pages css -->
@@ -20,6 +21,10 @@
 
             case 'signup':
                 echo '<link rel="stylesheet" href="assets/css/signup.css">';
+                break;
+
+            case 'createprofil':
+                echo '<link rel="stylesheet" href="assets/css/createProfil.css">';
                 break;
 
             case 'profil':

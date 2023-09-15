@@ -1,17 +1,29 @@
 <div id="top">
 
     <nav>
-        <a href='?page=home'><img id="logo-header" src="assets/img/logo/Kimia.svg" alt=""></a>
 
+        <!-- Si l'utilisateur est connecté, la version connected de la navbar est affiché -->
+        <?php if (isset($_SESSION['email'])) : ?>
 
-        <?php if (isset($_SESSION['email'])) {
-            echo "<ul>";
-            echo "<a href='?page=profil'>PROFIL</a>";
-            echo "<a href='?page=contes'>CONTES</a>";
-            echo "</ul>";
-            echo "<button id='logout'><a href='?page=login'>Se deconnecter</a></button>";
-        } else {
-            echo "<button id='login'><a href='?page=login'>S'identifier</a></button>";
-        } ?>
+            <!-- VERSION CONNECTED -->
+            <a href='?page=home'><img id="logo-header" src="assets/img/logo/Kimia.svg" alt=""></a>
+            <ul>
+                <a href='?page=profil'>PROFIL</a>
+                <a href='?page=account'>COMPTE</a>
+                <a href='?page=contes'>CONTES</a>
+            </ul>
+            <button id='logout'><a href='?page=logout'>Se deconnecter</a></button>
+            <!-- VERSION CONNECTED -->
+
+            <!-- Sinon on affiche la version disconnected -->
+        <?php else : ?>
+
+            <!-- VERSION DISCONNECTED -->
+
+            <button id='login'><a href='?page=login'>S'identifier</a></button>
+            <!-- VERSION DISCONNECTED -->
+
+        <?php endif; ?>
+
     </nav>
 </div>

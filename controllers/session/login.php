@@ -39,6 +39,7 @@ if (isset($_POST['login'])) {
             header('Location: ?page=contes');
         } else {
             $message = "<span>Wrong Data</span>";
+            var_dump($_POST['email'], $_POST['password'], $_SESSION['email']);
         }
     }
 }

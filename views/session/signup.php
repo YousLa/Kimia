@@ -8,14 +8,8 @@
 
     <form action="?page=signup" method="POST">
 
-        <label for="pseudo">Pseudo</label>
-        <input type="text" name="pseudo" id="pseudo">
-
         <label for="email">Email adress</label>
-        <input type="email" name="email" id="email" required>
-
-        <label for="birthdate">Date of birth</label>
-        <input type="date" name="birthdate" id="birthdate">
+        <input type="email" name="email" id="email">
 
         <label for="password">Password</label>
         <input type="password" name="password" id="password" required>

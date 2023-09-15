@@ -1,6 +1,8 @@
+<!-- Fichier non visible du profil (controllers) dans lequel on note le code php nécessaire à son fonctionnement -->
+
 <?php
 
-# Connexion à la base de données
+# On inclut le fichier database.php qui regroupe les infos nécessaire à la connexion vers la base de données
 include_once "models/database.php";
 
 # Création de la requête de récupération de tous les users
@@ -21,5 +23,5 @@ foreach ($users as $user) {
     ) = $user;
 }
 
-
-require_once 'views/session/profil.php';
+# On fait appel au fichier profil visible (views). C'est ce fichier qui est affiché sur l'index.php grâce au router 
+require_once 'views/user/account.php';

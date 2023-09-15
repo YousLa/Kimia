@@ -1,28 +1,29 @@
 $color_1: #F2F2F2;
 $color_2: #221D2E;
-$font-family_1: 'Raleway';
+$font-family_1: "Raleway";
 $background-color_1: #221D2E;
 $background-color_2: #F2F2F2;
 $background-color_3: #9747FF;
 
 /* Font */
 @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     src: url(../fonts/Raleway/static/Raleway-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'Raleway-thin';
+    font-family: "Raleway-thin";
     src: url(../fonts/Raleway/static/Raleway-Thin.ttf);
 }
 
-/* HTML */
-/* Barre de navigation */
-/* #region Logo */
-/* #endregion */
-/* Boutons */
-/* Input */
+/*# sourceMappingURL=style.css.map */
 * {
+    background-color: $background-color_1;
+    font-family: $font-family_1;
+    color: $color_1;
+}
+
+body {
     background-color: $background-color_1;
     font-family: $font-family_1;
     color: $color_1;
@@ -47,6 +48,8 @@ nav {
 }
 
 footer {
+
+
     padding: 0.5rem;
     bottom: 0;
     text-align: center;
@@ -68,7 +71,8 @@ footer {
 
 button {
     width: 8rem;
-    height: 2rem;
+    height: 2.5rem;
+    padding: 0.5rem;
     background-color: $background-color_3;
     border-radius: 0.3rem;
     border: none;
@@ -86,4 +90,21 @@ button {
     border-radius: 0.3rem;
     border: 2px solid #F2F2F2;
     opacity: 0.6;
+}
+
+// Temporaire
+
+h1 {
+    margin-top: 2rem;
+    font-size: large;
+}
+
+h2 {
+    margin-top: 2rem;
+    font-size: large;
+}
+
+p {
+    margin-top: 2rem;
+    font-size: large;
 }

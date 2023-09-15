@@ -1,0 +1,104 @@
+// Page de Personnalisation du profil pour la première fois
+
+
+#create-profil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    height: max-content;
+
+
+    #create-profil-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            font-size: xx-large;
+            margin: 0.5rem auto;
+        }
+
+        h2 {
+            font-size: x-large;
+            margin: 2rem auto;
+        }
+
+        input {
+
+            width: 25rem;
+            height: 3rem;
+            flex-shrink: 0;
+            border: transparent;
+            border-bottom: 1px solid #F2F2F2;
+        }
+
+        #empty-avatar {
+            align-self: center;
+            height: 15rem;
+            width: fit-content;
+
+        }
+
+        button {
+            font-size: large;
+            align-self: center;
+            margin: 2rem 0;
+        }
+    }
+}
+
+
+
+
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+
+    #logo {
+        align-self: left;
+    }
+
+    .pic {
+        height: 15rem;
+    }
+
+    #rang {
+        width: fit-content;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        row-gap: 5rem;
+        column-gap: 5rem;
+    }
+}
+
+
+#close {
+
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-right: 10rem;
+    margin-top: 3rem;
+
+    img {
+        width: 2rem;
+        height: fit-content;
+    }
+}
+
+::-webkit-input-placeholder {
+    font-size: x-large;
+}
+
+.modalHidden {
+    display: none;
+}

@@ -1,4 +1,6 @@
-<h1>PROFIL</h1>
+<h1>Compte</h1>
+
+<span>Ici seront noté les informations officiel d'ordre privée</span>
 
 <p>Rôle : <?= $role ?></p>
 <p>Nom : <?= $last_name ?></p>

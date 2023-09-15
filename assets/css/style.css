@@ -3,13 +3,18 @@
   font-family: "Raleway";
   src: url(../fonts/Raleway/static/Raleway-Regular.ttf);
 }
-
 @font-face {
   font-family: "Raleway-thin";
   src: url(../fonts/Raleway/static/Raleway-Thin.ttf);
 }
 
 * {
+  background-color: #221D2E;
+  font-family: "Raleway";
+  color: #F2F2F2;
+}
+
+body {
   background-color: #221D2E;
   font-family: "Raleway";
   color: #F2F2F2;
@@ -40,13 +45,11 @@ footer {
   color: #221D2E;
   background-color: #F2F2F2;
 }
-
-footer>div {
+footer > div {
   background-color: #F2F2F2;
   font-size: xx-small;
 }
-
-footer>div>p {
+footer > div > p {
   margin: 0.2rem;
   font-family: "Raleway";
   background-color: #F2F2F2;
@@ -55,13 +58,13 @@ footer>div>p {
 
 button {
   width: 8rem;
-  height: 2rem;
+  height: 2.5rem;
+  padding: 0.5rem;
   background-color: #9747FF;
   border-radius: 0.3rem;
   border: none;
 }
-
-button>a {
+button > a {
   text-decoration: none;
   background-color: #9747FF;
   font-size: 1rem;
@@ -73,6 +76,21 @@ button>a {
   border-radius: 0.3rem;
   border: 2px solid #F2F2F2;
   opacity: 0.6;
+}
+
+h1 {
+  margin-top: 2rem;
+  font-size: large;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: large;
+}
+
+p {
+  margin-top: 2rem;
+  font-size: large;
 }
 
 /*# sourceMappingURL=style.css.map */

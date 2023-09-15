@@ -28,32 +28,32 @@
 
         <div class="slideshow-container">
             <div class="slide">
-                <img src="assets/img/slide-accueil/Slide1.png" alt="Image 1">
+                <img src="assets/img/homepage/slide-accueil/Slide1.png" alt="Image 1">
             </div>
             <div class="slide">
-                <img src="assets/img/slide-accueil/Slide2.png" alt="Image 2">
+                <img src="assets/img/homepage/slide-accueil/Slide2.png" alt="Image 2">
             </div>
             <div class="slide">
-                <img src="assets/img/slide-accueil/Slide3.png" alt="Image 3">
+                <img src="assets/img/homepage/slide-accueil/Slide3.png" alt="Image 3">
             </div>
 
             <div class="slide">
-                <img src="assets/img/slide-accueil/Slide4.png" alt="Image 4">
+                <img src="assets/img/homepage/slide-accueil/Slide4.png" alt="Image 4">
             </div>
             <div class="slide">
-                <img src="assets/img/slide-accueil/Slide5.png" alt="Image 5">
+                <img src="assets/img/homepage/slide-accueil/Slide5.png" alt="Image 5">
             </div>
             <div class="slide">
-                <img src="assets/img/slide-accueil/Slide6.png" alt="Image 6">
+                <img src="assets/img/homepage/slide-accueil/Slide6.png" alt="Image 6">
             </div>
             <div class="slide">
-                <img src="assets/img/slide-accueil/Slide7.png" alt="Image 7">
+                <img src="assets/img/homepage/slide-accueil/Slide7.png" alt="Image 7">
             </div>
             <div class="slide">
-                <img src="assets/img/slide-accueil/Slide8.png" alt="Image 8">
+                <img src="assets/img/homepage/slide-accueil/Slide8.png" alt="Image 8">
             </div>
             <div class="slide">
-                <img src="assets/img/slide-accueil/Slide9.png" alt="Image 9">
+                <img src="assets/img/homepage/slide-accueil/Slide9.png" alt="Image 9">
             </div>
         </div>
 
@@ -70,11 +70,11 @@
 
         <div id="plateformes">
 
-            <img src="assets/img/plateformes/Kimia-pc.svg" alt="">
+            <img src="assets/img/homepage/plateformes/Kimia-pc.svg" alt="">
 
-            <img src="assets/img/plateformes/Kimia-tablette.svg" alt="">
+            <img src="assets/img/homepage/plateformes/Kimia-tablette.svg" alt="">
 
-            <img src="assets/img/plateformes/Kimia-phone.svg" alt="">
+            <img src="assets/img/homepage/plateformes/Kimia-phone.svg" alt="">
         </div>
 
         <div class="commencer">

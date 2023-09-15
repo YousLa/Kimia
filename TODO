@@ -1,0 +1,38 @@
+Vendredi 15 Septembre 2023
+
+PS : Le Profil reprends des infos non officiel tel que le pseudo et l'avatar. Tandis que le compte reprends les informations privées tel que le nom, le prénom, l'adresse email, le mot de passe et plus tard les données de paiement
+
+TODO :
+
+Création du dossier Profil :
+
+☐ Affichage du profil.
+☐ Modification du profil.
+
+Création de la page post inscription :
+
+☐ Une page pour choisir un pseudo et un avatar.
+☐ Pseudo 
+    ☐ Input - le choix du pseudo est libre
+☐ Avatar 
+    ☐ Les avatars son proposés.
+
+
+    
+TODO LATER :
+
+Création du dossier Account :
+
+☐ Affichage du compte
+☐ Modification du compte
+
+Création de la page de suppression de compte :
+
+☐ Un lien qui enclenchera la demande de suppression
+☐ Demande de validation avant suppression du compte 
+☐ Suppression et redirection vers la page d'accueil - hors connexion.
+
+BONUS :
+
+☐ Insertion des données de paiement.
+☐ Activation/Annulation de l'abonnement.
