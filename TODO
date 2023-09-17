@@ -1,38 +1,95 @@
-Vendredi 15 Septembre 2023
+Dimanche 17 Septembre 2023
 
 PS : Le Profil reprends des infos non officiel tel que le pseudo et l'avatar. Tandis que le compte reprends les informations privées tel que le nom, le prénom, l'adresse email, le mot de passe et plus tard les données de paiement
 
 TODO :
 
+    Création de fonctions :
+    
+        ResponseModel.php - Réponse structurée : 
+
+            ✔ Function response() @done(23-09-17 18:06)
+        
+        UserModel.php - Session utilisateur :
+
+            ✔ Function signIn() - Connexion @done(23-09-17 18:10)
+            ☐ Function signUp() - Inscription
+                ☐ Renvoyer les variables session createProfile.php
+            ✔ Function userPatchField() - Modification @done(23-09-17 18:10)
+            ✔ Function getUserByIndex() - Récupération @done(23-09-17 18:10)
+            ✔ Function deleteUser() - Suppression @done(23-09-17 18:10)
+
+        ProfileModel.php - Profil utilisateur : 
+
+            ✔ Function createProfile - Création @done(23-09-17 18:11)
+            ☐ Function profilePatchField - Modification
+            ☐ Function Avatar - Récupération
+
+        ContesModel.php - Contes :
+
+            ☐ Function createContesController - Création
+            ☐ Function contesController - Affichage
+            ☐ Function updateContesController- Modification
+
+
+TODO :
+
+N'oublie pas de mettre à jour la nav, le header et le router à chaque modification
+
 Création du dossier Profil :
 
-☐ Affichage du profil.
-☐ Modification du profil.
+    Controllers :
 
-Création de la page post inscription :
+    ✔ createProfileController.php - Création @done(23-09-17 18:17)
+    ☐ profileController.php - Affichage
+    ☐ updateProfilController.php - Modification
 
-☐ Une page pour choisir un pseudo et un avatar.
-☐ Pseudo 
-    ☐ Input - le choix du pseudo est libre
-☐ Avatar 
-    ☐ Les avatars son proposés.
+    Views :
 
+    ✔ createProfileView.php - Création @done(23-09-17 18:17)
+    ☐ profileView.php - Affichage
+    ☐ updateProfilView.php - Modification
 
-    
-TODO LATER :
+Création de la page post inscription JS :
+
+    ✔ Une page pour choisir un pseudo et un avatar. @done(23-09-17 18:02)
+        ✔ Pseudo @done(23-09-17 18:02)
+        ✔ Input - le choix du pseudo est libre @done(23-09-17 18:02)
+    ✔ Avatar @done(23-09-17 18:02)
+        ✔ Les avatars son proposés. @done(23-09-17 18:02)
 
 Création du dossier Account :
 
-☐ Affichage du compte
-☐ Modification du compte
+    Controllers :
 
-Création de la page de suppression de compte :
+    ☐ accountController.php - Affichage 
+    ☐ updateAccountController.php - Modification
+    ☐ deleteAccountController.php - Suppression
 
-☐ Un lien qui enclenchera la demande de suppression
-☐ Demande de validation avant suppression du compte 
-☐ Suppression et redirection vers la page d'accueil - hors connexion.
+    Views : 
+
+    ☐ accountView.php - Affichage 
+    ☐ updateAccountView.php - Modification
+    ☐ deleteAccountView.php - Suppression
+
+
+Modification du dossier Contes :
+
+    Controllers :
+
+    ☐ createContesController.php - Création 
+    ☐ contesController.php - Affichage 
+    ☐ updateContesController.php - Modification
+    ☐ deleteContesController.php - Suppression
+
+    Views : 
+
+    ☐ createContesView.php - Création 
+    ☐ contesView.php - Affichage 
+    ☐ updateContesView.php - Modification
+    ☐ deleteContesView.php - Suppression
 
 BONUS :
 
-☐ Insertion des données de paiement.
-☐ Activation/Annulation de l'abonnement.
+    ☐ Insertion des données de paiement.
+    ☐ Activation/Annulation de l'abonnement.

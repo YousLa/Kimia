@@ -14,17 +14,17 @@ if (isset($_GET['page'])) {
 
             // Page d'inscription - Création du compte 
         case 'signup':
-            require_once 'controllers/session/signup.php';
+            require_once 'controllers/session/signupController.php';
             break;
 
             // Affichage du profil (Infos non officielles)
         case 'profil':
-            require_once 'controllers/profil/profil.php';
+            require_once 'controllers/profil/profile.php';
             break;
 
             // Création du profil (Infos non officielles)
-        case 'createprofil':
-            require_once 'controllers/profil/createProfil.php';
+        case 'createProfile':
+            require_once 'controllers/profil/createProfileController.php';
             break;
 
             // Modification du profil
@@ -44,12 +44,12 @@ if (isset($_GET['page'])) {
 
             // Page de connexion
         case 'login':
-            require_once 'controllers/session/login.php';
+            require_once 'controllers/session/loginController.php';
             break;
 
             // Page de déconnexion
         case 'logout':
-            require_once 'controllers/session/logout.php';
+            require_once 'controllers/session/logoutController.php';
             break;
 
             // Fiche descriptif d'un conte

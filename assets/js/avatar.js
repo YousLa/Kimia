@@ -1,4 +1,6 @@
-console.log('test avatar.js')
+// & Ce code à effet sur la page de personnalisation du profil après l'inscription.
+
+console.log('Personnalisez votre profil')
 
 // * Récupération du svg de l'empty-avatar
 const SVG_EMPTY_AVATAR = document.querySelector('#empty-avatar');
@@ -9,7 +11,7 @@ const SVG_EMPTY_AVATAR_SRC = SVG_EMPTY_AVATAR.getAttribute('src');
 console.log(SVG_EMPTY_AVATAR_SRC);
 
 // * Récupération de l'input de l'empty avatar
-const INPUT_AVATAR_VALUE = document.querySelector('#avatar');
+const INPUT_AVATAR_VALUE = document.querySelector('#avatar-input');
 
 // * Récupération de mon modal
 const DIV_MODAL = document.querySelector('.modalHidden');
@@ -68,3 +70,7 @@ for (let i = 0; i < IMG_IMG_MODAL.length; i++) {
     })
 
 }
+
+
+
+// & Ce code à effet lors du clic sur l'avatar sur le catalogue. Il affiche le menu qui lui ai lié

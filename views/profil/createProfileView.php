@@ -2,22 +2,24 @@
 
 <main id="create-profil">
 
-    <form id="create-profil-form" action="?page=createprofil" method="POST">
+    <form id="create-profil-form" action="?page=createProfile" method="POST">
 
         <h1>Personnalisez votre profil</h1>
 
-        <?= $error_message ?>
+        <?php if (isset($error) && $error && !empty($error_message)) {
+            echo "<div>$error_message</div>";
+        } ?>
+
 
         <h2>Choisissez votre Pseudo</h2>
 
-        <label for="pseudo"></label>
-        <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo">
+        <input type="text" name="pseudo" id="pseudo" autocomplete="off" placeholder="Pseudo" value="<?= isset($_POST['pseudo']) ? $_POST['pseudo'] : '' ?>">
 
 
         <h2>Choisissez votre Avatar.</h2>
 
         <img id="empty-avatar" src="assets/img/avatar/empty-avatar.svg" alt="Avatar vide">
-        <input type="hidden" name="avatar" id="avatar" value="">
+        <input type="hidden" name="avatar" id="avatar-input" value="">
 
         <button name="send">Terminer</button>
 

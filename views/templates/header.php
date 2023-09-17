@@ -23,7 +23,7 @@
                 echo '<link rel="stylesheet" href="assets/css/signup.css">';
                 break;
 
-            case 'createprofil':
+            case 'createProfile':
                 echo '<link rel="stylesheet" href="assets/css/createProfil.css">';
                 break;
 

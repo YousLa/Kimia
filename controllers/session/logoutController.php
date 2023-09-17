@@ -2,10 +2,9 @@
 
 <?php
 
-// On start la session pour pouvoir unset les variables session
-session_start();
-
+unset($_SESSION['id']);
 unset($_SESSION['email']);
+unset($_SESSION['role']);
 
 // Une fois que les variables session sont unset on peut détruire la session en cours
 session_destroy();
