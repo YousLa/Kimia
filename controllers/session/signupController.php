@@ -21,8 +21,27 @@ if (isset($_POST['register'], $_POST['email'], $_POST['password']) && !empty($_P
     $response = signUp($userData);
 
     if ($response->success) {
+
         $success = $response->success;
-        header('Location: ?page=createProfile');
+
+        if (isset($_POST['email'], $_POST['password'])) {
+
+            $response = signIn(['email' => $email, 'password' => $password]);
+
+            if ($response->success) {
+                $error = false;
+                $error_message = null;
+
+                $_SESSION['id'] = $response->data['id'];
+                $_SESSION['email'] = $response->data['email'];
+                $_SESSION['role'] = $response->data['role'];
+
+                header('Location: ?page=createProfile');
+            } else {
+                $error = true;
+                $error_message = $response->error;
+            }
+        }
     } else {
         $error = true;
         $error_message = $response->error;

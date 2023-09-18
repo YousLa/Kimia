@@ -13,8 +13,8 @@ TODO :
         UserModel.php - Session utilisateur :
 
             ✔ Function signIn() - Connexion @done(23-09-17 18:10)
-            ☐ Function signUp() - Inscription
-                ☐ Renvoyer les variables session createProfile.php
+            ✔ Function signUp() - Inscription @done(23-09-18 10:57)
+                ✔ Renvoyer les variables session createProfile.php @done(23-09-18 10:56)
             ✔ Function userPatchField() - Modification @done(23-09-17 18:10)
             ✔ Function getUserByIndex() - Récupération @done(23-09-17 18:10)
             ✔ Function deleteUser() - Suppression @done(23-09-17 18:10)

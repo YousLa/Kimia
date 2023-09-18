@@ -2,7 +2,8 @@
 
 $fiche = "";
 
-require_once "models/database.php";
+require_once 'models/database/database.php';
+$database = getConnection();
 
 $query = "SELECT title, image FROM conte";
 
