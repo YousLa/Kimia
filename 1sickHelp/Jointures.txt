@@ -22,3 +22,13 @@ JOIN
     	category 
 ON 	conte_category.category_id = category.id;
 
+
+Ajout des liens conte - category
+
+INSERT INTO 
+
+	`conte_category` (`conte_id`, `category_id`, `created_at`, `updated_at`) 
+
+VALUES 
+
+('1', '1', current_timestamp(), current_timestamp());

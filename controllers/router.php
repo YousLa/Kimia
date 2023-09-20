@@ -19,7 +19,7 @@ if (isset($_GET['page'])) {
 
             // Affichage du profil (Infos non officielles)
         case 'profil':
-            require_once 'controllers/profil/profile.php';
+            require_once 'controllers/profil/profil.php';
             break;
 
             // Création du profil (Infos non officielles)

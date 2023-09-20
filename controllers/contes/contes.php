@@ -5,7 +5,16 @@ $fiche = "";
 require_once 'models/database/database.php';
 $database = getConnection();
 
-$query = "SELECT title, image FROM conte";
+$query = "SELECT
+	*
+FROM
+    	conte
+JOIN
+    	conte_category 
+ON 	conte.id = conte_category.conte_id
+JOIN
+    	category 
+ON 	conte_category.category_id = category.id";
 
 // Extraction des données de la requête
 $objet = $database->query($query);

@@ -1,7 +1,19 @@
 <?php
 
-require_once 'ResponseModel.php';
-require_once 'UserModel.php';
+// ^ Cette page regroupe les fonctions utiles au profil utilisateur lors de sa création, son affichage et de la modification des informations d'un profil utilisateur.
+
+
+// On fait appelle aux pages :
+
+// ~ ResponseModel.php qui va nous servir pour paramètrer les réponses de la base de données selon les situations avec la fonction response().
+// ~ Database.php qui va nous servir à faire appel à la fonction getConnection().
+require_once 'models/functions/ResponseModel.php';
+require_once 'models/database/database.php';
+
+/*
+^ Fonctionnalités liées aux profils utilisateurs
+*/
+
 
 /**
  * Permet de créer un profil
@@ -44,6 +56,8 @@ function createProfile(array $userProfileData): ApiResponse
  * @param $newValue mixed La nouvelle valeur
  * @return ApiResponse
  */
+
+//  TODO
 function profilePatchField(int $id, string $columnName, mixed $newValue): ApiResponse
 {
 
@@ -79,5 +93,40 @@ function profilePatchField(int $id, string $columnName, mixed $newValue): ApiRes
         $database->rollBack();
         $database = null;
         return response(false, null, $e->getMessage());
+    }
+}
+
+/**
+ * Permet de récupérer les informations du profil sous forme d'un tableau reprenant toutes les colonnes de la base de données
+ * @return ApiResponse
+ */
+
+function getProfile(int $id): ApiResponse
+{
+    $query = "
+        SELECT 
+           *
+        FROM 
+            profil p 
+                JOIN user u 
+                    ON u.id = p.user_id 
+        WHERE u.id = :id";
+
+    $database = getConnection();
+
+    $stmt = $database->prepare($query);
+    $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+
+    $isDone = $stmt->execute();
+
+    $database = null;
+
+    if ($isDone) {
+        $profil_i = $stmt->fetch(PDO::FETCH_ASSOC);
+        var_dump($profil_i);
+        die;
+        return response(true, $profil_i);
+    } else {
+        return response(false, null, "Erreur lors de la récupération du profil");
     }
 }

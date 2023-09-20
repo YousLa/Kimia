@@ -11,7 +11,7 @@ require_once 'models/functions/ResponseModel.php';
 require_once 'models/database/database.php';
 
 /*
-^ Fonctionnalités liées aux utilisateurs
+^ Fonctionnalités liées aux comptes utilisateurs
 */
 
 #region signIn() - Se connecter
