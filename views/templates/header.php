@@ -24,10 +24,11 @@
                 break;
 
             case 'createProfile':
+            case 'updateProfile':
                 echo '<link rel="stylesheet" href="assets/css/createProfil.css">';
                 break;
 
-            case 'profil':
+            case 'profile':
                 echo '<link rel="stylesheet" href="assets/css/profil.css">';
                 break;
 

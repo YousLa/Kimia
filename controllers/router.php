@@ -18,8 +18,8 @@ if (isset($_GET['page'])) {
             break;
 
             // Affichage du profil (Infos non officielles)
-        case 'profil':
-            require_once 'controllers/profil/profil.php';
+        case 'profile':
+            require_once 'controllers/profil/profile.php';
             break;
 
             // Création du profil (Infos non officielles)
@@ -28,8 +28,8 @@ if (isset($_GET['page'])) {
             break;
 
             // Modification du profil
-        case 'updateprofil':
-            require_once 'controllers/profil/updateProfil.php';
+        case 'updateProfile':
+            require_once 'controllers/profil/updateProfile.php';
             break;
 
             // Affichage du compte (Infos officielle)

@@ -1,8 +1,22 @@
 Dimanche 17 Septembre 2023
 
-PS : Le Profil reprends des infos non officiel tel que le pseudo et l avatar. Tandis que le compte reprends les informations privées tel que le nom, le prénom, l adresse email, le mot de passe et plus tard les données de paiement
+PS : Le Profil reprends des infos non officiel tel que le pseudo et l'avatar. Tandis que le compte reprends les informations privées tel que le nom, le prénom, l'adresse email, le mot de passe et plus tard les données de paiement
 
 TODO :
+
+    Catalogue : 
+
+        Avatar : 
+
+        ✔ Affichage de l'avatar @done(23-09-21 10:40)
+
+        Menu :
+            
+        ☐ Menu avatar
+            ☐ Profil
+            ☐ Compte
+            ☐ Centre d'aide
+            ☐ Se déconnecter
 
     Création de fonctions :
     
@@ -34,7 +48,7 @@ TODO :
 
 TODO :
 
-N oublie pas de mettre à jour la nav, le header et le router à chaque modification
+N'oublie pas de mettre à jour la nav, le header et le router à chaque modification
 
 Création du dossier Profil :
 

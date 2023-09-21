@@ -1,13 +1,10 @@
 <?php
 
 $fiche = "";
-$profil = "";
 $avatar = "";
 $pseudo = "";
 $error = false;
 $error_message = "";
-
-require_once 'models/functions/ProfileModel.php';
 
 if (isset($_SESSION['id'])) {
 
@@ -18,7 +15,7 @@ if (isset($_SESSION['id'])) {
         $error_message = null;
 
         $avatar = $response->data['avatar'];
-        $pseudo = $response->data['avatar'];
+        $pseudo = $response->data['pseudo'];
     } else {
         $error = true;
         $error_message = $response->error;
@@ -34,23 +31,28 @@ if (isset($_SESSION['id'])) {
         <a href='?page=home'><img id="logo-header" src="assets/img/logo/Kimia.svg" alt=""></a>
         <?php if (isset($_SESSION['email'])) : ?>
 
-            <!-- TODO Afficher l'avatar avec php -->
-            <div id="avatar-catalogue">
-                <a href="?page=profil"><img id="user-avatar" src="<?= $avatar ?>" alt="Avatar de l'utilisateur"></a>
+            <?php if ($_GET['page'] == 'updateProfile') : ?>
 
-            </div>
+            <?php else : ?>
 
-            <!-- VERSION CONNECTED -->
-            <div id="menu-avatar">
-                <ul>
-                    <li><a href='?page=profil'>PROFIL</a></li>
-                    <li><a href='?page=account'>COMPTE</a></li>
-                    <li><a href='?page=contes'>CONTES</a></li>
-                    <li><a href='?page=logout'>Se deconnecter</a></li>
-                </ul>
-            </div>
-            <!-- VERSION CONNECTED -->
+                <!-- TODO Afficher l'avatar avec php -->
+                <div id="avatar-catalogue">
+                    <a href="?page=profile"><img id="user-avatar" src="<?= $avatar ?>" alt="Avatar de l'utilisateur"></a>
 
+                </div>
+
+                <!-- VERSION CONNECTED -->
+                <div id="menu-avatar">
+                    <ul>
+                        <!-- <li><a href='?page=profil'>PROFIL</a></li> -->
+                        <li><a href='?page=account'>COMPTE</a></li>
+                        <li><a href='?page=contes'>CONTES</a></li>
+                        <li><a href='?page=logout'>Se deconnecter</a></li>
+                    </ul>
+                </div>
+                <!-- VERSION CONNECTED -->
+
+            <?php endif; ?>
             <!-- Sinon on affiche la version disconnected -->
         <?php else : ?>
 

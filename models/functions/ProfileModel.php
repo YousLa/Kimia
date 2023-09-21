@@ -61,14 +61,14 @@ function createProfile(array $userProfileData): ApiResponse
 function profilePatchField(int $id, string $columnName, mixed $newValue): ApiResponse
 {
 
-    $allowedColumns = ["lastname", "firstname", "pseudo", "phone_number", "email", "street_address", "number_address", "zip_address", "city_address", "filename", "filepath"];
+    $allowedColumns = ["pseudo", "avatar"];
 
     // Vérifier si le nom de colonne est autorisé
     if (!in_array($columnName, $allowedColumns)) {
-        return response(false, null, "Nom de colonne non autorisé");
+        return response(false, null, "Vous n'êtes pas autorisé à modifier cette valeur");
     }
 
-    $query = "UPDATE contact SET $columnName = :newValue WHERE id = :id";
+    $query = "UPDATE profil SET $columnName = :newValue WHERE id = :id";
     $database = getConnection();
 
     $stmt = $database->prepare($query);
@@ -87,7 +87,7 @@ function profilePatchField(int $id, string $columnName, mixed $newValue): ApiRes
 
             return response(true);
         } else {
-            throw new Exception("Erreur lors de la mise à jour");
+            throw new Exception("Erreur lors de la mise à jour des informations de votre profil.");
         }
     } catch (Exception $e) {
         $database->rollBack();
