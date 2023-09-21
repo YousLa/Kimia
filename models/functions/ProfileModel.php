@@ -123,8 +123,6 @@ function getProfile(int $id): ApiResponse
 
     if ($isDone) {
         $profil_i = $stmt->fetch(PDO::FETCH_ASSOC);
-        var_dump($profil_i);
-        die;
         return response(true, $profil_i);
     } else {
         return response(false, null, "Erreur lors de la récupération du profil");

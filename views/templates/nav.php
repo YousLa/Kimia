@@ -1,3 +1,31 @@
+<?php
+
+$fiche = "";
+$profil = "";
+$avatar = "";
+$pseudo = "";
+$error = false;
+$error_message = "";
+
+require_once 'models/functions/ProfileModel.php';
+
+if (isset($_SESSION['id'])) {
+
+    $response = getProfile($_SESSION['id']);
+
+    if ($response->success) {
+        $error = false;
+        $error_message = null;
+
+        $avatar = $response->data['avatar'];
+        $pseudo = $response->data['avatar'];
+    } else {
+        $error = true;
+        $error_message = $response->error;
+    }
+}
+?>
+
 <div id="top">
 
     <nav>
@@ -8,7 +36,8 @@
 
             <!-- TODO Afficher l'avatar avec php -->
             <div id="avatar-catalogue">
-                <img id="user-avatar" src="" alt="Avatar de l'utilisateur">
+                <a href="?page=profil"><img id="user-avatar" src="<?= $avatar ?>" alt="Avatar de l'utilisateur"></a>
+
             </div>
 
             <!-- VERSION CONNECTED -->
