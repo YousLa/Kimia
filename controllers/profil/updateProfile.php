@@ -21,25 +21,20 @@ $error_message = "";
 //     }
 // }
 
-if (isset($_POST['update'], $_POST['pseudo'], $_POST['avatar']) && !empty($_POST['pseudo']) && !empty($_POST['avatar'])) {
+if (isset($_POST['update'])) {
 
     $id = $_SESSION['id'];
 
-    $profil = [
-        'pseudo' => $_POST['pseudo'],
-        'avatar' => $_POST['avatar']
-    ];
+    $pseudo = $_POST['pseudo'];
+    $avatar = $_POST['avatar'];
 
-    foreach ($profil as $field => $value) {
-        $response = profilePatchField($id, $field, $value);
+    $response = profilePatchField($id, $pseudo, $avatar);
 
-
+    if ($response) {
         header('Location : ?page=profile');
-        if (!$response->success) {
-
-            $error = true;
-            $error_message = $response->error;
-        }
+    } else {
+        $error = true;
+        $error_message = $response->error;
     }
 }
 
