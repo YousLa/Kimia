@@ -31,8 +31,10 @@ if (isset($_POST['update'])) {
     $response = profilePatchField($id, $pseudo, $avatar);
 
     if ($response) {
-        header('Location : ?page=profile');
+
+        header('Location: ?page=profile');
     } else {
+
         $error = true;
         $error_message = $response->error;
     }
