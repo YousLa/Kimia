@@ -45,9 +45,7 @@ if (isset($_GET['page'])) {
             ];
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = [];
 
             break;
 

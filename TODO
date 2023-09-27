@@ -18,6 +18,13 @@ TODO :
             ☐ Centre d'aide
             ☐ Se déconnecter
 
+    Création du nouveau router : 
+
+            ✔ router.php @done(23-09-27 15:26)
+                ✔ $view @done(23-09-27 15:26)
+                ✔ $css @done(23-09-27 15:26)
+                ✔ $js @done(23-09-27 15:26)
+
     Création de fonctions :
     
         ResponseModel.php - Réponse structurée : 
