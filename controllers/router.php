@@ -1,78 +1,259 @@
 <?php
 
+$view = "";
+$css = "";
+$js = "";
+
+//! Nouvelle version du routing => View + CSS + JS 🍹
 if (isset($_GET['page'])) {
 
     switch ($_GET['page']) {
-            // Page d'accueil IN/OUT
+
+            // ^ ======================= HOMEPAGE IN/OUT =======================
+
+        case '':
         case 'home':
+
+            // * View 
             if (isset($_SESSION['email'])) {
-                require_once 'controllers/contes/contes.php';
+                $view = 'controllers/contes/contes.php';
             } else {
-                require_once 'controllers/home.php';
+                $view = 'controllers/home.php';
             }
+
+            // * Ressource CSS 
+            $css = array('assets/css/home.css');
+
+            // * JS
+            $js = [
+                'assets/js/slide-homepage.js',
+                'assets/js/avatar.js'
+            ];
+
             break;
 
-            // Page d'inscription - Création du compte 
+            // ^ ======================= INSCRIPTION =======================
+
         case 'signup':
-            require_once 'controllers/session/signupController.php';
+
+            // * View 
+            $view = 'controllers/session/signupController.php';
+
+            // * Ressource CSS 
+            $css = [
+                'assets/css/signup.css'
+            ];
+
+            // * JS
+            $js = [];
+
             break;
 
-            // Affichage du profil (Infos non officielles)
+            // ^ ======================= PROFIL =======================
+
         case 'profile':
-            require_once 'controllers/profil/profileController.php';
+
+            // * View 
+            $view = 'controllers/profil/profileController.php';
+
+            // * Ressource CSS 
+            $css = [
+                'assets/css/profile.css'
+            ];
+
+            // * JS
+            $js = [
+                ''
+            ];
+
             break;
 
-            // Création du profil (Infos non officielles)
+            // ^ ======================= CREATION DU PROFIL =======================
         case 'createProfile':
-            require_once 'controllers/profil/createProfileController.php';
+
+            // * View 
+            $view = 'controllers/profil/createProfileController.php';
+
+            // * Ressource CSS 
+            $css = [
+                '<link rel="stylesheet" href="assets/css/createProfil.css">'
+            ];
+
+            // * JS
+            $js = [
+                ''
+            ];
+
             break;
 
-            // Modification du profil
+            // ^ ======================= MODIFICATION DU PROFIL =======================
+
         case 'updateProfile':
-            require_once 'controllers/profil/updateProfileController.php';
+
+            // * View 
+            $view = 'controllers/profil/updateProfileController.php';
+
+            // * Ressource CSS 
+            $css = [
+                '<link rel="stylesheet" href="assets/css/createProfil.css">'
+            ];
+
+            // * JS
+            $js = [
+                ''
+            ];
+
             break;
 
-            // Affichage du compte (Infos officielle)
+            // ^ ======================= COMPTE =======================
+
         case 'account':
-            require_once 'controllers/user/account.php';
+
+            // * View
+            $view = 'controllers/user/account.php';
+
+            // * Ressource CSS
+            $css = [
+                ''
+            ];
+
+            // * JS
+            $js = [
+                ''
+            ];
+
             break;
 
-            // Modification du compte
+            // ^ ======================= MODIFICATION DU COMPTE =======================
+
         case 'updateaccount':
-            require_once 'controllers/user/updateAccount.php';
+
+            // * View
+            $view = 'controllers/user/updateAccount.php';
+
+            // * Ressource CSS
+            $css = [
+                ''
+            ];
+
+            // * JS
+            $js = [
+                ''
+            ];
+
             break;
 
-            // Page de connexion
+            // ^ ======================= CONNEXION =======================
+
         case 'login':
-            require_once 'controllers/session/loginController.php';
+
+            // * View
+            $view = 'controllers/session/loginController.php';
+
+            // * Ressource CSS
+            $css = [
+                'assets/css/login.css'
+            ];
+
+            // * JS
+            $js = [
+                ''
+            ];
+
             break;
 
-            // Page de déconnexion
+            // ^ ======================= DECONNEXION =======================
+
         case 'logout':
-            require_once 'controllers/session/logoutController.php';
+
+            // * View
+            $view = 'controllers/session/logoutController.php';
+
+            // * Ressource CSS
+            $css = [
+                ''
+            ];
+
+            // * JS
+            $js = [
+                ''
+            ];
+
             break;
 
-            // Fiche descriptif d'un conte
+            // ^ ======================= FICHE DESCRIPTIVE DE CONTE =======================
+
         case 'fiche':
-            require_once 'controllers/contes/fiche.php';
+
+            // * View
+            $view = 'controllers/contes/fiche.php';
+
+            // * Ressource CSS
+            $css = [
+                'assets/css/fiche.css'
+            ];
+
+            // * JS      
+            $js = [
+                ''
+            ];
+
             break;
 
-            // La page sur laquelle la vidéo est lancée
+            // ^ ======================= LECTEUR VIDEO =======================
+
         case 'video':
-            require_once 'controllers/contes/video.php';
+
+            // * View
+            $view = 'controllers/contes/video.php';
+
+            // * Ressource CSS
+            $css = [
+                ''
+            ];
+
+            // * JS 
+            $js = [
+                ''
+            ];
+
             break;
 
-            // Liste des contes
+            // ^ ======================= CATALOGUE CONTES =======================
+
         case 'contes':
-            require_once 'controllers/contes/contes.php';
+
+            // * View
+            $view = 'controllers/contes/contes.php';
+
+            // * Ressource CSS
+            $css = [
+                'assets/css/contes.css'
+            ];
+
+            // * JS
+            $js = [
+                ''
+            ];
+
             break;
 
-            // Page 404 Not Found
+            // ^ ======================= ERROR 404 =======================
+
         default:
-            require_once 'views/errors/fourofour.php';
+
+            // * View
+            $view = 'views/errors/fourofour.php';
+
+            // * Ressource CSS
+            $css = [
+                ''
+            ];
+
+            // * JS
+            $js = [
+                ''
+            ];
             break;
     }
-} else {
-    // S'il n'y a pas de ?page= alors on renvoie vers la page d'accueil
-    require_once 'controllers/home.php';
 }

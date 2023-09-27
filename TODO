@@ -18,6 +18,13 @@ TODO :
             ☐ Centre d'aide
             ☐ Se déconnecter
 
+    Création du nouveau router : 
+
+            ✔ router.php @done(23-09-27 15:26)
+                ✔ $view @done(23-09-27 15:26)
+                ✔ $css @done(23-09-27 15:26)
+                ✔ $js @done(23-09-27 15:26)
+
     Création de fonctions :
     
         ResponseModel.php - Réponse structurée : 
@@ -36,7 +43,7 @@ TODO :
         ProfileModel.php - Profil utilisateur : 
 
             ✔ Function createProfile - Création @done(23-09-17 18:11)
-            ☐ Function profilePatchField - Modification
+            ✔ Function profilePatchField - Modification @done(23-09-27 14:07)
             ☐ Function Avatar - Récupération
 
         ContesModel.php - Contes :
@@ -55,14 +62,14 @@ Création du dossier Profil :
     Controllers :
 
     ✔ createProfileController.php - Création @done(23-09-17 18:17)
-    ☐ profileController.php - Affichage
-    ☐ updateProfilController.php - Modification
+    ✔ profileController.php - Affichage @done(23-09-27 14:07)
+    ✔ updateProfilController.php - Modification @done(23-09-27 14:07)
 
     Views :
 
     ✔ createProfileView.php - Création @done(23-09-17 18:17)
-    ☐ profileView.php - Affichage
-    ☐ updateProfilView.php - Modification
+    ✔ profileView.php - Affichage @done(23-09-27 14:07)
+    ✔ updateProfilView.php - Modification @done(23-09-27 14:08)
 
 Création de la page post inscription JS :
 
