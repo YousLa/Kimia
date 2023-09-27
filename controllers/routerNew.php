@@ -4,6 +4,7 @@ $view = "";
 $css = "";
 $js = "";
 
+//! Nouvelle version du routing => View + CSS + JS 🍹
 if (isset($_GET['page'])) {
 
     switch ($_GET['page']) {
