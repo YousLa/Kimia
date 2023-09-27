@@ -2,6 +2,10 @@
 
 $fiche = "";
 
+$error = false;
+$error_message = "";
+
+
 require_once 'models/database/database.php';
 $database = getConnection();
 
@@ -37,5 +41,6 @@ foreach ($contes as $cle => $conte) {
 
     $fiche .= "</li>";
 }
+
 
 require_once 'views/contes/contes.php';

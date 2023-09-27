@@ -58,21 +58,17 @@ function createProfile(array $userProfileData): ApiResponse
  */
 
 //  TODO
-function profilePatchField(int $id, string $columnName, mixed $newValue): ApiResponse
+function profilePatchField(int $id, string $pseudo, mixed $avatar): ApiResponse
 {
 
-    $allowedColumns = ["lastname", "firstname", "pseudo", "phone_number", "email", "street_address", "number_address", "zip_address", "city_address", "filename", "filepath"];
 
-    // Vérifier si le nom de colonne est autorisé
-    if (!in_array($columnName, $allowedColumns)) {
-        return response(false, null, "Nom de colonne non autorisé");
-    }
-
-    $query = "UPDATE contact SET $columnName = :newValue WHERE id = :id";
+    $query = "UPDATE profil SET pseudo = :pseudo , avatar = :avatar where user_id = :id";
     $database = getConnection();
 
     $stmt = $database->prepare($query);
-    $stmt->bindParam(":newValue", $newValue);
+
+    $stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+    $stmt->bindParam(':avatar', $avatar, PDO::PARAM_STR);
     $stmt->bindParam(":id", $id, PDO::PARAM_INT);
 
     $database->beginTransaction();
@@ -87,13 +83,29 @@ function profilePatchField(int $id, string $columnName, mixed $newValue): ApiRes
 
             return response(true);
         } else {
-            throw new Exception("Erreur lors de la mise à jour");
+            throw new Exception("Erreur lors de la mise à jour des informations de votre");
         }
     } catch (Exception $e) {
         $database->rollBack();
         $database = null;
         return response(false, null, $e->getMessage());
     }
+}
+
+function updateProfil($id, $pseudo, $avatar)
+{
+
+
+    $database = getConnection();
+    $sql = "UPDATE profil SET pseudo = :pseudo , avatar = :avatar where user_id = :id";
+
+    $stmt = $database->prepare($sql);
+
+    $stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+    $stmt->bindParam(':avatar', $avatar, PDO::PARAM_STR);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+    $stmt->execute();
 }
 
 /**
@@ -123,8 +135,6 @@ function getProfile(int $id): ApiResponse
 
     if ($isDone) {
         $profil_i = $stmt->fetch(PDO::FETCH_ASSOC);
-        var_dump($profil_i);
-        die;
         return response(true, $profil_i);
     } else {
         return response(false, null, "Erreur lors de la récupération du profil");

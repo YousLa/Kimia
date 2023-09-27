@@ -1,5 +1,9 @@
 <?php
 
+$view = "";
+$css = "";
+$js = "";
+
 if (isset($_GET['page'])) {
 
     switch ($_GET['page']) {
@@ -8,8 +12,14 @@ if (isset($_GET['page'])) {
             if (isset($_SESSION['email'])) {
                 require_once 'controllers/contes/contes.php';
             } else {
-                require_once 'controllers/home.php';
+                $view = 'controllers/home.php';
             }
+
+            $css = '<link rel="stylesheet" href="assets/css/home.css">';
+
+            $js =     '<script src="assets/js/slide-homepage.js" defer></script>';
+
+
             break;
 
             // Page d'inscription - Création du compte 
@@ -19,7 +29,7 @@ if (isset($_GET['page'])) {
 
             // Affichage du profil (Infos non officielles)
         case 'profile':
-            require_once 'controllers/profil/profileController.php';
+            require_once 'controllers/profil/profile.php';
             break;
 
             // Création du profil (Infos non officielles)
@@ -29,7 +39,7 @@ if (isset($_GET['page'])) {
 
             // Modification du profil
         case 'updateProfile':
-            require_once 'controllers/profil/updateProfileController.php';
+            require_once 'controllers/profil/updateProfile.php';
             break;
 
             // Affichage du compte (Infos officielle)
