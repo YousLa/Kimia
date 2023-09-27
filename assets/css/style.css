@@ -8,7 +8,7 @@
   src: url(../fonts/Raleway/static/Raleway-Thin.ttf);
 }
 
-* {
+{
   background-color: #221D2E;
   font-family: "Raleway";
   color: #F2F2F2;
@@ -30,6 +30,7 @@ nav {
 }
 
 #logo-header {
+
   width: 9rem;
 }
 
@@ -94,3 +95,4 @@ p {
 }
 
 /*# sourceMappingURL=style.css.map */
+

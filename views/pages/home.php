@@ -1,7 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    
+</head>
+<body>
+    
+</body>
+</html>
+
+
 <main>
 
     <!-- Section 1 -->
-    <div class="container-section1">
+    <section class="hero-section">   
         <div id="section1">
 
             <p>Embarquez pour un voyage narratif avec Kimia, la plateforme de streaming de contes pour tous.</p>
@@ -13,9 +28,11 @@
             </div>
 
         </div>
-    </div>
+    
     <h1>Seulement sur Kimia</h1>
 
+    </section>
+    
 
     <!-- Section 2 -->
     <div id="section2">
