@@ -16,6 +16,6 @@ require_once 'views/templates/header.php';
 
 require_once 'views/templates/nav.php';
 
-require_once 'controllers/' . $view . '.php';
+require_once $view;
 
 require_once 'views/templates/footer.php';

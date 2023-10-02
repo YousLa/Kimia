@@ -1,6 +1,6 @@
 <?php
 
-$view = 'home';
+$view = "";
 $css = array('assets/css/home.css');
 $js = array(
     'assets/js/slide-homepage.js',
@@ -18,9 +18,9 @@ if (isset($_GET['page'])) {
 
             // * View 
             if (isset($_SESSION['email'])) {
-                $view = 'contes/contesController';
+                $view =  'controllers/contes/contesController.php';
             } else {
-                $view = 'home';
+                $view =  'views/pages/homeView.php';
             }
 
             // * Ressource CSS 
@@ -39,7 +39,7 @@ if (isset($_GET['page'])) {
         case 'signup':
 
             // * View 
-            $view = 'session/signupController';
+            $view =  'controllers/session/signupController.php';
 
             // * Ressource CSS 
             $css = array(
@@ -56,7 +56,7 @@ if (isset($_GET['page'])) {
         case 'profile':
 
             // * View 
-            $view = 'profil/profileController';
+            $view =  'controllers/profil/profileController.php';
 
             // * Ressource CSS 
             $css = array(
@@ -72,7 +72,7 @@ if (isset($_GET['page'])) {
         case 'createProfile':
 
             // * View 
-            $view = 'profil/createProfileController';
+            $view =  'controllers/profil/createProfileController.php';
 
             // * Ressource CSS 
             $css = array(
@@ -89,7 +89,7 @@ if (isset($_GET['page'])) {
         case 'updateProfile':
 
             // * View 
-            $view = 'profil/updateProfileController';
+            $view =  'controllers/profil/updateProfileController.php';
 
             // * Ressource CSS 
             $css = array(
@@ -106,7 +106,7 @@ if (isset($_GET['page'])) {
         case 'account':
 
             // * View
-            $view = 'user/account';
+            $view =  'controllers/user/account.php';
 
             // * Ressource CSS
             $css = array();
@@ -121,7 +121,7 @@ if (isset($_GET['page'])) {
         case 'updateaccount':
 
             // * View
-            $view = 'user/updateAccount';
+            $view =  'controllers/user/updateAccount.php';
 
             // * Ressource CSS
             $css = array();
@@ -136,7 +136,7 @@ if (isset($_GET['page'])) {
         case 'login':
 
             // * View
-            $view = 'session/loginController';
+            $view =  'controllers/session/loginController.php';
 
             // * Ressource CSS
             $css = array(
@@ -153,7 +153,7 @@ if (isset($_GET['page'])) {
         case 'logout':
 
             // * View
-            $view = 'session/logoutController';
+            $view =  'controllers/session/logoutController.php';
 
             // * Ressource CSS
             $css = array();
@@ -168,7 +168,7 @@ if (isset($_GET['page'])) {
         case 'fiche':
 
             // * View
-            $view = 'contes/ficheController';
+            $view =  'controllers/contes/ficheController.php';
 
             // * Ressource CSS
             $css = array(
@@ -185,7 +185,7 @@ if (isset($_GET['page'])) {
         case 'video':
 
             // * View
-            $view = 'contes/videoController';
+            $view =  'controllers/contes/videoController.php';
 
             // * Ressource CSS
             $css = array();
@@ -200,7 +200,7 @@ if (isset($_GET['page'])) {
         case 'contes':
 
             // * View
-            $view = 'contes/contes';
+            $view =  'controllers/contes/contes.php';
 
             // * Ressource CSS
             $css = array(
@@ -217,7 +217,7 @@ if (isset($_GET['page'])) {
         default:
 
             // * View
-            $view = 'views/errors/fourofour';
+            $view =  'views/errors/fourofour.php';
 
             // * Ressource CSS
             $css = array();
@@ -227,4 +227,10 @@ if (isset($_GET['page'])) {
             break;
     }
 } else {
+    // * View 
+    if (isset($_SESSION['email'])) {
+        $view =  'controllers/contes/contesController.php';
+    } else {
+        $view =  'views/pages/homeView.php';
+    }
 }
