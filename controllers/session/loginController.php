@@ -9,7 +9,7 @@ $error_message = null;
 
 if (isset($_POST['login'])) {
 
-    require_once 'models/functions/UserModel.php';
+
 
     $email = trim(htmlspecialchars($_POST['email']));
     $password = trim(htmlspecialchars($_POST['password']));

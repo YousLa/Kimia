@@ -10,7 +10,7 @@ unset($_SESSION['role']);
 session_destroy();
 
 // Redirection vers la page home - hors connexion
-header('Location: ?page=homeView');
+header('Location: ?page=home');
 
 ?>
 

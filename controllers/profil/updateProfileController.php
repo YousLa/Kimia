@@ -46,6 +46,6 @@ if (isset($_POST['update'])) {
 
 
 # On fait appel au fichier update profil visible (views). C'est ce fichier qui est affiché sur l'index.php grâce au router 
-require_once 'views/profil/updateProfile.php';
+require_once 'views/profil/updateProfileView.php';
 
 ?>

@@ -4,7 +4,7 @@ $view = "";
 $css = array('assets/css/home.css');
 $js = array(
     'assets/js/slide-homepage.js',
-    'assets/js/avatar.js'
+    'assets/js/assets/js/avatar.js'
 );
 
 //! Nouvelle version du routing => View + CSS + JS 🍹
@@ -28,8 +28,7 @@ if (isset($_GET['page'])) {
 
             // * JS
             $js = array(
-                'assets/js/slide-homepage.js',
-                'assets/js/avatar.js'
+                'assets/js/slide-homepage.js'
             );
 
             break;
@@ -76,11 +75,13 @@ if (isset($_GET['page'])) {
 
             // * Ressource CSS 
             $css = array(
-                '<link rel="stylesheet" href="assets/css/createProfil.css">'
+                'assets/css/createProfil.css'
             );
 
             // * JS
-            $js = array();
+            $js = array(
+                'assets/js/avatar.js'
+            );
 
             break;
 
@@ -93,11 +94,13 @@ if (isset($_GET['page'])) {
 
             // * Ressource CSS 
             $css = array(
-                '<link rel="stylesheet" href="assets/css/createProfil.css">'
+                'assets/css/createProfil.css'
             );
 
             // * JS
-            $js = array();
+            $js = array(
+                'assets/js/avatar.js'
+            );
 
             break;
 

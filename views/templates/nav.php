@@ -14,8 +14,16 @@ if (isset($_SESSION['id'])) {
         $error = false;
         $error_message = null;
 
-        $avatar = $response->data['avatar'];
-        $pseudo = $response->data['pseudo'];
+        switch ($_GET['page']) {
+            case 'createProfile':
+                break;
+
+            default:
+
+                $avatar = $response->data['avatar'];
+                $pseudo = $response->data['pseudo'];
+                break;
+        }
     } else {
         $error = true;
         $error_message = $response->error;
@@ -35,11 +43,23 @@ if (isset($_SESSION['id'])) {
 
             <?php else : ?>
 
-                <!-- TODO Afficher l'avatar avec php -->
-                <div id="avatar-catalogue">
-                    <a href="?page=profile"><img id="user-avatar" src="<?= $avatar ?>" alt="Avatar de l'utilisateur"></a>
+                <?php
+                switch ($_GET['page']) {
+                    case 'createProfile':
 
-                </div>
+                        break;
+
+                    default:
+
+                        echo "<div id='avatar-catalogue'>";
+                        echo "<a href='?page=profile'><img id='user-avatar' src='$avatar' alt='Avatar de l'utilisateur'></a>";
+
+                        echo "</div>";
+                        break;
+                }
+                ?>
+
+
 
                 <!-- VERSION CONNECTED -->
                 <div id="menu-avatar">
