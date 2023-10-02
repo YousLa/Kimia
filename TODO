@@ -44,7 +44,7 @@ TODO :
 
             ✔ Function createProfile - Création @done(23-09-17 18:11)
             ✔ Function profilePatchField - Modification @done(23-09-27 14:07)
-            ☐ Function Avatar - Récupération
+            ✔ Function getProfile - Récupération @done(23-10-02 08:55)
 
         ContesModel.php - Contes :
 

@@ -11,7 +11,6 @@
     <?php
 
     foreach ($css as $value) {
-        var_dump(88, $value);
         echo '<link rel="stylesheet" href="' . $value . '">';
     }
 

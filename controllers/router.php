@@ -1,8 +1,11 @@
 <?php
 
-$view = "";
-$css = "";
-$js = "";
+$view = 'home';
+$css = array('assets/css/home.css');
+$js = array(
+    'assets/js/slide-homepage.js',
+    'assets/js/avatar.js'
+);
 
 //! Nouvelle version du routing => View + CSS + JS 🍹
 if (isset($_GET['page'])) {
@@ -11,24 +14,23 @@ if (isset($_GET['page'])) {
 
             // ^ ======================= HOMEPAGE IN/OUT =======================
 
-        case '':
         case 'home':
 
             // * View 
             if (isset($_SESSION['email'])) {
-                $view = 'controllers/contes/contes.php';
+                $view = 'contes/contes';
             } else {
-                $view = 'controllers/home.php';
+                $view = 'home';
             }
 
             // * Ressource CSS 
             $css = array('assets/css/home.css');
 
             // * JS
-            $js = [
+            $js = array(
                 'assets/js/slide-homepage.js',
                 'assets/js/avatar.js'
-            ];
+            );
 
             break;
 
@@ -37,15 +39,15 @@ if (isset($_GET['page'])) {
         case 'signup':
 
             // * View 
-            $view = 'controllers/session/signupController.php';
+            $view = 'session/signupController';
 
             // * Ressource CSS 
-            $css = [
+            $css = array(
                 'assets/css/signup.css'
-            ];
+            );
 
             // * JS
-            $js = [];
+            $js = array();
 
             break;
 
@@ -54,17 +56,15 @@ if (isset($_GET['page'])) {
         case 'profile':
 
             // * View 
-            $view = 'controllers/profil/profileController.php';
+            $view = 'profil/profileController';
 
             // * Ressource CSS 
-            $css = [
+            $css = array(
                 'assets/css/profile.css'
-            ];
+            );
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -72,17 +72,15 @@ if (isset($_GET['page'])) {
         case 'createProfile':
 
             // * View 
-            $view = 'controllers/profil/createProfileController.php';
+            $view = 'profil/createProfileController';
 
             // * Ressource CSS 
-            $css = [
+            $css = array(
                 '<link rel="stylesheet" href="assets/css/createProfil.css">'
-            ];
+            );
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -91,17 +89,15 @@ if (isset($_GET['page'])) {
         case 'updateProfile':
 
             // * View 
-            $view = 'controllers/profil/updateProfileController.php';
+            $view = 'profil/updateProfileController';
 
             // * Ressource CSS 
-            $css = [
+            $css = array(
                 '<link rel="stylesheet" href="assets/css/createProfil.css">'
-            ];
+            );
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -110,17 +106,13 @@ if (isset($_GET['page'])) {
         case 'account':
 
             // * View
-            $view = 'controllers/user/account.php';
+            $view = 'user/account';
 
             // * Ressource CSS
-            $css = [
-                ''
-            ];
+            $css = array();
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -129,17 +121,13 @@ if (isset($_GET['page'])) {
         case 'updateaccount':
 
             // * View
-            $view = 'controllers/user/updateAccount.php';
+            $view = 'user/updateAccount';
 
             // * Ressource CSS
-            $css = [
-                ''
-            ];
+            $css = array();
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -148,17 +136,15 @@ if (isset($_GET['page'])) {
         case 'login':
 
             // * View
-            $view = 'controllers/session/loginController.php';
+            $view = 'session/loginController';
 
             // * Ressource CSS
-            $css = [
+            $css = array(
                 'assets/css/login.css'
-            ];
+            );
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -167,17 +153,13 @@ if (isset($_GET['page'])) {
         case 'logout':
 
             // * View
-            $view = 'controllers/session/logoutController.php';
+            $view = 'session/logoutController';
 
             // * Ressource CSS
-            $css = [
-                ''
-            ];
+            $css = array();
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -186,17 +168,15 @@ if (isset($_GET['page'])) {
         case 'fiche':
 
             // * View
-            $view = 'controllers/contes/fiche.php';
+            $view = 'contes/fiche';
 
             // * Ressource CSS
-            $css = [
+            $css = array(
                 'assets/css/fiche.css'
-            ];
+            );
 
             // * JS      
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -205,17 +185,13 @@ if (isset($_GET['page'])) {
         case 'video':
 
             // * View
-            $view = 'controllers/contes/video.php';
+            $view = 'contes/video';
 
             // * Ressource CSS
-            $css = [
-                ''
-            ];
+            $css = array();
 
             // * JS 
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -224,17 +200,15 @@ if (isset($_GET['page'])) {
         case 'contes':
 
             // * View
-            $view = 'controllers/contes/contes.php';
+            $view = 'contes/contes';
 
             // * Ressource CSS
-            $css = [
+            $css = array(
                 'assets/css/contes.css'
-            ];
+            );
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -243,17 +217,14 @@ if (isset($_GET['page'])) {
         default:
 
             // * View
-            $view = 'views/errors/fourofour.php';
+            $view = 'views/errors/fourofour';
 
             // * Ressource CSS
-            $css = [
-                ''
-            ];
+            $css = array();
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
             break;
     }
+} else {
 }
