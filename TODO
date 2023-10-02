@@ -46,12 +46,6 @@ TODO :
             ✔ Function profilePatchField - Modification @done(23-09-27 14:07)
             ✔ Function getProfile - Récupération @done(23-10-02 08:55)
 
-        ContesModel.php - Contes :
-
-            ☐ Function createContesController - Création
-            ☐ Function contesController - Affichage
-            ☐ Function updateContesController- Modification
-
 
 TODO :
 
@@ -99,14 +93,14 @@ Modification du dossier Contes :
     Controllers :
 
     ☐ createContesController.php - Création 
-    ☐ contesController.php - Affichage 
+    ✔ contesController.php - Affichage @done(23-10-02 10:43)
     ☐ updateContesController.php - Modification
     ☐ deleteContesController.php - Suppression
 
     Views : 
 
     ☐ createContesView.php - Création 
-    ☐ contesView.php - Affichage 
+    ✔ contesView.php - Affichage @done(23-10-02 10:43)
     ☐ updateContesView.php - Modification
     ☐ deleteContesView.php - Suppression
 

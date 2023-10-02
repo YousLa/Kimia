@@ -56,8 +56,6 @@ function createProfile(array $userProfileData): ApiResponse
  * @param $newValue mixed La nouvelle valeur
  * @return ApiResponse
  */
-
-//  TODO
 function profilePatchField(int $id, string $pseudo, mixed $avatar): ApiResponse
 {
 
@@ -94,8 +92,6 @@ function profilePatchField(int $id, string $pseudo, mixed $avatar): ApiResponse
 
 function updateProfil($id, $pseudo, $avatar)
 {
-
-
     $database = getConnection();
     $sql = "UPDATE profil SET pseudo = :pseudo , avatar = :avatar where user_id = :id";
 

@@ -18,7 +18,7 @@ if (isset($_GET['page'])) {
 
             // * View 
             if (isset($_SESSION['email'])) {
-                $view = 'contes/contes';
+                $view = 'contes/contesController';
             } else {
                 $view = 'home';
             }
@@ -168,7 +168,7 @@ if (isset($_GET['page'])) {
         case 'fiche':
 
             // * View
-            $view = 'contes/fiche';
+            $view = 'contes/ficheController';
 
             // * Ressource CSS
             $css = array(
@@ -185,7 +185,7 @@ if (isset($_GET['page'])) {
         case 'video':
 
             // * View
-            $view = 'contes/video';
+            $view = 'contes/videoController';
 
             // * Ressource CSS
             $css = array();
