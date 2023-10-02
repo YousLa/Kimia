@@ -1,5 +1,5 @@
 
-main {
+/*main {
   margin: auto;
   text-align: center;
 }
@@ -61,7 +61,16 @@ h1 {
 h2 {
   margin: 1.5rem;
   font-size: x-large;
+}*/
+
+
+.home-hero-section{
+
+  height: 100vh;
+  background-color: aquamarine;
+  
 }
+
 
 #section2 p {
   margin: 2rem;

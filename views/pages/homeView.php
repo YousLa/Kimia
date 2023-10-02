@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="home.css">
     <title>Home</title>
 
 </head>
@@ -19,13 +20,13 @@
 <main>
 
     <!-- Section 1 -->
-    <section class="hero-section">
-        <div id="section1">
+    <section  class="home-hero-section">
+        <div>
 
             <p>Embarquez pour un voyage narratif avec Kimia, la plateforme de streaming de contes pour tous.</p>
 
 
-            <div class="commencer">
+            <div>
                 <input class="input-forms" type="text" placeholder="Adresse Email">
                 <button id='signup'><a href='?page=signup'>Commencer</a></button>
             </div>
