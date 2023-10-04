@@ -1,63 +1,72 @@
-/* Font */
+/* #region Font */
 @font-face {
   font-family: "Raleway";
   src: url(../fonts/Raleway/static/Raleway-Regular.ttf);
 }
+
 @font-face {
   font-family: "Raleway-thin";
   src: url(../fonts/Raleway/static/Raleway-Thin.ttf);
 }
 
-{
-  background-color: #221D2E;
-  font-family: "Raleway";
-  color: #F2F2F2;
+@font-face {
+  font-family: "Raleway-medium";
+  src: url(../fonts/Raleway/static/Raleway-Medium.ttf);
 }
 
+@font-face {
+  font-family: "Raleway-regular";
+  src: url(../fonts/Raleway/static/Raleway-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Raleway-light";
+  src: url(../fonts/Raleway/static/Raleway-Light.ttf);
+}
+
+@font-face {
+  font-family: "Raleway-extralight";
+  src: url(../fonts/Raleway/static/Raleway-ExtraLight.ttf);
+}
+
+/* #endregion */
+
+/* #region */
 body {
+  width: 100%;
   background-color: #221D2E;
   font-family: "Raleway";
   color: #F2F2F2;
+  line-height: normal;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* #endregion */
+
+/* #region navbar */
+
+/* * Parent => nav */
 #top {
   margin: 2rem 7rem 0 7rem;
 }
 
+/* * Parent => logo - menu - button  */
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
+/* * Logo de la barre de navigation */
 #logo-header {
-
-  width: 9rem;
+  width: 14rem;
 }
 
-#logo-footer {
-  width: 5rem;
-  background-color: #F2F2F2;
-}
-
-footer {
-  padding: 0.5rem;
-  bottom: 0;
-  text-align: center;
-  color: #221D2E;
-  background-color: #F2F2F2;
-}
-footer > div {
-  background-color: #F2F2F2;
-  font-size: xx-small;
-}
-footer > div > p {
-  margin: 0.2rem;
-  font-family: "Raleway";
-  background-color: #F2F2F2;
-  color: #221D2E;
-}
-
-button {
+/* * Button header */
+#login {
   width: 8rem;
   height: 2.5rem;
   padding: 0.5rem;
@@ -65,34 +74,86 @@ button {
   border-radius: 0.3rem;
   border: none;
 }
-button > a {
-  text-decoration: none;
+
+/* * Lien button login */
+#login>a {
   background-color: #9747FF;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.0325rem;
+  color: #F2F2F2;
 }
 
-.input-forms {
-  width: 20rem;
-  height: 2rem;
-  border-radius: 0.3rem;
-  border: 2px solid #F2F2F2;
-  opacity: 0.6;
+
+/* #endregion */
+
+/* #region footer */
+
+/* * Logo du le footer */
+#logo-footer {
+  width: 9rem;
+  background-color: #F2F2F2;
 }
 
-h1 {
-  margin-top: 2rem;
-  font-size: large;
+/* * Parent => Logo - div */
+footer {
+  padding: 0.5rem;
+  bottom: 0;
+  text-align: center;
+  color: #221D2E;
+  background-color: #F2F2F2;
 }
 
-h2 {
-  margin-top: 2rem;
-  font-size: large;
+/* * Parent => p */
+footer>div {
+  background-color: #F2F2F2;
+  font-size: medium;
 }
 
-p {
-  margin-top: 2rem;
-  font-size: large;
+/* * Parent => a */
+footer>div>p {
+  margin: 0.2rem;
+  font-family: "Raleway";
+  background-color: #F2F2F2;
+  color: #221D2E;
 }
 
-/*# sourceMappingURL=style.css.map */
+footer>div>p>a {
+  color: #221D2E;
+}
 
+/* #endregion */
+
+
+/* #region Responsive */
+
+
+/* ^ ====================== Tablet ======================*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* 
+  #top {
+    border: solid 1px blue;
+  } */
+
+  /* * Logo de la barre de navigation */
+  #logo-header {
+    width: 12rem;
+  }
+}
+
+/* ^ ====================== Smartphone ====================== */
+@media screen and (max-width: 767px) {
+
+  /* #top {
+    border: solid 1px yellow;
+  } */
+
+  #top {
+    margin: 2rem 2rem 0 2rem;
+  }
+
+  #logo-header {
+    width: 10rem;
+  }
+}
+
+/* endregion */
