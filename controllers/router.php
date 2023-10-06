@@ -1,7 +1,9 @@
 <?php
 
 $view = "";
-$css = array('assets/css/home.css');
+$css = array(
+    'assets/css/home.css'
+);
 $js = array(
     'assets/js/slide-homepage.js',
     'assets/js/assets/js/avatar.js'
@@ -24,7 +26,10 @@ if (isset($_GET['page'])) {
             }
 
             // * Ressource CSS 
-            $css = array('assets/css/home.css');
+            $css = array(
+                'assets/css/home.css',
+                'assets/css/catalogue.css'
+            );
 
             // * JS
             $js = array(
