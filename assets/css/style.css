@@ -29,6 +29,12 @@
   src: url(../fonts/Raleway/static/Raleway-ExtraLight.ttf);
 }
 
+@font-face {
+  font-family: "Savedbyzero";
+  src: url(../fonts/saved_by_zero/saved\ by\ zero\ rg.otf);
+}
+
+
 /* #endregion */
 
 /* #region */

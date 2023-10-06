@@ -5,7 +5,9 @@
 
 <form action="?page=login" method="POST">
 
-    <h1 class="loginh1">Connexion</h1>
+    <h1 class="loginh1">S'identifier</h1>
+
+   
 
     <?php if ($error) {
         // Lui donner un comportement css alert pour qu'il se distingue des autres élément de la page
@@ -15,7 +17,7 @@
     <div class="login-input-box">
 
     <input type="text" name="email" id="email" autocomplete="off"  value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>">
-    <label for="">E-mail</label>
+    <label for="">Adresse e-mail</label>
 
     </div>
 
@@ -33,7 +35,7 @@
     </div> -->
 
     <div >
-    <button type="submit" name="login" class="login-btn">Se connecter</button>
+    <button type="submit" name="login" class="login-btn">Terminer</button>
     </div>
 
 
