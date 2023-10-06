@@ -1,0 +1,9 @@
+/* Class qui reprend les contes de la catégorie */
+.catalogues {
+    border: solid 2px green;
+}
+
+/* Affiche du conte */
+.affiche {
+    width: 15rem;
+}

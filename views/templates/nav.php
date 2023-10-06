@@ -57,10 +57,10 @@ if (isset($_SESSION['id'])) {
                         echo "<a href='?page=account'>Compte</a>";
                         // Si l'utilisateur veut revenir sur catalogue il n'aura qu'à cliquer sur le logo
                         // echo "<a href='?page=contes'>C</a>";
-                        echo "<a href='?page=logout'>Se deconnecter</a>";
-                        echo "<a href='#'>Nous contacter</a>";
-                        echo "<a href='#'>Conditions d'utilisation</a>";
                         echo "<a href='#'>À propos</a>";
+                        echo "<a href='#'>contact</a>";
+                        echo "<a href='#'>CGU</a>";
+                        echo "<a href='?page=logout'>Déconnexion</a>";
                         echo "</div>";
                         echo "</div>";
                         break;

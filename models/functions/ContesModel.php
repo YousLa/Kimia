@@ -15,14 +15,49 @@ require_once 'models/database/database.php';
 ^ Fonctionnalités liées aux contes
 */
 
+// ! ================== AFFICHER LES CATEGORIES ==================
+
+/**
+ * Permet de récupérer la liste des catégories sous forme d'un tableau reprenant toutes les colonnes de la base de données
+ * @return ApiResponse
+ */
+function getCategory(): ApiResponse
+{
+    $query = "
+        SELECT
+	        *
+        FROM
+    	    category
+            ";
+
+
+    // Ouverture du flux
+    $database = getConnection();
+
+    $stmt = $database->prepare($query);
+    $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $isDone = $stmt->execute();
+
+    // Nettoyage du flux
+    $database = null;
+
+    if ($isDone) {
+        $categories = $stmt;
+        return response(true, $categories);
+    } else {
+        return response(false, null, "Erreur lors de la récupération des contes");
+    }
+}
+
 // ! ================== AFFICHER LES CONTES ==================
 
 /**
  * Permet de récupérer la liste des conttes sous forme d'un tableau reprenant toutes les colonnes de la base de données
  * @return ApiResponse
  */
-function getContes(): ApiResponse
+function getContes($categoryID): ApiResponse
 {
+    // LEFT JOIN si conte sans catégorie
     $query = "
         SELECT
 	        *
@@ -32,15 +67,19 @@ function getContes(): ApiResponse
     	    conte_category 
         ON 	
             conte.id = conte_category.conte_id
-        JOIN
+         JOIN
     	    category 
         ON 	
-            conte_category.category_id = category.id";
+            conte_category.category_id = category.id
+        WHERE
+            category.id = :categoryID  
+        ";
 
     // Ouverture du flux
     $database = getConnection();
 
     $stmt = $database->prepare($query);
+    $stmt->bindParam(":categoryID", $categoryID, PDO::PARAM_STR);
     $stmt->fetchAll(PDO::FETCH_ASSOC);
     $isDone = $stmt->execute();
 
