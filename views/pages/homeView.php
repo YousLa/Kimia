@@ -12,8 +12,8 @@
                 <div class="input-field">
 
                     <div id="interne">
-                        <input type="text" id="email">
-                        <label for="email">Adresse e-mail</label>
+                        <input type="text" id="email-top" placeholder=" ">
+                        <label for="email-top">Adresse e-mail</label>
                     </div>
 
                 </div>
@@ -89,12 +89,13 @@
         <h2>Kimia vous accompagne !</h2>
 
         <div id="plateformes">
-
+            <img src="assets/img/homepage/plateformes/logo knt.png" alt="">
+            <!-- 
             <img src="assets/img/homepage/plateformes/Kimia-pc.svg" alt="">
 
             <img src="assets/img/homepage/plateformes/Kimia-tablette.svg" alt="">
 
-            <img src="assets/img/homepage/plateformes/Kimia-phone.svg" alt="">
+            <img src="assets/img/homepage/plateformes/Kimia-phone.svg" alt=""> -->
         </div>
 
         <div class="commencer bottom">
@@ -104,8 +105,8 @@
                 <div class="input-field">
 
                     <div id="interne">
-                        <input type="text" id="email">
-                        <label for="email">Adresse e-mail</label>
+                        <input type="text" id="email-bot" placeholder=" ">
+                        <label for="email-bot">Adresse e-mail</label>
                     </div>
 
                 </div>

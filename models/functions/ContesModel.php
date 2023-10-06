@@ -84,6 +84,7 @@ function getConteById(): ApiResponse
     $database = null;
 
     if ($isDone) {
+
         $conte = $stmt->fetchAll()[0];
         return response(true, $conte);
     } else {
