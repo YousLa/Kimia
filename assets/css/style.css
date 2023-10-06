@@ -86,6 +86,64 @@ nav {
 
 /* #endregion */
 
+
+/* #region menu avatar */
+
+/* Image Avatar */
+#user-avatar {
+  height: 3rem;
+  border: solid #F2F2F2 1px;
+  border-radius: 5%;
+}
+
+
+/* Styles pour le dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Styles pour le bouton de déclenchement du dropdown (votre avatar) */
+.dropbtn {
+  cursor: pointer;
+}
+
+/* Styles pour le contenu du dropdown (initialement caché) */
+#dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9747FF;
+  min-width: 15rem;
+  z-index: 1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Styles pour les liens du dropdown */
+#dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #F2F2F2;
+  font-size: medium;
+}
+
+/* Changement de couleur des liens au survol */
+#dropdown-content a:hover {
+  background-color: #221D2E;
+  color: #F2F2F2;
+}
+
+/* Affichage du contenu du dropdown lorsque le bouton est survolé */
+.dropdown:hover #dropdown-content {
+  display: block;
+}
+
+
+
+
+/* #endregion */
+
 /* #region footer */
 
 /* * Logo du le footer */
@@ -157,53 +215,3 @@ footer>div>p>a {
 }
 
 /* endregion */
-
-/* #region avatar */
-
-/* Image Avatar */
-#user-avatar {
-  height: 3rem;
-  border: solid #F2F2F2 1px;
-  border-radius: 5%;
-}
-
-button #user-avatar {}
-
-/* Bouton avatar */
-
-
-/* Menu avatar */
-/* .dropdown {
-  position: relative;
-  display: inline-block;
-} */
-
-/* Contenu du menu avatar */
-/* .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: #F2F2F2;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #9747FF;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-} */
-
-
-
-
-/* #endregion */

@@ -51,28 +51,23 @@ if (isset($_SESSION['id'])) {
                     default:
 
                         echo "<div class='dropdown'>";
-                        echo "<button class='dropbtn'><img id='user-avatar' src='$avatar' alt='Avatar de l'utilisateur'></button>";
+                        echo "<img id='user-avatar' class='dropbtn' src='$avatar' alt='Avatar de l'utilisateur'>";
                         echo "<div id='dropdown-content'>";
-                        echo "<a href='?page=profile'>PROFIL</a>";
-                        echo "<a href='?page=account'>COMPTE</a>";
-                        echo "<a href='?page=contes'>CONTES</a>";
+                        echo "<a href='?page=profile'>Profil</a>";
+                        echo "<a href='?page=account'>Compte</a>";
+                        // Si l'utilisateur veut revenir sur catalogue il n'aura qu'à cliquer sur le logo
+                        // echo "<a href='?page=contes'>C</a>";
                         echo "<a href='?page=logout'>Se deconnecter</a>";
+                        echo "<a href='#'>Nous contacter</a>";
+                        echo "<a href='#'>Conditions d'utilisation</a>";
+                        echo "<a href='#'>À propos</a>";
                         echo "</div>";
                         echo "</div>";
                         break;
                 }
                 ?>
 
-
-
-                <!-- VERSION CONNECTED -->
-
-                <ul>
-                    <!-- <li><a href='?page=profil'>PROFIL</a></li> -->
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+    </nav>
 </div>
 <!-- VERSION CONNECTED -->
 
