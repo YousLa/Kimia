@@ -8,7 +8,7 @@
 
         <div class="signup-input-box" >
 
-        <h1 class="signuph1">Inscription</h1>
+        <h1 class="signuph1">Créer un mot de passe pour activer votre compte</h1>
 
         <?php if ($error) {
             // Lui donner un comportement css alert pour qu'il se distingue des autres élément de la page
@@ -19,7 +19,7 @@
     <div class="signup-form-box1">
 
         <input type="text" name="email" id="email" autocomplete="off"  value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>">
-        <label for="">Email</label>
+        <label for="">Adresse e-mail</label>
 
     </div> 
 
@@ -39,14 +39,15 @@
 
     </div>
 
+</div>
 
     <div>
 
-        <button type="submit" name="register">S'inscrire</button>
+        <button type="submit" name="register" class="btn-sign">Terminer</button>
 
     </div>    
 
-</div>
+
 
 
     </form>
@@ -55,4 +56,3 @@
 
 </section>
 
-<h3>test</h3>

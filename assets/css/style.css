@@ -7,12 +7,13 @@
   font-family: "Raleway-thin";
   src: url(../fonts/Raleway/static/Raleway-Thin.ttf);
 }
-
-{
-  background-color: #221D2E;
-  font-family: "Raleway";
-  color: #F2F2F2;
+@font-face {
+  font-family: "Savedbyzero";
+  src: url(../fonts/saved_by_zero/saved\ by\ zero\ rg.otf);
 }
+
+
+
 
 body {
   background-color: #221D2E;
@@ -45,6 +46,7 @@ footer {
   text-align: center;
   color: #221D2E;
   background-color: #F2F2F2;
+ 
 }
 footer > div {
   background-color: #F2F2F2;
@@ -55,6 +57,7 @@ footer > div > p {
   font-family: "Raleway";
   background-color: #F2F2F2;
   color: #221D2E;
+  font-size: 1.5em;
 }
 
 button {
@@ -64,11 +67,13 @@ button {
   background-color: #9747FF;
   border-radius: 0.3rem;
   border: none;
+ 
 }
 button > a {
   text-decoration: none;
   background-color: #9747FF;
   font-size: 1rem;
+  color:#F2F2F2;
 }
 
 .input-forms {
@@ -87,6 +92,17 @@ h1 {
 h2 {
   margin-top: 2rem;
   font-size: large;
+}
+.h2-footer{
+  font-family:"Savedbyzero";
+  color: #9747FF;
+  letter-spacing: 0.5em;
+  padding-bottom: 5px;
+  
+}
+
+.a-h2-footer{
+  text-decoration: none;
 }
 
 p {
