@@ -89,7 +89,7 @@
         <h2>Kimia vous accompagne !</h2>
 
         <div id="plateformes">
-            <img src="assets/img/homepage/plateformes/logo knt.png" alt="">
+            <img src="assets/img/homepage/plateformes/image apparels kimia .png" alt="">
             <!-- 
             <img src="assets/img/homepage/plateformes/Kimia-pc.svg" alt="">
 
