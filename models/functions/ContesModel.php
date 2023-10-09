@@ -53,6 +53,7 @@ function getCategory(): ApiResponse
 
 /**
  * Permet de récupérer la liste des conttes sous forme d'un tableau reprenant toutes les colonnes de la base de données
+ * @param int $categoryID Prends en paramètre l'id de la catégorie pour laquelle on recherche les contes
  * @return ApiResponse
  */
 function getContes($categoryID): ApiResponse
@@ -93,6 +94,52 @@ function getContes($categoryID): ApiResponse
         return response(false, null, "Erreur lors de la récupération des contes");
     }
 }
+
+// ! ================== AFFICHER LES CONTES SELON LE NIVEAU D'IMPORTANCE ==================
+
+/**
+ * Permet de récupérer la liste des conttes sous forme d'un tableau reprenant toutes les colonnes de la base de données
+ * @param int $categoryID Prends en paramètre l'id de la catégorie pour laquelle on recherche les contes
+ * @return ApiResponse
+ */
+function getContesTendances(): ApiResponse
+{
+    // On cherche les contes qui ont une importance de 1
+    $query = "
+        SELECT
+	        *
+        FROM
+    	    conte
+        JOIN
+    	    conte_category 
+        ON 	
+            conte.id = conte_category.conte_id
+         JOIN
+    	    category 
+        ON 	
+            conte_category.category_id = category.id
+        WHERE
+            importance = 1
+        ";
+
+    // Ouverture du flux
+    $database = getConnection();
+
+    $stmt = $database->prepare($query);
+    $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $isDone = $stmt->execute();
+
+    // Nettoyage du flux
+    $database = null;
+
+    if ($isDone) {
+        $tendances = $stmt;
+        return response(true, $tendances);
+    } else {
+        return response(false, null, "Erreur lors de la récupération des contes");
+    }
+}
+
 
 // ! ================== AFFICHER LA FICHE DU CONTE SELECTIONEE ==================
 

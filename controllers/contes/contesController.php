@@ -17,4 +17,13 @@ if ($responseCategory->success) {
     $error_message = $response->error;
 }
 
+$responseTendances = getContesTendances();
+
+if ($responseTendances->success) {
+    $tendances = $responseTendances->data;
+} else {
+    $error = true;
+    $error_message = $response->error;
+}
+
 require_once 'views/contes/contesView.php';

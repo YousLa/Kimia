@@ -33,7 +33,8 @@ if (isset($_GET['page'])) {
 
             // * JS
             $js = array(
-                'assets/js/slide-homepage.js'
+                'assets/js/slide-homepage.js',
+                'assets/js/grand-slider-catalogue.js'
             );
 
             break;

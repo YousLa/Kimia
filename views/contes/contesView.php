@@ -1,4 +1,23 @@
+<!-- Afficher le grand slider  -->
+<div class="carousel">
+    <img src="" alt="">
+    <span id="prev"> <img src="assets/img/icons/previous-blanc.svg" alt=""> </span>
+
+    <?php foreach ($tendances as $cle => $tendance) : ?>
+
+        <img class="slide-pic" src="assets/contes/<?= $tendance['image']; ?>" alt="<?= $tendance['title'] ?>">
+
+    <?php endforeach; ?>
+
+    <span id="next"> <img src="assets/img/icons/next-blanc.svg" alt=""> </span>
+    <div id="dots">
+
+    </div>
+</div>
+
+
 <!-- Pour chaque catégories dans le tableau -->
+
 <ul>
 
     <?php foreach ($categories as $cle => $category) : ?>
