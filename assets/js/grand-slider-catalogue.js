@@ -1,5 +1,7 @@
 console.log("TEST 2");
 
+// #region grand slider 
+
 // ! #########################################################################
 // ! ========================== SRC IMAGES DU SLIDE ==========================
 // ! #########################################################################
@@ -75,7 +77,7 @@ NEXT.addEventListener('click', () => {
 // * Création du timer
 timer = setInterval(() => {
     changeImage(1);
-}, 1750)
+}, 2750)
 
 // * Ajout de l'event pour stopper le timer quand on a la souris sur le carousel
 CAROUSEL.addEventListener('mouseover', () => {
@@ -86,7 +88,7 @@ CAROUSEL.addEventListener('mouseover', () => {
 CAROUSEL.addEventListener('mouseleave', () => {
     timer = setInterval(() => {
         changeImage(1);
-    }, 1750)
+    }, 2750)
 })
 
 // * Mise en place du changer-ment d'image avec les dots
@@ -103,19 +105,13 @@ Array.from(DOTS.children).forEach((DOT, indice) => {
     })
 })
 
-// Optimisation -> fonctions
+// Optimisation -> fonction
 function changeImage(count) {
     DOTS.children[currentImg].classList.remove('active-dot');
 
-    // currentImg = currentImg + count;
+
     currentImg += count;
-    //#region explication
-    // Si count = 1
-    // currentImg = currentImg + 1;
-    // Si count = -1
-    // currentImg = currentImg + -1;
-    // donc currentImg = currentImg - 1;
-    //#endregion explication
+
 
     if (currentImg < 0) {
         currentImg = SRC_IMG_TENDANCES.length - 1;
@@ -124,11 +120,10 @@ function changeImage(count) {
         currentImg = 0;
     }
 
-    //#region Pareil avec la ternaire
-    // currentImg = ( currentImg < 0 ) ? SRC_IMG_TENDANCES.length - 1 : ( currentImg >= SRC_IMG_TENDANCES.length ) ? 0 : currentImg;
-    //#endregion
-
     IMG_CAROUSEL.src = SRC_IMG_TENDANCES[currentImg];
     IMG_CAROUSEL.alt = ALT_IMG_TENDANCES[currentImg];
     DOTS.children[currentImg].classList.add('active-dot');
 }
+
+// #endregion
+

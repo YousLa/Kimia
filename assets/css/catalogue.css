@@ -6,13 +6,17 @@
 
 /* Carroussel */
 .carousel {
-    width: 80vw;
-    height: 80vh;
+    width: 61vw;
+    height: 70vh;
     margin: auto;
 
     margin-top: 4rem;
 
     position: relative;
+    border-radius: 1rem;
+
+    /* Slider Accueil - effet de halo */
+    box-shadow: 0px 0px 100px 0px rgba(255, 255, 255, 0.40);
 }
 
 /* Image du carroussel */
@@ -20,19 +24,45 @@
     object-fit: contain;
     width: 100%;
     height: 100%;
-    border-radius: 1rem;
-
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
+    border-radius: inherit;
 }
+
+/* lors du Hover sur le carrousel les boutons prev et next auront les propriétés suivantes */
+.carousel:hover #prev,
+.carousel:hover #next {
+    display: flex;
+    background-color: rgba(34, 29, 46, 0.651);
+}
+
+/* lors du Hover sur le carrousel le bouton PREV aura les propriétés suivantes */
+.carousel:hover #prev {
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+/* lors du Hover sur le carrousel le bouton NEXT aura les propriété suivantes */
+.carousel:hover #next {
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+/* lors du Hover sur le carrousel le hover du bouton prev next aura les propriétés suivants */
+.carousel:hover #next:hover {
+    background-color: rgb(34, 29, 46);
+}
+
+/* lors du Hover sur le carrousel le hover du bouton prev next aura les propriétés suivants */
+.carousel:hover #prev:hover {
+    background-color: rgb(34, 29, 46);
+}
+
+
 
 /* Encadrée des boutons prev et next */
 #prev,
 #next {
     position: absolute;
-    top: 45%;
-    /* background-color: rgba(0, 0, 0, 0.664); */
-    background-color: blue;
+    top: 0%;
     height: 10%;
     width: 3.5%;
     color: whitesmoke;
@@ -41,41 +71,38 @@
     align-items: center;
     cursor: pointer;
     user-select: none;
-    font-weight: bold;
-    font-size: x-large;
+    display: none;
 }
 
 /* Hover encadrée des boutons prev et next */
 #prev:hover,
 #next:hover {
-    /* background-color: rgba(245, 245, 245, 0.892); */
-    background-color: fuchsia;
-    color: black;
+
+    background-color: rgb(94, 255, 1);
+
 }
 
 /* Position + arrondi bouton prev */
 #prev {
     left: 0;
     border-radius: 0 0.5rem 0.5rem 0;
+    height: 70vh;
 }
 
 /* Position + arrondi bouton next */
 #next {
     right: 0;
     border-radius: 0.5rem 0 0 0.5rem;
+    height: 70vh;
+
 }
 
 /* Encadrée des dots */
 #dots {
     position: absolute;
-    bottom: 0;
+    bottom: -5%;
     left: 35%;
-    background-color: rgba(0, 0, 0, 0.664);
-    background-color: fuchsia;
-    width: 30%;
-    height: 8%;
-    border-radius: 0.5rem 0.5rem 0 0;
-
+    width: 25%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -86,7 +113,8 @@
     height: 1rem;
     width: 1rem;
     /* background-color: rgba(34, 29, 46, 0.272); */
-    background-color: orange;
+    background-color: rgba(34, 29, 46, 0.651);
+    ;
     border-radius: 50%;
 }
 
@@ -94,14 +122,12 @@
 /* Hover encadrée des dots */
 #dots:hover {
     /* background-color: rgba(245, 245, 245, 0.892); */
-    background-color: chartreuse;
     color: black;
 }
 
 /* Hover encadrée des dots, lorsque que l'on passe sur l'encadrée les dots non actif changent de couleurs */
 #dots:hover .dot {
-    /* background-color: rgba(0, 0, 0, 0.411); */
-    background-color: crimson;
+    /* background-color: chartreuse; */
 }
 
 /* La couleur des dots actifs */
@@ -111,12 +137,12 @@
 
 /* La couleur du dot sur laquelle on passe change de couleur */
 #dots:hover .dot:hover {
-    background-color: rgb(39, 248, 255);
+    background-color: #9747FF;
 }
 
 /* La couleur du dot actif change de couleur lorsque l'on passe sur l'encadrée des dots */
 #dots:hover .active-dot {
-    background-color: rgb(229, 255, 0);
+    /* background-color: chartreuse; */
 }
 
 /* On cache les images récuperé par php */
@@ -126,12 +152,111 @@
 
 /* #endregion  */
 
-/* Class qui reprend les contes de la catégorie */
-.catalogues {
-    border: solid 2px green;
+.categories {
+    margin: 1.5rem 0;
+    font-size: 1.8rem;
+    font-family: "Raleway-bold";
+    letter-spacing: 1px;
 }
 
 /* Affiche du conte */
 .affiche {
     width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+
+    border-radius: 0.5rem;
 }
+
+#catalogue {
+    margin: 3vw 0;
+}
+
+/* #region petits slider */
+
+#wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.petit-carousel {
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.petit-carousel::-webkit-scrollbar {
+    height: 0;
+}
+
+/* Bouton previous et next */
+.next img,
+.prev img {
+    height: 2rem;
+}
+
+.prev,
+.next {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.541);
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+
+    height: 81%;
+    width: 3.5%;
+    display: flex;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+
+
+#wrapper:hover .next {
+    display: flex;
+}
+
+.prev {
+    top: 57.5%;
+    left: -3.5%;
+    transform: translate(0%, -50%);
+    display: none;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.next {
+    top: 57.5%;
+    right: -3.3%;
+    transform: translate(0%, -50%);
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+
+}
+
+#content {
+    display: grid;
+    grid-gap: 1rem;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.item {
+    width: 180px;
+    height: 180px;
+    background: green;
+    background-color: charteuse;
+}
+
+.slide-contes {
+    margin: 3vw 0;
+    padding: 0 3.75rem;
+}
+
+/* #endregion */
