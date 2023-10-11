@@ -32,9 +32,10 @@
 <main>
     <div id="only">
 
-        <img id="arrow" src="assets/img/homepage/arrow.svg" alt="">
+        <img class="bounce2" id="arrow" src="assets/img/homepage/arrow.svg" alt="">
 
         <h1>Seulement sur Kimia</h1>
+
     </div>
     <!-- Section 2 -->
     <div id="section2">

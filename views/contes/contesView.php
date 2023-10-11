@@ -61,11 +61,11 @@
 
                         <?php endforeach; ?>
 
-                        <span class="prev"> <img src="assets/img/icons/previous-blanc.svg" alt=""> </span>
-                        <span class=" next"> <img src="assets/img/icons/next-blanc.svg" alt=""> </span>
                     </div>
 
                 </div>
+                <span class="prev"> <img src="assets/img/icons/previous-blanc.svg" alt=""> </span>
+                <span class=" next"> <img src="assets/img/icons/next-blanc.svg" alt=""> </span>
             </div>
         </li>
 

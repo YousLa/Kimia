@@ -73,9 +73,11 @@ if (isset($_SESSION['id'])) {
 <?php else : ?>
 
     <!-- VERSION DISCONNECTED -->
-
-    <button id='login'><a href='?page=login'>S'identifier</a></button>
-    <!-- VERSION DISCONNECTED -->
+    <?php if ($_GET['page'] == 'login') : ?>
+    <?php else : ?>
+        <button id='login'><a href='?page=login'>S'identifier</a></button>
+        <!-- VERSION DISCONNECTED -->
+    <?php endif; ?>
 
 <?php endif; ?>
 

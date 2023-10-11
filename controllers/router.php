@@ -35,7 +35,8 @@ if (isset($_GET['page'])) {
             $js = array(
                 'assets/js/slide-homepage.js',
                 'assets/js/grand-slider-catalogue.js',
-                'assets/js/petit-slider-catalogue.js'
+                // 'assets/js/petit-slider-catalogue.js',
+                'assets/js/mon-petit-slider.js'
             );
 
             break;
