@@ -54,7 +54,9 @@ if (isset($_GET['page'])) {
             );
 
             // * JS
-            $js = array();
+            $js = array(
+                'assets/js/input.js'
+            );
 
             break;
 
@@ -88,7 +90,7 @@ if (isset($_GET['page'])) {
 
             // * JS
             $js = array(
-                'assets/js/avatar.js'
+                'assets/js/avatar.js',
             );
 
             break;
@@ -155,7 +157,9 @@ if (isset($_GET['page'])) {
             );
 
             // * JS
-            $js = array();
+            $js = array(
+                'assets/js/input.js'
+            );
 
             break;
 
