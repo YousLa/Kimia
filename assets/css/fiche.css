@@ -1,0 +1,16 @@
+.fiche {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+.titre-conte {
+    font-family: "Raleway-Regular";
+    font-size: 2rem;
+}
+
+.message-error {}
+
+.affiche-conte {
+    width: 37.5rem;
+}

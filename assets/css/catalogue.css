@@ -1,7 +1,7 @@
 /* #region Grand SLider */
 #prev img,
 #next img {
-    height: 4rem;
+    height: 3rem;
 }
 
 /* Carroussel */
@@ -31,30 +31,19 @@
 .carousel:hover #prev,
 .carousel:hover #next {
     display: flex;
-    background-color: rgba(34, 29, 46, 0.651);
+
 }
 
 /* lors du Hover sur le carrousel le bouton PREV aura les propriétés suivantes */
-.carousel:hover #prev {
-    border-bottom-left-radius: 1rem;
-    border-top-left-radius: 1rem;
-}
+
 
 /* lors du Hover sur le carrousel le bouton NEXT aura les propriété suivantes */
-.carousel:hover #next {
-    border-bottom-right-radius: 1rem;
-    border-top-right-radius: 1rem;
-}
+
 
 /* lors du Hover sur le carrousel le hover du bouton prev next aura les propriétés suivants */
-.carousel:hover #next:hover {
-    background-color: rgb(34, 29, 46);
-}
+
 
 /* lors du Hover sur le carrousel le hover du bouton prev next aura les propriétés suivants */
-.carousel:hover #prev:hover {
-    background-color: rgb(34, 29, 46);
-}
 
 
 
@@ -63,7 +52,7 @@
 #next {
     position: absolute;
     top: 0%;
-    height: 10%;
+    margin: 0 1%;
     width: 3.5%;
     color: whitesmoke;
     display: flex;
@@ -75,12 +64,7 @@
 }
 
 /* Hover encadrée des boutons prev et next */
-#prev:hover,
-#next:hover {
 
-    background-color: rgb(94, 255, 1);
-
-}
 
 /* Position + arrondi bouton prev */
 #prev {
@@ -114,7 +98,6 @@
     width: 1rem;
     /* background-color: rgba(34, 29, 46, 0.272); */
     background-color: rgba(34, 29, 46, 0.651);
-    ;
     border-radius: 50%;
 }
 
@@ -204,8 +187,8 @@
     cursor: pointer;
     position: absolute;
 
-    height: 81%;
-    width: 3.5%;
+    height: 80%;
+    width: 5%;
     display: flex;
     color: whitesmoke;
     justify-content: center;
@@ -215,28 +198,31 @@
 
 }
 
-
-
-#wrapper:hover .next {
-    display: flex;
-}
-
+/* Position et style du bouton prev */
 .prev {
-    top: 57.5%;
-    left: -3.5%;
+    top: 59%;
+    left: -3.3%;
     transform: translate(0%, -50%);
     display: none;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
 }
 
+/* Position et style du bouton next */
 .next {
-    top: 57.5%;
+    top: 59%;
     right: -3.3%;
     transform: translate(0%, -50%);
     border-bottom-left-radius: 4px;
     border-top-left-radius: 4px;
+}
 
+.none {
+    display: none;
+}
+
+.flex {
+    display: flex;
 }
 
 #content {
@@ -251,7 +237,7 @@
     width: 180px;
     height: 180px;
     background: green;
-    background-color: charteuse;
+
 }
 
 .slide-contes {

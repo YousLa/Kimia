@@ -1,13 +1,20 @@
-<h1><?= $title ?></h1>
+<div class="fiche">
 
-<h2><?= $error_message ?></h2>
+    <div class="">
 
-<img src="assets/contes/<?= $image ?>" alt="">
+        <img class="affiche-conte" src="assets/contes/<?= $image ?>" alt="">
+    </div>
+    <h1 class="titre-conte"><?= $title ?></h1>
 
-<audio controls>
-    <source src="assets/contes/<?= $audio ?>" type="audio/mp3">
-</audio>
+    <h2 class="message-error"><?= $error_message ?></h2>
 
-<p><?= $synopsis ?></p>
 
-<a href="?page=video&conte=<?= $title ?>">Visionner le contes</a>
+    <audio controls>
+        <source src="assets/contes/<?= $audio ?>" type="audio/mp3">
+    </audio>
+
+    <p class="synopsis-conte"><?= $synopsis ?></p>
+
+    <a class="video-conte" href="?page=video&conte=<?= $title ?>">Visionner le contes</a>
+
+</div>

@@ -64,8 +64,8 @@
                     </div>
 
                 </div>
-                <span class="prev"> <img src="assets/img/icons/previous-blanc.svg" alt=""> </span>
-                <span class=" next"> <img src="assets/img/icons/next-blanc.svg" alt=""> </span>
+                <span class="prev none"> <img src="assets/img/icons/previous-blanc.svg" alt=""> </span>
+                <span class=" next flex"> <img src="assets/img/icons/next-blanc.svg" alt=""> </span>
             </div>
         </li>
 

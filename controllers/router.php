@@ -223,6 +223,57 @@ if (isset($_GET['page'])) {
 
             break;
 
+            // ^ ======================= ABOUT =======================
+
+        case 'about':
+
+            // * View
+            $view =  'views/pages/aboutView.php';
+
+            // * Ressource CSS
+            $css = array(
+                'assets/css/about.css'
+            );
+
+            // * JS
+            $js = array();
+
+            break;
+
+            // ^ ======================= CONTACT =======================
+
+        case 'contact':
+
+            // * View
+            $view =  'views/pages/contactView.php';
+
+            // * Ressource CSS
+            $css = array(
+                'assets/css/contact.css'
+            );
+
+            // * JS
+            $js = array();
+
+            break;
+
+            // ^ ======================= RGPD =======================
+
+        case 'rgpd':
+
+            // * View
+            $view =  'views/pages/rgpdView.php';
+
+            // * Ressource CSS
+            $css = array(
+                'assets/css/rgpd.css'
+            );
+
+            // * JS
+            $js = array();
+
+            break;
+
             // ^ ======================= ERROR 404 =======================
 
         default:

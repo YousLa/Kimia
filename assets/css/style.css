@@ -130,11 +130,12 @@ nav {
 #dropdown-content {
   display: none;
   position: absolute;
+  right: -2%;
   background-color: #9747ff50;
   min-width: 10rem;
   z-index: 1;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5%;
+  border-radius: 3%;
 }
 
 /* Styles pour les liens du dropdown */
@@ -191,12 +192,30 @@ nav {
 
 /* * Logo du le footer */
 #logo-footer {
+  padding: 0.5rem 0;
   width: 9rem;
   background-color: #F2F2F2;
 }
 
+.p-footer {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.p-footer p a {
+  padding: 0 0.5rem;
+}
+
 /* * Parent => Logo - div */
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 0.5rem;
   bottom: 0;
   text-align: center;

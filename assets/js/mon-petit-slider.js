@@ -29,12 +29,16 @@ for (let i = 0; i < NB_SLIDE_CONTES; i++) {
     // Evenement sur la flèche next
     next.addEventListener("click", e => {
         carousel.scrollBy(width, 0);
-        // TODO Toggle 
+        // TODO créer comme pour la modal une class flex/none
         if (carousel.scrollWidth !== 0) {
-            prev.style.display = "flex";
+            // Toggle sur la flèche previous en mode display flex
+            prev.classList.remove('none');
+            prev.classList.add('flex');
         }
         if (content.scrollWidth - width <= carousel.scrollLeft + width) {
-            next.style.display = "none";
+            // Toggle sur la flèche next en mode display none
+            next.classList.remove('flex');
+            next.classList.add('none');
         }
     });
 
@@ -42,10 +46,14 @@ for (let i = 0; i < NB_SLIDE_CONTES; i++) {
     prev.addEventListener("click", e => {
         carousel.scrollBy(-(width), 0);
         if (carousel.scrollLeft - width <= 0) {
-            prev.style.display = "none";
+            // Toggle sur la flèche previous en mode display none
+            prev.classList.remove('flex');
+            prev.classList.add('none');
         }
         if (!content.scrollWidth - width <= carousel.scrollLeft + width) {
-            next.style.display = "flex";
+            // Toggle sur la flèche next en mode display flex
+            next.classList.remove('none');
+            next.classList.add('flex');
         }
     });
 
@@ -53,38 +61,3 @@ for (let i = 0; i < NB_SLIDE_CONTES; i++) {
     window.addEventListener("resize", e => (width = carousel.offsetWidth));
 
 }
-
-// // ! #########################################################################
-// // ! ========================== SRC IMAGES DU SLIDE ==========================
-// // ! #########################################################################
-
-// // * Récupération des IMG_AFFICHE sous forme de tableau
-// const IMG_AFFICHE = document.querySelectorAll('.slide-contes:nth-child(1) .affiche');
-// console.log(IMG_AFFICHE);
-// console.log(IMG_AFFICHE.length);
-
-// // Créez un tableau vide pour stocker les valeurs "src"
-// const SRC_IMG_AFFICHE = [];
-
-// // Parcourez chaque image et extrayez son attribut "src"
-// IMG_AFFICHE.forEach(image => {
-//     SRC_IMG_AFFICHE.push(image.getAttribute('src'));
-// });
-
-// // Maintenant, SRC_IMG_AFFICHE contient les valeurs "src" de toutes les images avec la classe "slide-pic"
-// console.log(SRC_IMG_AFFICHE);
-
-// // ! #########################################################################
-// // ! ========================== ALT IMAGES DU SLIDE ==========================
-// // ! #########################################################################
-
-// // Créez un tableau vide pour stocker les valeurs "alt"
-// const ALT_IMG_AFFICHE = [];
-
-// // Parcourez chaque image et extrayez son attribut "alt"
-// IMG_AFFICHE.forEach(image => {
-//     ALT_IMG_AFFICHE.push(image.getAttribute('alt'));
-// });
-
-// // Maintenant, ALT_IMG_AFFICHE contient les valeurs "alt" de toutes les images avec la classe "slide-pic"
-// console.log(ALT_IMG_AFFICHE);
