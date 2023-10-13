@@ -8,15 +8,13 @@ TODO :
 
         Nav : 
 
-            ☐ CSS 
-                ☐ Session Active
+            ✔ CSS @done(23-10-13 15:36)
+                ✔ Session Active @done(23-10-13 15:36)
                 ✔ Session non active @done(23-10-04 17:27)
         
         Footer :
 
-            ☐ CSS
-                ☐ Session Active
-                ✔ Session non active @done(23-10-04 17:29)
+            ✔ CSS @done(23-10-13 15:36)
 
         Homepage :
             
@@ -28,6 +26,12 @@ TODO :
 
     PHP :
 
+        Formulaire de contact :
+
+            ☐ Function contact() - Envoie formulaire de contact
+            ☐ contactView.php
+            ☐ contactControllers.php
+
         Catalogue : 
 
             Avatar : 
@@ -36,11 +40,10 @@ TODO :
 
             Menu :
 
-            ☐ Menu avatar
-                ☐ Profil
-                ☐ Compte
-                ☐ Centre d'aide
-                ☐ Se déconnecter
+            ✔ Menu avatar @done(23-10-13 15:36)
+                ✔ Profil @done(23-10-13 15:36)
+                ✔ Compte @done(23-10-13 15:36)
+                ✔ Se déconnecter @done(23-10-13 15:36)
 
         Création du nouveau router : 
 

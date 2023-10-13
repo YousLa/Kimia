@@ -46,6 +46,7 @@ if (isset($_SESSION['id'])) {
                 <?php
                 switch ($_GET['page']) {
                     case 'updateProfile':
+                    case 'createProfile':
 
                         break;
                     default:
