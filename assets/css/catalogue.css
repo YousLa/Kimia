@@ -26,7 +26,7 @@
     object-fit: contain;
     width: 100%;
     height: 100%;
-    border-radius: inherit;
+    border-radius: 1rem;
 }
 
 /* lors du Hover sur le carrousel les boutons prev et next auront les propriétés suivantes */
