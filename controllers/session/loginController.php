@@ -24,6 +24,7 @@ if (isset($_POST['login'])) {
         $_SESSION['email'] = $response->data['email'];
         $_SESSION['role'] = $response->data['role'];
 
+        // TODO Vérifier si le profil à été completé, sinon rediriger vers la création de profil
         header('Location: ?page=home');
     } else {
         $error = true;
