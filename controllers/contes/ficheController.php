@@ -21,9 +21,8 @@ if (isset($_GET['conte'])) {
     # Extraction des données d'un conte dans une variable
     if ($response->success) {
         $conte = $response->data;
-
         list(
-            $id, $title, $synopsis, $url, $image, $image_square, $audio
+            $id, $title, $synopsis, $url, $image_square, $image, $audio
         ) = $conte;
     }
 } else {
