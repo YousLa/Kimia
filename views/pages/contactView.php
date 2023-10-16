@@ -37,7 +37,7 @@
 
     <div class="submit">
 
-    <input type="submit" value="Envoyer">
+    <input type="submit" value="Envoyer" class="submit1">
 
     </div>
 
@@ -47,6 +47,26 @@
 
 
 </form>
+
+<script>
+
+console.log('test son père')
+
+const inputs = document.querySelectorAll('input');
+
+for (let i = 0; i < inputs.length; i++) {
+    let field = inputs[i];
+
+    field.addEventListener('input', (e) => {
+
+        if (e.target.value != "") {
+            e.target.parentNode.classList.add('animation');
+        } else if (e.target.value == "") {
+            e.target.parentNode.classList.remove('animation');
+        }
+    })
+}
+</script>
 
 
 </section>
