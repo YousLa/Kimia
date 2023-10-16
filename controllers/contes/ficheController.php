@@ -10,6 +10,7 @@ $title = "";
 $synopsis = "";
 $url = "";
 $image = "";
+$image_square = "";
 $audio = "";
 
 // TODO créer un url au lieu d'utiliser les noms des comtpes dans le get
@@ -22,7 +23,7 @@ if (isset($_GET['conte'])) {
         $conte = $response->data;
 
         list(
-            $id, $title, $synopsis, $url, $image, $audio
+            $id, $title, $synopsis, $url, $image, $image_square, $audio
         ) = $conte;
     }
 } else {

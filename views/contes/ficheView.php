@@ -5,7 +5,7 @@
     <div class="fiche">
         <div class="left">
 
-            <img class="affiche-conte" src="assets/contes/<?= $image ?>" alt="">
+            <img class="affiche-conte" src="assets/contes/<?= $image_square ?>" alt="">
 
             <!-- TODO -->
             <!-- <audio class="trailer" controls>
