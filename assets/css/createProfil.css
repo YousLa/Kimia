@@ -12,7 +12,6 @@ html {
   align-items: center;
   margin: 2rem;
   height: max-content;
-  border: chartreuse solid 1px;
 }
 
 /* #endregion */
@@ -81,9 +80,10 @@ label {
   width: 100%;
   position: absolute;
   top: 5px;
-  left: 5px;
+  left: 0px;
   color: #d3d3d3;
   transition: 0.2s all;
+  font-size: large;
 }
 
 /* #endregion  */
@@ -127,19 +127,30 @@ label {
 /* * H1 => Personnalisez votre profil + Choisissez votre avatar */
 #create-profil #create-profil-form h1 {
   font-size: xx-large;
-  margin: 0.5rem auto;
+  margin: 0.5rem auto 2rem auto;
+  font-weight: 600;
+  font-family: "Raleway-Light";
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 /* * H2 Choisissez votre pseudo + Choisissez votre avatar */
 #create-profil #create-profil-form h2 {
   font-size: x-large;
   margin: 2rem auto;
+  font-family: "Raleway-Light";
+}
+
+#create-profil #create-profil-form h2:last-of-type {
+  font-size: x-large;
+  margin: 3rem auto 2rem auto;
+  font-family: "Raleway-Light";
 }
 
 /* * Input du formulaire  */
 #create-profil #create-profil-form input {
   width: 16rem;
-  height: 3rem;
+  height: 2rem;
   margin: auto;
   flex-shrink: 0;
   border: transparent;
@@ -148,14 +159,14 @@ label {
 }
 
 /* * Avatar vide */
-#create-profil #create-profil-form #empty-avatar {
+#create-profil #create-profil-form #container-empty-avatar {
   align-self: center;
   width: 15rem;
   width: fit-content;
 }
 
 /* * Avatar vide image */
-#empty-avatar img {
+#empty-avatar {
   width: 15rem;
 }
 
@@ -177,8 +188,10 @@ label {
 .modal .choose-avatar {
   text-align: center;
   margin: 0 0 5rem 0;
-  font-family: "Raleway";
   font-size: xx-large;
+  font-weight: 600;
+  font-family: "Raleway-Light";
+  letter-spacing: 1px;
 }
 
 .modal #logo {
@@ -202,10 +215,6 @@ label {
 
 .modal .pic-modal {
   height: 15.625;
-}
-
-.modal #rang {
-  width: fit-content;
 }
 
 .avatar-choices {
@@ -236,4 +245,72 @@ label {
 }
 
 /* #endregion */
-/*# sourceMappingURL=createProfil.css.map */
+
+/* #region Reponsive */
+
+/* ^ ====================== Tablet ======================*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  #create-profil {
+    margin: 5rem auto auto auto;
+  }
+
+  .modal #logo {
+    width: 12rem;
+    margin: 2rem 7rem 0 7rem;
+  }
+
+  .modal .pic-modal {
+    height: 10rem;
+  }
+
+}
+
+/* ^ ====================== Smartphone ====================== */
+@media screen and (max-width: 767px) {
+
+  /* avatar */
+  .modal .pic-modal {
+    height: 7rem;
+  }
+
+  /* avatar container */
+  .avatar-choices {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    overflow: scroll;
+  }
+
+  footer {
+    display: none;
+  }
+
+  /* h1 */
+  .modal .choose-avatar {
+    text-align: center;
+    margin: 0 0 5rem 0;
+    font-size: x-large;
+    font-weight: 600;
+    font-family: "Raleway-Light";
+    letter-spacing: 1px;
+  }
+
+  .modal-content h2 {
+    font-size: large;
+    font-family: "Raleway-Light";
+    margin: 1rem 0;
+  }
+
+  .modal-content {
+    margin: 0;
+  }
+
+  .modal .rang {
+    width: fit-content;
+  }
+}
+
+/* #endregion */
