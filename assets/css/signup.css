@@ -49,20 +49,20 @@ body {
 .signup-input-box {
   position: relative;
   margin: 30px 0;
-  width: 510px;
+  width: 410px;
 
 }
 
 .signuph1 {
   color: rgb(243, 233, 233);
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding-bottom: 15px;
 }
 
 .signup-form-box1 {
   position: relative;
   margin: 30px 0;
-  width: 510px;
+  width: 410px;
   border-bottom: 0.8px solid #F2F2F2;
 
 }
