@@ -25,7 +25,7 @@
         </div>
 
 
-        <h2>Choisissez votre Avatar.</h2>
+        <h2>Choisissez votre Avatar</h2>
 
         <div id="container-empty-avatar">
             <img id="empty-avatar" src="assets/img/avatar/empty-avatar.svg" alt="Avatar vide">
@@ -48,7 +48,7 @@
 
             <span id="close"><img src="assets/img/avatar/close.svg" alt="Fermer"></span>
 
-            <h1 class="choose-avatar">Choisissez votre avatar.</h1>
+            <h1 class="choose-avatar">Choisissez votre avatar</h1>
 
             <!-- Bouton close -->
 
@@ -58,12 +58,6 @@
 
                 <div class="avatar-choices">
                     <img class="pic-modal" src="assets/img/avatar/futuristique/futuristique-1.jpg" alt="futuristique-1">
-                    <img class="pic-modal" src="assets/img/avatar/futuristique/futuristique-2.jpg" alt="futuristique-2">
-                    <img class="pic-modal" src="assets/img/avatar/futuristique/futuristique-3.jpg" alt="futuristique-3">
-                    <img class="pic-modal" src="assets/img/avatar/futuristique/futuristique-4.jpg" alt="futuristique-4"> <img class="pic-modal" src="assets/img/avatar/futuristique/futuristique-1.jpg" alt="futuristique-1">
-                    <img class="pic-modal" src="assets/img/avatar/futuristique/futuristique-2.jpg" alt="futuristique-2">
-                    <img class="pic-modal" src="assets/img/avatar/futuristique/futuristique-3.jpg" alt="futuristique-3">
-                    <img class="pic-modal" src="assets/img/avatar/futuristique/futuristique-4.jpg" alt="futuristique-4"> <img class="pic-modal" src="assets/img/avatar/futuristique/futuristique-1.jpg" alt="futuristique-1">
                     <img class="pic-modal" src="assets/img/avatar/futuristique/futuristique-2.jpg" alt="futuristique-2">
                     <img class="pic-modal" src="assets/img/avatar/futuristique/futuristique-3.jpg" alt="futuristique-3">
                     <img class="pic-modal" src="assets/img/avatar/futuristique/futuristique-4.jpg" alt="futuristique-4">
