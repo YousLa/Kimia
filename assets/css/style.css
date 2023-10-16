@@ -310,6 +310,27 @@ footer>div>p>a {
   #logo-header {
     width: 10rem;
   }
+
+  /* * Logo du le footer */
+  #logo-footer {
+    padding: 0.5rem 0 0 0;
+    width: 5rem;
+    background-color: #F2F2F2;
+  }
+
+  /* * Parent => p */
+  footer>div {
+    background-color: #F2F2F2;
+    font-size: small;
+  }
+
+  /* * Parent => a */
+  footer>div>p {
+    font-family: "Raleway-ExtraLight";
+  }
+
+
+
 }
 
 /* endregion */

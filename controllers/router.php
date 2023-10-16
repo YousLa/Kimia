@@ -32,12 +32,16 @@ if (isset($_GET['page'])) {
             );
 
             // * JS
-            $js = array(
-                'assets/js/slide-homepage.js',
-                'assets/js/grand-slider-catalogue.js',
-                // 'assets/js/petit-slider-catalogue.js',
-                'assets/js/mon-petit-slider.js'
-            );
+            if (isset($_SESSION['email'])) {
+                $js = array(
+                    'assets/js/grand-slider-catalogue.js',
+                    'assets/js/mon-petit-slider.js'
+                );
+            } else {
+                $js = array(
+                    'assets/js/slide-homepage.js',
+                );
+            }
 
             break;
 

@@ -27,7 +27,9 @@ for (let i = 0; i < NB_SLIDE_CONTES; i++) {
         prev = document.querySelector(".prev");
 
     // Evenement sur la flèche next
+    console.log(next)
     next.addEventListener("click", e => {
+        console.log('buton next')
         carousel.scrollBy(width, 0);
         // TODO créer comme pour la modal une class flex/none
         if (carousel.scrollWidth !== 0) {
