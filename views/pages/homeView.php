@@ -29,7 +29,7 @@
 </section>
 
 <!-- Main - taille width -->
-<main>
+<main id="main">
     <div id="only">
 
         <img class="bounce2" id="arrow" src="assets/img/homepage/arrow.svg" alt="">
