@@ -1,10 +1,12 @@
 <!-- Afficher le grand slider  -->
 <div class="carousel">
-    <img src="" alt="">
+    <a href="">
+        <img src="" alt="">
+    </a>
     <span id="prev"> <img src="assets/img/icons/previous-blanc.svg" alt=""> </span>
 
     <?php foreach ($tendances as $cle => $tendance) : ?>
-        <a href='?page=fiche&conte=<?= htmlspecialchars($tendance['title']) ?>'>
+        <a class="url-pic" href='?page=fiche&conte=<?= htmlspecialchars($tendance['title']) ?>'>
             <img class="slide-pic" src="assets/contes/<?= $tendance['image']; ?>" alt="<?= $tendance['title'] ?>">
         </a>
     <?php endforeach; ?>
@@ -46,7 +48,7 @@
                 <!-- Carousel -->
                 <div class="petit-carousel">
                     <!-- Contenu -->
-                    <div id="content">
+                    <div class="content">
 
 
                         <!-- Pour chaque contes dans le tableau -->
