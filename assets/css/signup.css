@@ -29,6 +29,10 @@ body {
   background: 0, 0, 0, 0.4;
 
 }
+.form{
+
+
+}
 
 .signup-form-box {
   position: relative;
@@ -38,7 +42,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  margin-top: 200px;
+  margin-top: 100px;
 
 }
 

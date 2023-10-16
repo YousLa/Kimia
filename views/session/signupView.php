@@ -2,7 +2,7 @@
 
     <div class="signup-form-box">
 
-        <form action="?page=signup" method="POST">
+        <form action="?page=signup" method="POST" class="form">
 
             <div class="signup-input-box">
 
