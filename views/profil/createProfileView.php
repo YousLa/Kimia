@@ -14,7 +14,6 @@
         <h2>Choisissez votre Pseudo</h2>
         <div class="commencer">
             <div class="input-container">
-
                 <div class="input-field">
                     <div>
                         <input type="text" name="pseudo" id="pseudo" autocomplete="off" value="<?= isset($_POST['pseudo']) ? $_POST['pseudo'] : '' ?>" placeholder=" ">
@@ -39,8 +38,9 @@
 
     <!-- Div caché -->
     <div class="modal modalHidden">
+
         <div class="div-logo">
-            <a href='?page=contes'><img id="logo" src="assets/img/logo/Kimia.svg" alt=""></a>
+            <a href='?page=contes'><img id="logo" src="assets/img/logo/Kimia.svg" alt="Logo"></a>
         </div>
 
         <div class="modal-content">

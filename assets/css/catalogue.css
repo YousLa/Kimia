@@ -7,7 +7,9 @@
 /* Carroussel */
 .carousel {
     width: 61vw;
-    height: 70vh;
+    /* width: calc(25vw - 3.1875rem); */
+    height: calc(61vw * 9/16);
+
     margin: auto;
 
     margin-top: 4rem;
@@ -97,9 +99,9 @@
 }
 
 /* Hover encadrée des dots, lorsque que l'on passe sur l'encadrée les dots non actif changent de couleurs */
-#dots:hover .dot {
-    /* background-color: chartreuse; */
-}
+/* #dots:hover .dot {
+     background-color: chartreuse; 
+} */
 
 /* La couleur des dots actifs */
 .active-dot {
@@ -112,9 +114,9 @@
 }
 
 /* La couleur du dot actif change de couleur lorsque l'on passe sur l'encadrée des dots */
-#dots:hover .active-dot {
-    /* background-color: chartreuse; */
-}
+/* #dots:hover .active-dot {
+     background-color: chartreuse; 
+} */
 
 /* On cache les images récuperé par php */
 .slide-pic {
@@ -134,8 +136,8 @@
 .affiche {
     /* la taille de l'image (25% de l'écran - (padding extérieur .slide-contes + gap entre les affiche(1rem) / 4 (le nombre d'image afficher) */
     width: calc(25vw - 3.1875rem);
-    height: 15rem;
-    object-fit: cover;
+    height: calc((25vw - 3.1875rem) * 9/16);
+    object-fit: contain;
 
     border-radius: 0.5rem;
 }
@@ -225,7 +227,7 @@
 .item {
     width: 180px;
     height: 180px;
-    background: green;
+
 
 }
 

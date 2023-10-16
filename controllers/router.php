@@ -73,11 +73,14 @@ if (isset($_GET['page'])) {
 
             // * Ressource CSS 
             $css = array(
+                'assets/css/createProfil.css',
                 'assets/css/profile.css'
             );
 
             // * JS
-            $js = array();
+            $js = array(
+                'assets/js/avatar.js',
+            );
 
             break;
 

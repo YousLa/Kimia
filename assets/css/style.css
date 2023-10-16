@@ -226,7 +226,7 @@ nav {
 
 /* * Logo du le footer */
 #logo-footer {
-  padding: 0.5rem 0;
+  padding: 1rem 0 0 0;
   width: 9rem;
   background-color: #F2F2F2;
 }
