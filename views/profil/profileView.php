@@ -1,11 +1,13 @@
-<h1>Profil</h1>
+<div id="profil">
 
-<p>
-    Pseudo : <?= $pseudo ?>
-</p>
-<img src="<?= $avatar ?>" alt="Avatar de l'utilisateur">
+    <h1>Profil</h1>
 
-<button name="modifier"><a href="?page=updateProfile">Modifier le profil.</a></button>
+    <h2>
+        <?= $pseudo ?>
+    </h2>
 
+    <img id="avatar" src="<?= $avatar ?>" alt="Avatar de l'utilisateur">
 
-<p>Ici seront repris les informations du profil</p>
+    <button id="modify" name="modifier"><a href="?page=updateProfile">Modifier le profil</a></button>
+
+</div>

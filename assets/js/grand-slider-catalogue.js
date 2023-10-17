@@ -37,8 +37,29 @@ IMG_TENDANCES.forEach(image => {
 // Maintenant, ALT_IMG_TENDANCES contient les valeurs "alt" de toutes les images avec la classe "slide-pic"
 console.log(ALT_IMG_TENDANCES);
 
+// ! #########################################################################
+// ! ========================== URL IMAGES DU SLIDE ==========================
+// ! #########################################################################
+
+// * Récupération des IMG_TENDANCES en tendances sous forme de tableau
+const URL_TENDANCES = document.querySelectorAll('.url-pic');
+console.log(URL_TENDANCES);
+console.log(URL_TENDANCES.length);
+
+// Créez un tableau vide pour stocker les valeurs "src"
+const A_IMG_TENDANCES = [];
+
+// Parcourez chaque image et extrayez son attribut "src"
+URL_TENDANCES.forEach(image => {
+    A_IMG_TENDANCES.push(image.getAttribute('href'));
+});
+
+// Maintenant, SRC_IMG_TENDANCES contient les valeurs "src" de toutes les images avec la classe "slide-pic"
+console.log(SRC_IMG_TENDANCES);
+
 // * Récupération des éléments HTML :
 const IMG_CAROUSEL = document.querySelector('.carousel img');
+const A_CAROUSEL = document.querySelector('.carousel a');
 const DOTS = document.getElementById('dots');
 const PREV = document.getElementById('prev');
 const NEXT = document.getElementById('next');
@@ -51,6 +72,7 @@ let timer;
 // * Setup de la première image dans le HTML
 IMG_CAROUSEL.src = SRC_IMG_TENDANCES[currentImg];
 IMG_CAROUSEL.alt = ALT_IMG_TENDANCES[currentImg];
+A_CAROUSEL.href = A_IMG_TENDANCES[currentImg];
 
 // * Création des dots
 IMG_TENDANCES.forEach(image => {
@@ -101,6 +123,7 @@ Array.from(DOTS.children).forEach((DOT, indice) => {
 
         IMG_CAROUSEL.src = SRC_IMG_TENDANCES[currentImg];
         IMG_CAROUSEL.alt = ALT_IMG_TENDANCES[currentImg];
+        A_CAROUSEL.href = A_IMG_TENDANCES[currentImg];
         DOTS.children[currentImg].classList.add('active-dot');
     })
 })
@@ -122,6 +145,7 @@ function changeImage(count) {
 
     IMG_CAROUSEL.src = SRC_IMG_TENDANCES[currentImg];
     IMG_CAROUSEL.alt = ALT_IMG_TENDANCES[currentImg];
+    A_CAROUSEL.href = A_IMG_TENDANCES[currentImg];
     DOTS.children[currentImg].classList.add('active-dot');
 }
 

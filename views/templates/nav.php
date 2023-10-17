@@ -74,7 +74,7 @@ if (isset($_SESSION['id'])) {
 <?php else : ?>
 
     <!-- VERSION DISCONNECTED -->
-    <?php if (isset($_GET['page']) && $_GET['page'] == 'login') : ?>
+    <?php if (isset($_GET['page']) && ($_GET['page'] == 'login' || $_GET['page'] == 'createProfile')) : ?>
     <?php else : ?>
         <button id='login'><a href='?page=login'>S'identifier</a></button>
         <!-- VERSION DISCONNECTED -->
