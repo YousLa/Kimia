@@ -24,13 +24,17 @@ TODO :
                 ✔ Mobile @done(23-10-04 17:27)
                 ✔ Tablette @done(23-10-04 17:27)
 
+        Formulaire de contact :
+
+            ☐ Textarea
+
     PHP :
 
         Formulaire de contact :
 
-            ☐ Function contact() - Envoie formulaire de contact
-            ☐ contactView.php
-            ☐ contactControllers.php
+            ✔ Function contact() - Envoie formulaire de contact @done(23-10-17 14:09)
+            ✔ contactView.php @done(23-10-17 14:09)
+            ✔ contactControllers.php @done(23-10-17 14:09)
 
         Catalogue : 
 

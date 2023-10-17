@@ -256,7 +256,7 @@ if (isset($_GET['page'])) {
         case 'contact':
 
             // * View
-            $view =  'views/pages/contactView.php';
+            $view =  'controllers/pages/contactController.php';
 
             // * Ressource CSS
             $css = array(

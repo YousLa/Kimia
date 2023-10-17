@@ -9,7 +9,7 @@
             <div class="input-container">
                 <div class="input-field">
                     <div>
-                        <input type="email" id="email" name="firstname" placeholder=" ">
+                        <input type="email" id="email" name="email" placeholder=" ">
                         <label for="email">Adresse e-mail</label>
                     </div>
                 </div>
@@ -20,8 +20,8 @@
             <div class="input-container">
                 <div class="input-field">
                     <div>
-                        <input type="text" id="subject" name="lastname" placeholder=" ">
-                        <label for="subject">Sujet</label>
+                        <input type="text" id="sujet" name="sujet" placeholder=" ">
+                        <label for="sujet">Sujet</label>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
         </div>
 
 
-        <button type="submit" class="send-profil">Envoyer</button>
+        <button type="submit" name="send" class="send-profil">Envoyer</button>
 
     </form>
 </main>
