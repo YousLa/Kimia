@@ -1,72 +1,46 @@
+<main id="create-profil">
 
 
+    <form id="create-profil-form" action="?page=contact" method="POST">
 
-<section class="contact-hero-section">
+        <h1>Nous contacter</h1>
 
+        <div class="commencer">
+            <div class="input-container">
+                <div class="input-field">
+                    <div>
+                        <input type="email" id="email" name="firstname" placeholder=" ">
+                        <label for="email">Adresse e-mail</label>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div class="contact-form-box">
+        <div class="commencer">
+            <div class="input-container">
+                <div class="input-field">
+                    <div>
+                        <input type="text" id="subject" name="lastname" placeholder=" ">
+                        <label for="subject">Sujet</label>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
-<form action="?page=contact" method="POST">
-
-<h1 class="loginh1">Nous contacter</h1>
-
-
-    <div class="contact-input-box">
-
-    <label for="fname">Prénom</label>
-    <input type="text" id="fname" name="firstname" >
-
-    </div>
-
-    
-    <div class="contact-input-box">
-
-    <label for="lname">Nom</label>
-    <input type="text" id="lname" name="lastname" >
-
-    </div>
-
-    
-    <div class="contact-input-box1">
-    <label for="subject">Votre message</label>
-    <textarea id="subject" name="subject" style="height:100px" class="textarea" ></textarea>
-
-
-    </div>
-
-    <div class="submit">
-
-    <input type="submit" value="Envoyer" class="submit1">
-
-    </div>
+        <div class="commencer">
+            <div class="input-container">
+                <div class="input-field2">
+                    <div id="interne">
+                        <!-- <textarea id="subject" name="subject" style="height:100px" class="textarea"></textarea> -->
+                        <input type="text" id="message" name="message" placeholder=" ">
+                        <label for="message">Message</label>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-    
-</div> 
+        <button type="submit" class="send-profil">Envoyer</button>
 
-
-</form>
-
-<script>
-
-console.log('test son père')
-
-const inputs = document.querySelectorAll('input');
-
-for (let i = 0; i < inputs.length; i++) {
-    let field = inputs[i];
-
-    field.addEventListener('input', (e) => {
-
-        if (e.target.value != "") {
-            e.target.parentNode.classList.add('animation');
-        } else if (e.target.value == "") {
-            e.target.parentNode.classList.remove('animation');
-        }
-    })
-}
-</script>
-
-
-</section>
+    </form>
+</main>

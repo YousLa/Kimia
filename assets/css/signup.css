@@ -1,242 +1,82 @@
-/*# sourceMappingURL=signup.css.map */
-body {
+/* !! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !! */
+/* !! CSS FINI IL NE FAUT PAS SUPPRIMER OU MODIFIER DE LIGNE !!*/
+/* !! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !! */
 
-
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-}
-
-
-/*
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  margin-top: 200px;
-  min-height: 90vh ;
-}*/
-
-.signup-hero-section {
-  max-width: 1100px;
-  margin: 0px auto;
-  display: flex;
-  justify-content: center;
-  min-height: 80vh;
-  background: 0, 0, 0, 0.4;
-
-}
-.form{
-
-
-}
-
-.signup-form-box {
-  position: relative;
-  width: 400px;
-  height: 450px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  margin-top: 100px;
-
-}
-
-.signup-input-box {
-  position: relative;
-  margin: 30px 0;
-  width: 410px;
-
-}
-
-.signuph1 {
-  color: rgb(243, 233, 233);
-  font-size: 2rem;
-  padding-bottom: 15px;
-}
-
-.signup-form-box1 {
-  position: relative;
-  margin: 30px 0;
-  width: 410px;
-  border-bottom: 0.8px solid #F2F2F2;
-
-}
-
-.signup-input-box input {
+.input-field div {
   width: 100%;
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  font-size: 1.5rem;
-  padding: 0 15px 0 15px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.signup-input-box label {
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  color: #F2F2F2;
-  font-size: 0.8em;
-  font-weight: 150px;
-  letter-spacing: 0.2em;
-  pointer-events: none;
-  transition: .5s;
+#create-profil #create-profil-form input {
+  width: 20rem;
   font-family: "Raleway";
 }
 
-.signuph1 {
+#create-profil #create-profil-form label {
+  width: 100%;
+  left: -2.5rem;
+
+  font-family: "Raleway-medium";
+}
+
+.send-profil {
+  margin: 1rem 0 0 0;
+  width: 20rem;
+
+}
+
+#create-profil #create-profil-form h1 {
   font-family: "Raleway";
+  font-size: xx-large;
+  margin: 0;
+  text-align: left;
+  width: 30rem;
+}
+
+#create-profil {
+  margin: 6rem 0 0 0;
+}
+
+#signup {
+  font-family: "Raleway-thin";
+  font-size: small;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+
+#signup a {
+  font-family: "Raleway-bold";
   color: #F2F2F2;
 }
 
-.btn-sign {
-  width: 100%;
-  height: 45px;
-  border-radius: 5px;
-  border-style: none;
-  color: aliceblue;
-  font-size: 1em;
-  cursor: pointer;
-  background-color: #9747FF;
+form {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 47px;
 }
 
-/*Animation label*/
-.signup-form-box .signup-form-box1:focus-within label,
-.signup-form-box .signup-form-box1.animation label {
-  top: 0px;
-  transform: translateY(-70%);
-
-}
-
-.signup-form-box .signup-form-box1:focus-within input,
-.signup-form-box .signup-form-box1.animation input {}
-
-/* Tablet*/
-
+/* ^ ====================== Tablet ======================*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-
-  body {
-    background-color: rgb(30, 126, 216);
-
+  #create-profil {
+    margin: 12rem;
   }
-
-
-
-  .signup-hero-section h1 {
-    width: 90%;
-    height: 10rem;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  .signup-form-box {
-    position: relative;
-    width: 300px;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    margin-top: 200px;
-
-  }
-
 
 }
 
-/* Smartphone */
+/* ^ ====================== Smartphone ====================== */
+@media screen and (max-width: 767px) {
 
-@media screen and (max-width: 600px) {
-
-  /*body {
-    background-color: rgb(92, 92, 22);
-  }*/
-
-  .signup-hero-section h1 {
-    width: 80%;
-    height: 30vh;
-    font-size: 2rem;
-    font-weight: bold;
-
-
-  }
-
-  .signup-hero-section {
-    width: 100%;
-    ;
-    background-color: rgb(105, 138, 138);
-  }
-
-
-  .signup-form-box {
-    position: relative;
-    width: 250px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    margin-top: 200px;
-    padding-left: 150px;
-
-
-  }
-
-  .signup-input-box input {
-    width: 80%;
-    height: 50px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-size: 1.5rem;
-    padding: 0 15px 0 15px;
-    color: #F2F2F2;
-    font-size: 1em;
-    font-weight: 150;
-    letter-spacing: 0.2em;
-
-
-  }
-
-  .signup-input-box label {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    color: #F2F2F2;
-    font-size: 0.8em;
-    font-weight: 150px;
-    letter-spacing: 0.2em;
-    pointer-events: none;
-    transition: .5s;
+  #create-profil #create-profil-form h1 {
     font-family: "Raleway";
-  }
-
-  .signup-form-box1 {
-    position: relative;
-    margin: 40px 0;
-    width: 410px;
-    border-bottom: 0.8px solid #F2F2F2;
-
-
-  }
-
-  .btn-sign {
-    width: 70%;
-    height: 45px;
-    border-radius: 5px;
-    border-style: none;
-    color: aliceblue;
-    font-size: 1em;
-    cursor: pointer;
-    background-color: #9747FF;
+    font-size: x-large;
+    margin: 0;
+    text-align: left;
+    width: 20rem;
   }
 }

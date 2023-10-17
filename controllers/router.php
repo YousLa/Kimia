@@ -54,6 +54,7 @@ if (isset($_GET['page'])) {
 
             // * Ressource CSS 
             $css = array(
+                'assets/css/createProfil.css',
                 'assets/css/signup.css'
             );
 
@@ -160,13 +161,12 @@ if (isset($_GET['page'])) {
 
             // * Ressource CSS
             $css = array(
+                'assets/css/createProfil.css',
                 'assets/css/login.css'
             );
 
             // * JS
-            $js = array(
-                'assets/js/input.js'
-            );
+            $js = array();
 
             break;
 
@@ -260,6 +260,7 @@ if (isset($_GET['page'])) {
 
             // * Ressource CSS
             $css = array(
+                'assets/css/createProfil.css',
                 'assets/css/contact.css'
             );
 
