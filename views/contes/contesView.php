@@ -7,7 +7,7 @@
 
     <?php foreach ($tendances as $cle => $tendance) : ?>
         <a class="url-pic" href='?page=fiche&conte=<?= htmlspecialchars($tendance['title']) ?>'>
-            <img class="slide-pic" src="assets/contes/<?= $tendance['image']; ?>" alt="<?= $tendance['title'] ?>">
+            <img class="slide-pic" src="assets/contes/landscape/<?= $tendance['image_landscape']; ?>" alt="<?= $tendance['title'] ?>">
         </a>
     <?php endforeach; ?>
 
@@ -57,7 +57,7 @@
 
                             <!-- Affiche de conte -->
                             <a href='?page=fiche&conte=<?= htmlspecialchars($conte['title']) ?>'>
-                                <img class="affiche" src="assets/contes/<?= $conte['image'] ?>" alt="<?= $conte['title'] ?>">
+                                <img class="affiche" src="assets/contes/landscape/<?= $conte['image_landscape'] ?>" alt="<?= $conte['title'] ?>">
                             </a>
 
 

@@ -5,11 +5,11 @@
     <div class="fiche">
         <div class="left">
 
-            <img class="affiche-conte" src="assets/contes/<?= $image_square ?>" alt="">
+            <img class="affiche-conte" src="assets/contes/square/<?= $image_square ?>" alt="">
 
             <!-- TODO -->
             <!-- <audio class="trailer" controls>
-                <source src="assets/contes/<?= $audio ?>" type="audio/mp3">
+                <source src="assets/contes/mp3/<?= $audio ?>" type="audio/mp3">
             </audio> -->
         </div>
 

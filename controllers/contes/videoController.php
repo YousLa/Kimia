@@ -19,7 +19,7 @@ if ($response->success) {
 
 
 $filename = $url;
-$direname = "assets/contes/";
+$direname = "assets/contes/mp4/";
 
 $stream = new VideoStream($direname . $filename);
 $stream->start();

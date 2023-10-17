@@ -22,7 +22,7 @@ if (isset($_GET['conte'])) {
     if ($response->success) {
         $conte = $response->data;
         list(
-            $id, $title, $synopsis, $url, $image_square, $image, $audio
+            $id, $title, $synopsis, $url, $image_landscape, $image_square, $audio
         ) = $conte;
     }
 } else {
