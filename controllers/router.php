@@ -62,7 +62,8 @@ if (isset($_GET['page'])) {
 
             // * JS
             $js = array(
-                'assets/js/input.js'
+                'assets/js/input.js',
+                'assets/js/localStorage.js'
             );
 
             break;
