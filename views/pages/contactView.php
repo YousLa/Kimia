@@ -31,9 +31,9 @@
             <div class="input-container">
                 <div class="input-field2">
                     <div id="interne">
-                        <!-- <textarea id="subject" name="subject" style="height:100px" class="textarea"></textarea> -->
-                        <input type="text" id="message" name="message" placeholder=" ">
-                        <label for="message">Message</label>
+                        <!-- <input type="text" id="message" name="message" placeholder=" "> -->
+                        <textarea id="message" name="message" class="textarea" placeholder=" "></textarea>
+                        <label id="label-message" for="message">Message</label>
                     </div>
                 </div>
             </div>

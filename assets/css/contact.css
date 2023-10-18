@@ -1,14 +1,9 @@
-/* !! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !! */
-/* !! CSS FINI IL NE FAUT PAS SUPPRIMER OU MODIFIER DE LIGNE !!*/
-/* !! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !! */
-
 #signup {
     font-family: "Raleway-thin";
     font-size: small;
     margin: 0.5rem;
     text-align: center;
 }
-
 
 #signup a {
     font-family: "Raleway-bold";
@@ -29,22 +24,31 @@ form {
     justify-content: center;
 }
 
-#create-profil #create-profil-form input {
+#create-profil #create-profil-form input,
+#create-profil #create-profil-form textarea {
     width: 20rem;
     font-family: "Raleway";
+}
+
+input,
+label,
+textarea {
+    cursor: text;
 }
 
 #create-profil #create-profil-form label {
     width: 100%;
     left: -2.5rem;
-
     font-family: "Raleway-medium";
+}
+
+#interne {
+    width: 20rem;
 }
 
 .send-profil {
     margin: 5rem 0 0 0;
     width: 20rem;
-
 }
 
 #create-profil #create-profil-form h1 {
@@ -54,18 +58,15 @@ form {
     text-align: left;
 }
 
-
 #message-container {
     width: 100%;
 }
 
-/* 
-#message-container {
-    border: solid 1px #F2F2F2;
-    width: 20rem;
-    position: absolute;
-    left: -5rem;
-} */
+/* * Parent => input - label */
+.input-field {
+
+    line-height: 3.75rem;
+}
 
 /* * Parent => input - label */
 .input-field2 {
@@ -77,38 +78,67 @@ form {
     position: relative;
     border: 0.1rem solid #d3d3d3;
     border-radius: 0.3rem;
-    /* espace entre le label et le border bot de l'input */
-    line-height: 2.75rem;
+    line-height: 0.75rem;
     left: -3rem;
 }
 
 
+
 /* * Input */
-.input-field2 input {
+.input-field2 input,
+.input-field2 textarea {
     width: 20rem;
     height: 60%;
     left: 2px;
     border: none;
-    /* Supprime la bordure par défaut */
     background-color: transparent;
-    /* Supprime le fond par défaut */
     box-shadow: none;
     color: #F2F2F2;
-    /* Supprime le contour en focus */
     outline: none;
     font-size: 1.1rem;
-    /* Espace entre le label et la value de l'input */
     top: 0;
 }
 
-#create-profil #create-profil-form .input-field2 label {
-    width: 100%;
-    left: 0.5rem;
-
+#create-profil #create-profil-form textarea {
+    width: 99%;
+    height: 8rem;
     font-family: "Raleway-medium";
 }
 
-#create-profil #create-profil-form .input-field2 input {
+/* Customize website's scrollbar like Mac OS (Not supported in Firefox and IE) */
+
+/* total width */
+textarea::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+}
+
+/* background of the scrollbar except button or resizer */
+textarea::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* scrollbar itself */
+textarea::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+}
+
+/* set button (top and bottom of the scrollbar) */
+textarea::-webkit-scrollbar-button {
+    display: none;
+    cursor: pointer;
+}
+
+
+#create-profil #create-profil-form #label-message {
+    width: 100%;
+    left: 0.5rem;
+    font-family: "Raleway-medium";
+}
+
+#create-profil #create-profil-form .input-field2 input,
+#create-profil #create-profil-form .input-field2 textarea {
     border-bottom: none;
 }
 
@@ -116,9 +146,53 @@ form {
     margin: 6rem 0 0 0;
 }
 
-/* ^ ====================== Tablet ======================*/
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+/* * Label */
+.input-field2 label {
+    width: 100%;
+    position: absolute;
+    top: 14px;
+    left: 0px;
+    color: #d3d3d3;
+    transition: 0.2s all;
+    font-size: large;
+}
 
+/* * Input au moment du focus */
+input:focus~label,
+textarea:focus~label {
+    font-size: 0.8rem;
+    top: -14px;
+}
+
+input:focus~label,
+input:not(:placeholder-shown)~label {
+    font-size: 0.8rem;
+    top: -8px;
+}
+
+/* TODO */
+textarea:focus~label,
+textarea:not(:placeholder-shown)~label {
+    font-size: 0.8rem;
+    top: 5px;
+}
+
+/* * Input */
+textarea {
+    left: 2px;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    color: #F2F2F2;
+    outline: none;
+    font-size: 1.1rem;
+    top: 0;
+    resize: none;
+    z-index: 1;
+}
+
+/* ^ ====================== Tablet ====================== */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     #create-profil {
         margin: 12rem 0 0 0;
     }

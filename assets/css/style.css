@@ -86,6 +86,12 @@ body {
   line-height: normal;
 }
 
+input,
+label,
+textarea {
+  cursor: text;
+}
+
 main {
   flex-grow: 1;
 }
