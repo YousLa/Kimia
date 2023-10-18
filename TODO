@@ -4,6 +4,23 @@ PS : Le Profil reprends des infos non officiel tel que le pseudo et l'avatar. Ta
 
 TODO : 
 
+    MIDJOURNEY & CO :
+
+        ☐ Affiche - 40
+            ☐ Square
+            ☐ Landscape
+            ☐ Titre
+
+    DATABASE : 
+
+        ☐ Ajouter URL Affiche de conte
+            ☐ Square
+            ☐ Landscape
+        
+        ☐ Catégories   
+            ☐ Assigner une catégorie à chaque contes
+            ☐ Tendances
+
     CSS :
 
         Nav : 
@@ -26,7 +43,25 @@ TODO :
 
         Formulaire de contact :
 
-            ☐ Textarea
+            ✔ Textarea @done(23-10-18 11:08)
+                ☐ cursor scroll => pointer
+
+        Modal avatar :
+
+            ✔ Enlever le visuel du scroll horizontal @done(23-10-18 11:35)
+                ✔ Firefox @done(23-10-18 11:35)
+                ✔ Edge @done(23-10-18 11:35)
+                ✔ Chrome @done(23-10-18 11:35)
+
+    JAVASCRIPT :
+
+        Home - Signup :
+
+            ☐ Email
+                ✔ LocalStorage @done(23-10-18 11:11)
+                ☐ Value Email - signup
+
+
 
     PHP :
 

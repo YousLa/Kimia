@@ -40,6 +40,8 @@ if (isset($_GET['page'])) {
             } else {
                 $js = array(
                     'assets/js/slide-homepage.js',
+                    'assets/js/localStorage.js'
+
                 );
             }
 

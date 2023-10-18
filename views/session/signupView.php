@@ -15,7 +15,7 @@
                 <div class="input-field">
 
                     <div>
-                        <input type="text" name="email" id="email" autocomplete="off" value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>" placeholder=" ">
+                        <input type="text" name="email" id="email" autocomplete="off" placeholder=" ">
                         <label for="email">Adresse e-mail</label>
                     </div>
 

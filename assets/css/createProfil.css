@@ -221,11 +221,39 @@ label {
   height: 15.625;
 }
 
+/* TODO Enlever le visuel des scroll horizontales des slides Avatar-choices */
+
 .avatar-choices {
   display: flex;
   flex-direction: row;
   gap: 2rem;
   margin-bottom: 2.5rem;
+}
+
+/* ! CHROME */
+/* * La règle simple pour les navigateurs -Webkit-: */
+.avatar-choices::-webkit-scrollbar {
+  display: none;
+}
+
+/* * OU */
+/* * -Webkit-: */
+/* .avatar-choices::-webkit-scrollbar { width: 0 !important } */
+
+/* ! EDGE */
+/* Règle pour IE 10+: */
+.avatar-choices {
+  -ms-overflow-style: none;
+}
+
+/* Il y avait une règle pour Firefox mais elle est déjà obsolète: */
+.avatar-choices {
+  overflow: -moz-scrollbars-none;
+}
+
+/* ! FIREFOX */
+.avatar-choices {
+  scrollbar-width: none;
 }
 
 #close {
