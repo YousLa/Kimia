@@ -6,20 +6,20 @@ TODO :
 
     MIDJOURNEY & CO :
 
-        ☐ Affiche - 40
-            ☐ Square
-            ☐ Landscape
-            ☐ Titre
+        ✔ Affiche - 40 @done(23-10-23 12:49)
+            ✔ Square @done(23-10-23 12:49)
+            ✔ Landscape @done(23-10-23 12:49)
+            ✔ Titre @done(23-10-23 12:49)
 
     DATABASE : 
 
-        ☐ Ajouter URL Affiche de conte
-            ☐ Square
-            ☐ Landscape
+        ✔ Ajouter URL Affiche de conte @done(23-10-23 12:49)
+            ✔ Square @done(23-10-23 12:49)
+            ✔ Landscape @done(23-10-23 12:49)
         
-        ☐ Catégories   
-            ☐ Assigner une catégorie à chaque contes
-            ☐ Tendances
+        ✔ Catégories @done(23-10-23 12:49)
+            ✔ Assigner une catégorie à chaque conte @done(23-10-23 12:49)
+            ✔ Tendance @done(23-10-23 12:49)
 
     CSS :
 
