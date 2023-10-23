@@ -34,7 +34,7 @@ function sendMessage(array $contactData): ApiResponse
 
     $stmt->bindParam(":email", $contactData['email']);
     $stmt->bindParam(":sujet", $contactData['sujet']);
-    $stmt->bindParam(":message", $contactData['sujet']);
+    $stmt->bindParam(":message", $contactData['message']);
 
     $isDone = $stmt->execute();
 
