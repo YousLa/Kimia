@@ -1,5 +1,6 @@
 <?php
 
+require_once 'models/functions/ContactModel.php';
 require_once 'models/functions/ProfileModel.php';
 require_once 'models/database/database.php';
 require_once 'models/functions/ContesModel.php';

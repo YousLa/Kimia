@@ -22,4 +22,4 @@ if (isset($_SESSION['id'])) {
     }
 }
 
-require_once 'views/profil/profile.php';
+require_once 'views/profil/profileView.php';

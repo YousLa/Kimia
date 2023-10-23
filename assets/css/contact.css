@@ -1,0 +1,202 @@
+#signup {
+    font-family: "Raleway-thin";
+    font-size: small;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+#signup a {
+    font-family: "Raleway-bold";
+    color: #F2F2F2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 47px;
+}
+
+.input-field div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#create-profil #create-profil-form input,
+#create-profil #create-profil-form textarea {
+    width: 20rem;
+    font-family: "Raleway";
+}
+
+input,
+label,
+textarea {
+    cursor: text;
+}
+
+#create-profil #create-profil-form label {
+    width: 100%;
+    left: -2.5rem;
+    font-family: "Raleway-medium";
+}
+
+#interne {
+    width: 20rem;
+}
+
+.send-profil {
+    margin: 5rem 0 0 0;
+    width: 20rem;
+}
+
+#create-profil #create-profil-form h1 {
+    font-size: xx-large;
+    font-family: "Raleway";
+    margin: 0;
+    text-align: left;
+}
+
+#message-container {
+    width: 100%;
+}
+
+/* * Parent => input - label */
+.input-field {
+
+    line-height: 3.75rem;
+}
+
+/* * Parent => input - label */
+.input-field2 {
+    width: 20rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    border: 0.1rem solid #d3d3d3;
+    border-radius: 0.3rem;
+    line-height: 0.75rem;
+    left: -3rem;
+}
+
+
+
+/* * Input */
+.input-field2 input,
+.input-field2 textarea {
+    width: 20rem;
+    height: 60%;
+    left: 2px;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    color: #F2F2F2;
+    outline: none;
+    font-size: 1.1rem;
+    top: 0;
+}
+
+#create-profil #create-profil-form textarea {
+    width: 99%;
+    height: 8rem;
+    font-family: "Raleway-medium";
+}
+
+/* Customize website's scrollbar like Mac OS (Not supported in Firefox and IE) */
+
+/* total width */
+textarea::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+}
+
+/* background of the scrollbar except button or resizer */
+textarea::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* scrollbar itself */
+textarea::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+}
+
+/* set button (top and bottom of the scrollbar) */
+textarea::-webkit-scrollbar-button {
+    display: none;
+    cursor: pointer;
+}
+
+
+#create-profil #create-profil-form #label-message {
+    width: 100%;
+    left: 0.5rem;
+    font-family: "Raleway-medium";
+}
+
+#create-profil #create-profil-form .input-field2 input,
+#create-profil #create-profil-form .input-field2 textarea {
+    border-bottom: none;
+}
+
+#create-profil {
+    margin: 6rem 0 0 0;
+}
+
+/* * Label */
+.input-field2 label {
+    width: 100%;
+    position: absolute;
+    top: 14px;
+    left: 0px;
+    color: #d3d3d3;
+    transition: 0.2s all;
+    font-size: large;
+}
+
+/* * Input au moment du focus */
+input:focus~label,
+textarea:focus~label {
+    font-size: 0.8rem;
+    top: -14px;
+}
+
+input:focus~label,
+input:not(:placeholder-shown)~label {
+    font-size: 0.8rem;
+    top: -8px;
+}
+
+/* TODO */
+textarea:focus~label,
+textarea:not(:placeholder-shown)~label {
+    font-size: 0.8rem;
+    top: 5px;
+}
+
+/* * Input */
+textarea {
+    left: 2px;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    color: #F2F2F2;
+    outline: none;
+    font-size: 1.1rem;
+    top: 0;
+    resize: none;
+    z-index: 1;
+}
+
+/* ^ ====================== Tablet ====================== */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #create-profil {
+        margin: 12rem 0 0 0;
+    }
+}
+
+/* ^ ====================== Smartphone ====================== */
+@media screen and (max-width: 767px) {}

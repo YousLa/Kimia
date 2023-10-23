@@ -30,13 +30,13 @@ console.log(SPAN_CLOSE);
 
 
 // ~ Ajout de l'évènement d'ouverture du modal sur mon empty avatar
-SVG_EMPTY_AVATAR.addEventListener('click', (e) => {
+SVG_EMPTY_AVATAR.addEventListener('click', () => {
     DIV_MODAL.classList.toggle('modalHidden');
 })
 
 
 // ~ Ajout de l'évènement de fermeture du modal sur mon bouton close
-SPAN_CLOSE.addEventListener('click', (e) => {
+SPAN_CLOSE.addEventListener('click', () => {
 
     DIV_MODAL.classList.toggle('modalHidden');
 })
@@ -52,7 +52,7 @@ for (let i = 0; i < IMG_IMG_MODAL.length; i++) {
     let position = IMG_IMG_MODAL[i];
 
     // ~ Ajout de l'évènement lorsque l'utilisateur choisi un image
-    position.addEventListener('click', (e) => {
+    position.addEventListener('click', () => {
 
         // * Récupération du src de l'avatar choisi
         let src = position.getAttribute('src');

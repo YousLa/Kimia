@@ -3,11 +3,11 @@
 $error = false;
 $error_message = "";
 
-var_dump($_SESSION['id'], $_SESSION['email'], $_SESSION['role']);
+// var_dump($_SESSION['id'], $_SESSION['email'], $_SESSION['role']);
 
 if (isset($_POST['send'], $_POST['pseudo'], $_POST['avatar']) && !empty($_POST['pseudo']) && !empty($_POST['avatar'])) {
 
-    require 'models/functions/ProfileModel.php';
+
 
     $userProfileData = [
         'pseudo' => $_POST['pseudo'],

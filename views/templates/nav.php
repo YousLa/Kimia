@@ -6,6 +6,7 @@ $pseudo = "";
 $error = false;
 $error_message = "";
 
+// Pour récuperer les informations du profil de l'utilisateur connecté
 if (isset($_SESSION['id'])) {
 
     $response = getProfile($_SESSION['id']);
@@ -14,8 +15,16 @@ if (isset($_SESSION['id'])) {
         $error = false;
         $error_message = null;
 
-        $avatar = $response->data['avatar'];
-        $pseudo = $response->data['pseudo'];
+        switch ($_GET['page']) {
+            case 'createProfile':
+                break;
+
+            default:
+
+                $avatar = $response->data['avatar'];
+                $pseudo = $response->data['pseudo'];
+                break;
+        }
     } else {
         $error = true;
         $error_message = $response->error;
@@ -26,7 +35,6 @@ if (isset($_SESSION['id'])) {
 <div id="top">
 
     <nav>
-
         <!-- Si l'utilisateur est connecté, la version connected de la navbar est affiché -->
         <a href='?page=home'><img id="logo-header" src="assets/img/logo/Kimia.svg" alt=""></a>
         <?php if (isset($_SESSION['email'])) : ?>
@@ -35,33 +43,44 @@ if (isset($_SESSION['id'])) {
 
             <?php else : ?>
 
-                <!-- TODO Afficher l'avatar avec php -->
-                <div id="avatar-catalogue">
-                    <a href="?page=profile"><img id="user-avatar" src="<?= $avatar ?>" alt="Avatar de l'utilisateur"></a>
+                <?php
+                switch ($_GET['page']) {
+                    case 'updateProfile':
+                    case 'createProfile':
 
-                </div>
+                        break;
+                    default:
 
-                <!-- VERSION CONNECTED -->
-                <div id="menu-avatar">
-                    <ul>
-                        <!-- <li><a href='?page=profil'>PROFIL</a></li> -->
-                        <li><a href='?page=account'>COMPTE</a></li>
-                        <li><a href='?page=contes'>CONTES</a></li>
-                        <li><a href='?page=logout'>Se deconnecter</a></li>
-                    </ul>
-                </div>
-                <!-- VERSION CONNECTED -->
-
-            <?php endif; ?>
-            <!-- Sinon on affiche la version disconnected -->
-        <?php else : ?>
-
-            <!-- VERSION DISCONNECTED -->
-
-            <button id='login'><a href='?page=login'>S'identifier</a></button>
-            <!-- VERSION DISCONNECTED -->
-
-        <?php endif; ?>
+                        echo "<div class='dropdown'>";
+                        echo "<img id='user-avatar' class='dropbtn' src='$avatar' alt='Avatar de l'utilisateur'>";
+                        echo "<div id='dropdown-content'>";
+                        echo "<a href='?page=profile'><img class='icon' src='assets/img/icons/edit-blanc.svg' alt='compte'> Gérer le profil</a>";
+                        echo "<a href='?page=account'><img class='icon' src='assets/img/icons/user-blanc.svg' alt='compte'> Compte</a>";
+                        echo "<div id='logout'>";
+                        echo "<a href='?page=logout'>Se déconnecter</a>";
+                        echo "</div>";
+                        echo "</div>";
+                        echo "</div>";
+                        break;
+                }
+                ?>
 
     </nav>
+</div>
+<!-- VERSION CONNECTED -->
+
+<?php endif; ?>
+<!-- Sinon on affiche la version disconnected -->
+<?php else : ?>
+
+    <!-- VERSION DISCONNECTED -->
+    <?php if (isset($_GET['page']) && ($_GET['page'] == 'login' || $_GET['page'] == 'createProfile')) : ?>
+    <?php else : ?>
+        <button id='login'><a href='?page=login'>S'identifier</a></button>
+        <!-- VERSION DISCONNECTED -->
+    <?php endif; ?>
+
+<?php endif; ?>
+
+</nav>
 </div>

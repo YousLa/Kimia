@@ -1,63 +1,128 @@
-/* Font */
+/* #region Font */
 @font-face {
   font-family: "Raleway";
   src: url(../fonts/Raleway/static/Raleway-Regular.ttf);
 }
+
 @font-face {
   font-family: "Raleway-thin";
   src: url(../fonts/Raleway/static/Raleway-Thin.ttf);
 }
 
-{
-  background-color: #221D2E;
-  font-family: "Raleway";
-  color: #F2F2F2;
+@font-face {
+  font-family: "Raleway-medium";
+  src: url(../fonts/Raleway/static/Raleway-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Raleway-regular";
+  src: url(../fonts/Raleway/static/Raleway-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Raleway-light";
+  src: url(../fonts/Raleway/static/Raleway-Light.ttf);
+}
+
+@font-face {
+  font-family: "Raleway-extralight";
+  src: url(../fonts/Raleway/static/Raleway-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: "Raleway-black";
+  src: url(../fonts/Raleway/static/Raleway-Black.ttf);
+}
+
+@font-face {
+  font-family: "Raleway-bold";
+  src: url(../fonts/Raleway/static/Raleway-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Savedbyzero";
+  src: url(../fonts/saved_by_zero/saved\ by\ zero\ rg.otf);
+}
+
+
+/* #endregion */
+
+/* #region */
+
+/* Customize website's scrollbar like Mac OS
+Not supports in Firefox and IE */
+
+/* total width */
+body::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+
+/* background of the scrollbar except button or resizer */
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* scrollbar itself */
+body::-webkit-scrollbar-thumb {
+  background-color: #babac0;
+  border-radius: 16px;
+  /* border: 4px solid transparent; */
+}
+
+/* set button(top and bottom of the scrollbar) */
+body::-webkit-scrollbar-button {
+  display: none;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
   background-color: #221D2E;
   font-family: "Raleway";
   color: #F2F2F2;
+  line-height: normal;
 }
 
+input,
+label,
+textarea {
+  cursor: text;
+}
+
+main {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* #endregion */
+
+/* #region navbar */
+
+/* * Parent => nav */
 #top {
   margin: 2rem 7rem 0 7rem;
 }
 
+/* * Parent => logo - menu - button  */
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
+/* * Logo de la barre de navigation */
 #logo-header {
-
-  width: 9rem;
+  width: 14rem;
 }
 
-#logo-footer {
-  width: 5rem;
-  background-color: #F2F2F2;
-}
-
-footer {
-  padding: 0.5rem;
-  bottom: 0;
-  text-align: center;
-  color: #221D2E;
-  background-color: #F2F2F2;
-}
-footer > div {
-  background-color: #F2F2F2;
-  font-size: xx-small;
-}
-footer > div > p {
-  margin: 0.2rem;
-  font-family: "Raleway";
-  background-color: #F2F2F2;
-  color: #221D2E;
-}
-
-button {
+/* * Button header */
+#login {
   width: 8rem;
   height: 2.5rem;
   padding: 0.5rem;
@@ -65,34 +130,213 @@ button {
   border-radius: 0.3rem;
   border: none;
 }
-button > a {
-  text-decoration: none;
+
+/* * Lien button login */
+#login>a {
   background-color: #9747FF;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.0325rem;
+  color: #F2F2F2;
+  font-family: "Raleway";
 }
 
-.input-forms {
-  width: 20rem;
-  height: 2rem;
-  border-radius: 0.3rem;
-  border: 2px solid #F2F2F2;
-  opacity: 0.6;
+
+/* #endregion */
+
+
+/* #region menu avatar */
+
+/* Image Avatar */
+#user-avatar {
+  height: 3rem;
+  border: solid #F2F2F2 1px;
+  border-radius: 5%;
 }
 
-h1 {
-  margin-top: 2rem;
-  font-size: large;
+
+/* Styles pour le dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+
 }
 
-h2 {
-  margin-top: 2rem;
-  font-size: large;
+/* Styles pour le bouton de déclenchement du dropdown (avatar) */
+.dropbtn {
+  cursor: pointer;
 }
 
-p {
-  margin-top: 2rem;
-  font-size: large;
+/* Styles pour le contenu du dropdown (initialement caché) */
+#dropdown-content {
+  display: none;
+  position: absolute;
+  right: -2%;
+  background-color: #9747ff50;
+  min-width: 10rem;
+  z-index: 1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3%;
 }
 
-/*# sourceMappingURL=style.css.map */
+/* Styles pour les liens du dropdown */
+#dropdown-content a {
+  /* justify-content: center; */
+  align-items: center;
+  color: #333;
+  padding: 5px 7px;
+  text-decoration: none;
 
+  display: flex;
+  color: #F2F2F2;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+#logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 7px;
+  border-top: solid 0.01rem #f2f2f242;
+}
+
+#logout:hover {
+  background-color: #221D2E;
+  color: #F2F2F2;
+}
+
+/* Changement de couleur des liens au survol */
+#dropdown-content a:hover {
+  background-color: #221D2E;
+  color: #F2F2F2;
+}
+
+/* Affichage du contenu du dropdown lorsque le bouton est survolé */
+.dropdown:hover #dropdown-content {
+  display: block;
+}
+
+/* *icones menu */
+.icon {
+  height: 1.5rem;
+  margin: 0.2rem;
+}
+
+
+
+
+/* #endregion */
+
+/* #region footer */
+
+/* * Logo du le footer */
+#logo-footer {
+  padding: 1rem 0 0 0;
+  width: 9rem;
+  background-color: #F2F2F2;
+}
+
+.p-footer {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.p-footer p a {
+  padding: 0 0.5rem;
+}
+
+/* * Parent => Logo - div */
+footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  text-align: center;
+  color: #221D2E;
+  background-color: #F2F2F2;
+}
+
+/* * Parent => p */
+footer>div {
+  background-color: #F2F2F2;
+  font-size: medium;
+}
+
+/* * Parent => a */
+footer>div>p {
+  margin: 0.2rem;
+  font-family: "Raleway";
+  background-color: #F2F2F2;
+  color: #221D2E;
+}
+
+footer>div>p>a {
+  color: #221D2E;
+}
+
+/* #endregion */
+
+
+/* #region Responsive */
+
+
+/* ^ ====================== Tablet ======================*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* 
+  #top {
+    border: solid 1px blue;
+  } */
+
+  /* * Logo de la barre de navigation */
+  #logo-header {
+    width: 12rem;
+  }
+}
+
+/* ^ ====================== Smartphone ====================== */
+@media screen and (max-width: 767px) {
+
+  /* #top {
+    border: solid 1px yellow;
+  } */
+
+  #top {
+    margin: 2rem 2rem 0 2rem;
+  }
+
+  #logo-header {
+    width: 10rem;
+  }
+
+  /* * Logo du le footer */
+  #logo-footer {
+    padding: 0.5rem 0 0 0;
+    width: 5rem;
+    background-color: #F2F2F2;
+  }
+
+  /* * Parent => p */
+  footer>div {
+    background-color: #F2F2F2;
+    font-size: small;
+  }
+
+  /* * Parent => a */
+  footer>div>p {
+    font-family: "Raleway-ExtraLight";
+  }
+
+
+
+}
+
+/* endregion */

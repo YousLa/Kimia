@@ -1,0 +1,129 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.container-fiche {
+    margin: 3rem 0 0 0;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.fiche {
+    width: 80%;
+    height: 80%;
+    margin: 2rem auto;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.close {
+    margin: 2rem 10% 0 0;
+}
+
+/* #region Left */
+
+/* Affiche du conte */
+
+.left {
+    width: 40%;
+    height: 100%;
+}
+
+.affiche-conte {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 2%;
+    border-bottom-left-radius: 2%;
+    object-fit: cover;
+}
+
+/* TODO */
+/* Trailer audio */
+.trailer {
+    position: absolute;
+}
+
+/* #endregion */
+
+.message-error {
+    width: 100%;
+}
+
+/* #region right */
+
+.right {
+    width: 60%;
+    height: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.titre-conte {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway-Regular";
+    font-size: 2.5rem;
+}
+
+
+.synopsis-conte {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-family: "Raleway-Light";
+}
+
+#video-conte {
+    width: 60%;
+    height: fit-content;
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9747FF;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+#video-conte a {
+    background-color: #9747FF;
+    letter-spacing: 0.0325rem;
+    color: #F2F2F2;
+    font-family: "Raleway";
+    font-size: 1.25rem;
+}
+
+.lien-conte {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* #endregion */
+
+footer {
+    display: none;
+}

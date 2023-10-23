@@ -1,3 +1,10 @@
+/* #region général */
+
+html {
+  height: 100vh;
+}
+
+
 #create-profil {
   display: flex;
   flex-direction: column;
@@ -6,70 +13,258 @@
   margin: 2rem;
   height: max-content;
 }
+
+/* #endregion */
+
+/* #region INPUT */
+
+/* ! PAS TOUCHER */
+
+.bottom {
+  margin: 4rem;
+}
+
+/* * Parent => input-field - button */
+.input-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+/* * Parent => input - label */
+.input-field {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+
+  border-radius: 0.3rem;
+  /* espace entre le label et le border bot de l'input */
+  line-height: 2.75rem;
+}
+
+
+/* * Input */
+input {
+  width: 100%;
+  height: 60%;
+  left: 2px;
+  border: none;
+  /* Supprime la bordure par défaut */
+  background-color: transparent;
+  /* Supprime le fond par défaut */
+  box-shadow: none;
+  color: #F2F2F2;
+  /* Supprime le contour en focus */
+  outline: none;
+  font-size: 1.1rem;
+  /* Espace entre le label et la value de l'input */
+  top: 0;
+}
+
+/* * Input au moment du focus */
+input:focus~label,
+input:not(:placeholder-shown)~label {
+  font-size: 0.8rem;
+  top: -10px;
+}
+
+#pseudo {
+  font-family: "Raleway";
+}
+
+
+
+/* * Label */
+label {
+  width: 100%;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  color: #d3d3d3;
+  transition: 0.2s all;
+  font-size: large;
+}
+
+/* #endregion  */
+
+/* #region main */
+
+/* * Container le plus haut de l'input pseudo */
+.commencer {
+  width: 70%;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* * Button envoie de formulaire */
+.send-profil {
+  width: 20rem;
+  height: 3rem;
+  padding: 0.5rem;
+  background-color: #9747FF;
+  border-radius: 0.3rem;
+  border: none;
+  font-size: 1.1rem;
+  letter-spacing: 0.0325rem;
+  color: #F2F2F2;
+
+  align-self: center;
+  margin: 2rem 0;
+  font-family: "Raleway";
+}
+
+/* * Container le plus haut + 1er enfant de tous le main */
 #create-profil #create-profil-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+/* * H1 => Personnalisez votre profil + Choisissez votre avatar */
 #create-profil #create-profil-form h1 {
   font-size: xx-large;
-  margin: 0.5rem auto;
+  margin: 0.5rem auto 2rem auto;
+  font-weight: 600;
+  font-family: "Raleway-Light";
+  letter-spacing: 1px;
+  text-align: center;
 }
+
+/* * H2 Choisissez votre pseudo + Choisissez votre avatar */
 #create-profil #create-profil-form h2 {
   font-size: x-large;
   margin: 2rem auto;
+  font-family: "Raleway-Light";
 }
+
+#create-profil #create-profil-form h2:last-of-type {
+  font-size: x-large;
+  margin: 3rem auto 2rem auto;
+  font-family: "Raleway-Light";
+}
+
+/* * Input du formulaire  */
 #create-profil #create-profil-form input {
-  width: 25rem;
-  height: 3rem;
+  width: 16rem;
+  height: 2rem;
+  margin: auto;
   flex-shrink: 0;
   border: transparent;
   border-bottom: 1px solid #F2F2F2;
-}
-#create-profil #create-profil-form #empty-avatar {
-  align-self: center;
-  height: 15rem;
-  width: fit-content;
-}
-#create-profil #create-profil-form button {
-  font-size: large;
-  align-self: center;
-  margin: 2rem 0;
+
 }
 
+/* * Avatar vide */
+#create-profil #create-profil-form #container-empty-avatar {
+  align-self: center;
+  width: 15rem;
+  width: fit-content;
+}
+
+/* * Avatar vide image */
+#empty-avatar {
+  width: 15rem;
+}
+
+/* #endregion */
+
+/* #region Modal */
 .modal {
+  background-color: #221d2e;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: absolute;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
 }
+
+.modal .choose-avatar {
+  text-align: center;
+  margin: 0 0 5rem 0;
+  font-size: xx-large;
+  font-weight: 600;
+  font-family: "Raleway-Light";
+  letter-spacing: 1px;
+}
+
 .modal #logo {
-  align-self: left;
+  width: 14rem;
+  margin: 2rem 7rem 0 7rem;
 }
-.modal .pic {
-  height: 15rem;
+
+.div-logo {
+  width: 100%;
 }
-.modal #rang {
-  width: fit-content;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  row-gap: 5rem;
-  column-gap: 5rem;
+
+.modal-content {
+  margin: 2.5rem;
+}
+
+.modal-content h2 {
+  font-size: x-large;
+  font-family: "Raleway-Light";
+  margin: 1rem 0;
+}
+
+.modal .pic-modal {
+  height: 15.625;
+}
+
+/* TODO Enlever le visuel des scroll horizontales des slides Avatar-choices */
+
+.avatar-choices {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ! CHROME */
+/* * La règle simple pour les navigateurs -Webkit-: */
+.avatar-choices::-webkit-scrollbar {
+  display: none;
+}
+
+/* * OU */
+/* * -Webkit-: */
+/* .avatar-choices::-webkit-scrollbar { width: 0 !important } */
+
+/* ! EDGE */
+/* Règle pour IE 10+: */
+.avatar-choices {
+  -ms-overflow-style: none;
+}
+
+/* Il y avait une règle pour Firefox mais elle est déjà obsolète: */
+.avatar-choices {
+  overflow: -moz-scrollbars-none;
+}
+
+/* ! FIREFOX */
+.avatar-choices {
+  scrollbar-width: none;
 }
 
 #close {
   width: 100%;
   display: flex;
   justify-content: right;
-  margin-right: 10rem;
-  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
+
 #close img {
-  width: 2rem;
+  width: 2.5rem;
   height: fit-content;
 }
 
@@ -81,4 +276,98 @@
   display: none;
 }
 
-/*# sourceMappingURL=createProfil.css.map */
+/* #endregion */
+
+/* #region Reponsive */
+
+/* ^ ====================== Tablet ======================*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  #create-profil {
+    margin: 5rem auto auto auto;
+  }
+
+  .modal #logo {
+    width: 12rem;
+    margin: 2rem 7rem 0 7rem;
+  }
+
+  .modal .pic-modal {
+    height: 10rem;
+  }
+
+}
+
+/* ^ ====================== Smartphone ====================== */
+@media screen and (max-width: 767px) {
+
+  /* avatar */
+  .modal .pic-modal {
+    height: 7rem;
+  }
+
+  /* avatar container */
+  .avatar-choices {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    overflow: scroll;
+  }
+
+
+  /* h1 */
+  .modal .choose-avatar {
+    text-align: center;
+    margin: 0 0 5rem 0;
+    font-size: x-large;
+    font-weight: 600;
+    font-family: "Raleway-Light";
+    letter-spacing: 1px;
+  }
+
+  .modal-content h2 {
+    font-size: large;
+    font-family: "Raleway-Light";
+    margin: 1rem 0;
+  }
+
+  .modal-content {
+    margin: 0;
+  }
+
+  .modal .rang {
+    width: fit-content;
+  }
+
+  .modal #logo {
+    width: 10rem;
+    margin: 2rem 2rem 0 2rem;
+  }
+
+  #close img {
+    width: 2rem;
+    height: fit-content;
+  }
+
+  #create-profil #create-profil-form h1 {
+    font-size: x-large;
+
+  }
+
+  #create-profil #create-profil-form h2,
+  #create-profil #create-profil-form h2:last-of-type {
+    font-size: large;
+    margin: 2rem auto;
+    font-family: "Raleway-Light";
+  }
+
+  #create-profil-form {
+    margin-top: 2rem;
+  }
+
+
+}
+
+/* #endregion */

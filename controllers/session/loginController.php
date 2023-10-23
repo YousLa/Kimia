@@ -9,7 +9,7 @@ $error_message = null;
 
 if (isset($_POST['login'])) {
 
-    require_once 'models/functions/UserModel.php';
+
 
     $email = trim(htmlspecialchars($_POST['email']));
     $password = trim(htmlspecialchars($_POST['password']));
@@ -24,6 +24,7 @@ if (isset($_POST['login'])) {
         $_SESSION['email'] = $response->data['email'];
         $_SESSION['role'] = $response->data['role'];
 
+        // TODO Vérifier si le profil à été completé, sinon rediriger vers la création de profil
         header('Location: ?page=home');
     } else {
         $error = true;

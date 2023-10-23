@@ -2,115 +2,174 @@ Dimanche 17 Septembre 2023
 
 PS : Le Profil reprends des infos non officiel tel que le pseudo et l'avatar. Tandis que le compte reprends les informations privées tel que le nom, le prénom, l'adresse email, le mot de passe et plus tard les données de paiement
 
-TODO :
+TODO : 
 
-    Catalogue : 
+    MIDJOURNEY & CO :
 
-        Avatar : 
+        ☐ Affiche - 40
+            ☐ Square
+            ☐ Landscape
+            ☐ Titre
 
-        ✔ Affichage de l'avatar @done(23-09-21 10:40)
+    DATABASE : 
 
-        Menu :
-            
-        ☐ Menu avatar
-            ☐ Profil
-            ☐ Compte
-            ☐ Centre d'aide
-            ☐ Se déconnecter
-
-    Création du nouveau router : 
-
-            ✔ router.php @done(23-09-27 15:26)
-                ✔ $view @done(23-09-27 15:26)
-                ✔ $css @done(23-09-27 15:26)
-                ✔ $js @done(23-09-27 15:26)
-
-    Création de fonctions :
-    
-        ResponseModel.php - Réponse structurée : 
-
-            ✔ Function response() @done(23-09-17 18:06)
+        ☐ Ajouter URL Affiche de conte
+            ☐ Square
+            ☐ Landscape
         
-        UserModel.php - Session utilisateur :
+        ☐ Catégories   
+            ☐ Assigner une catégorie à chaque contes
+            ☐ Tendances
 
-            ✔ Function signIn() - Connexion @done(23-09-17 18:10)
-            ✔ Function signUp() - Inscription @done(23-09-18 10:57)
-                ✔ Renvoyer les variables session createProfile.php @done(23-09-18 10:56)
-            ✔ Function userPatchField() - Modification @done(23-09-17 18:10)
-            ✔ Function getUserByIndex() - Récupération @done(23-09-17 18:10)
-            ✔ Function deleteUser() - Suppression @done(23-09-17 18:10)
+    CSS :
 
-        ProfileModel.php - Profil utilisateur : 
+        Nav : 
 
-            ✔ Function createProfile - Création @done(23-09-17 18:11)
-            ✔ Function profilePatchField - Modification @done(23-09-27 14:07)
-            ☐ Function Avatar - Récupération
+            ✔ CSS @done(23-10-13 15:36)
+                ✔ Session Active @done(23-10-13 15:36)
+                ✔ Session non active @done(23-10-04 17:27)
+        
+        Footer :
 
-        ContesModel.php - Contes :
+            ✔ CSS @done(23-10-13 15:36)
 
-            ☐ Function createContesController - Création
-            ☐ Function contesController - Affichage
-            ☐ Function updateContesController- Modification
+        Homepage :
+            
+            
+            ✔ CSS @done(23-10-04 17:28) CORRIGER LES BUGS !!! CORRIGER LES BUGS !!! CORRIGER LES BUGS !!! CORRIGER LES BUGS !!! CORRIGER LES BUGS !!! 
+            ✔ Responsive @done(23-10-04 17:27)
+                ✔ Mobile @done(23-10-04 17:27)
+                ✔ Tablette @done(23-10-04 17:27)
+
+        Formulaire de contact :
+
+            ✔ Textarea @done(23-10-18 11:08)
+                ☐ cursor scroll => pointer
+
+        Modal avatar :
+
+            ✔ Enlever le visuel du scroll horizontal @done(23-10-18 11:35)
+                ✔ Firefox @done(23-10-18 11:35)
+                ✔ Edge @done(23-10-18 11:35)
+                ✔ Chrome @done(23-10-18 11:35)
+
+    JAVASCRIPT :
+
+        Home - Signup :
+
+            ✔ Email @done(23-10-18 16:35)
+                ✔ LocalStorage @done(23-10-18 11:11)
+                ✔ Value Email - signup @done(23-10-18 16:35)
 
 
-TODO :
+
+    PHP :
+
+        Formulaire de contact :
+
+            ✔ Function contact() - Envoie formulaire de contact @done(23-10-17 14:09)
+            ✔ contactView.php @done(23-10-17 14:09)
+            ✔ contactControllers.php @done(23-10-17 14:09)
+
+        Catalogue : 
+
+            Avatar : 
+
+            ✔ Affichage de l'avatar @done(23-09-21 10:40)
+
+            Menu :
+
+            ✔ Menu avatar @done(23-10-13 15:36)
+                ✔ Profil @done(23-10-13 15:36)
+                ✔ Compte @done(23-10-13 15:36)
+                ✔ Se déconnecter @done(23-10-13 15:36)
+
+        Création du nouveau router : 
+
+                ✔ router.php @done(23-09-27 15:26)
+                    ✔ $view @done(23-09-27 15:26)
+                    ✔ $css @done(23-09-27 15:26)
+                    ✔ $js @done(23-09-27 15:26)
+
+        Création de fonctions :
+        
+            ResponseModel.php - Réponse structurée : 
+
+                ✔ Function response() @done(23-09-17 18:06)
+            
+            UserModel.php - Session utilisateur :
+
+                ✔ Function signIn() - Connexion @done(23-09-17 18:10)
+                ✔ Function signUp() - Inscription @done(23-09-18 10:57)
+                    ✔ Renvoyer les variables session createProfile.php @done(23-09-18 10:56)
+                ✔ Function userPatchField() - Modification @done(23-09-17 18:10)
+                ✔ Function getUserByIndex() - Récupération @done(23-09-17 18:10)
+                ✔ Function deleteUser() - Suppression @done(23-09-17 18:10)
+
+            ProfileModel.php - Profil utilisateur : 
+
+                ✔ Function createProfile - Création @done(23-09-17 18:11)
+                ✔ Function profilePatchField - Modification @done(23-09-27 14:07)
+                ✔ Function getProfile - Récupération @done(23-10-02 08:55)
+
 
 N'oublie pas de mettre à jour la nav, le header et le router à chaque modification
 
-Création du dossier Profil :
-
-    Controllers :
-
-    ✔ createProfileController.php - Création @done(23-09-17 18:17)
-    ✔ profileController.php - Affichage @done(23-09-27 14:07)
-    ✔ updateProfilController.php - Modification @done(23-09-27 14:07)
-
-    Views :
-
-    ✔ createProfileView.php - Création @done(23-09-17 18:17)
-    ✔ profileView.php - Affichage @done(23-09-27 14:07)
-    ✔ updateProfilView.php - Modification @done(23-09-27 14:08)
-
-Création de la page post inscription JS :
-
-    ✔ Une page pour choisir un pseudo et un avatar. @done(23-09-17 18:02)
-        ✔ Pseudo @done(23-09-17 18:02)
-        ✔ Input - le choix du pseudo est libre @done(23-09-17 18:02)
-    ✔ Avatar @done(23-09-17 18:02)
-        ✔ Les avatars son proposés. @done(23-09-17 18:02)
-
-Création du dossier Account :
-
-    Controllers :
-
-    ☐ accountController.php - Affichage 
-    ☐ updateAccountController.php - Modification
-    ☐ deleteAccountController.php - Suppression
-
-    Views : 
-
-    ☐ accountView.php - Affichage 
-    ☐ updateAccountView.php - Modification
-    ☐ deleteAccountView.php - Suppression
-
-
-Modification du dossier Contes :
-
-    Controllers :
-
-    ☐ createContesController.php - Création 
-    ☐ contesController.php - Affichage 
-    ☐ updateContesController.php - Modification
-    ☐ deleteContesController.php - Suppression
-
-    Views : 
-
-    ☐ createContesView.php - Création 
-    ☐ contesView.php - Affichage 
-    ☐ updateContesView.php - Modification
-    ☐ deleteContesView.php - Suppression
-
-BONUS :
-
-    ☐ Insertion des données de paiement.
-    ☐ Activation/Annulation de l abonnement.
+        Création du dossier Profil :
+        
+            Controllers :
+            
+            ✔ createProfileController.php - Création @done(23-09-17 18:17)
+            ✔ profileController.php - Affichage @done(23-09-27 14:07)
+            ✔ updateProfilController.php - Modification @done(23-09-27 14:07)
+            
+            Views :
+            
+            ✔ createProfileView.php - Création @done(23-09-17 18:17)
+            ✔ profileView.php - Affichage @done(23-09-27 14:07)
+            ✔ updateProfilView.php - Modification @done(23-09-27 14:08)
+            
+        Création de la page post inscription JS :
+        
+            ✔ Une page pour choisir un pseudo et un avatar. @done(23-09-17 18:02)
+                ✔ Pseudo @done(23-09-17 18:02)
+                ✔ Input - le choix du pseudo est libre @done(23-09-17 18:02)
+            ✔ Avatar @done(23-09-17 18:02)
+                ✔ Les avatars son proposés. @done(23-09-17 18:02)
+        
+        Création du dossier Account :
+        
+            Controllers :
+            
+            ☐ accountController.php - Affichage 
+            ☐ updateAccountController.php - Modification
+            ☐ deleteAccountController.php - Suppression
+            
+            Views : 
+            
+            ☐ accountView.php - Affichage 
+            ☐ updateAccountView.php - Modification
+            ☐ deleteAccountView.php - Suppression
+            
+            
+        Modification du dossier Contes :
+        
+            Controllers :
+            
+            ☐ createContesController.php - Création 
+            ✔ contesController.php - Affichage @done(23-10-02 10:43)
+            ☐ updateContesController.php - Modification
+            ☐ deleteContesController.php - Suppression
+            
+            Views : 
+            
+            ☐ createContesView.php - Création 
+            ✔ contesView.php - Affichage @done(23-10-02 10:43)
+            ☐ updateContesView.php - Modification
+            ☐ deleteContesView.php - Suppression
+            
+        BONUS :
+        
+            ☐ Insertion des données de paiement.
+            ☐ Activation/Annulation de l abonnement.
+        

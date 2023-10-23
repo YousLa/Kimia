@@ -1,8 +1,13 @@
 <?php
 
 $view = "";
-$css = "";
-$js = "";
+$css = array(
+    'assets/css/home.css'
+);
+$js = array(
+    'assets/js/slide-homepage.js',
+    'assets/js/assets/js/avatar.js'
+);
 
 //! Nouvelle version du routing => View + CSS + JS 🍹
 if (isset($_GET['page'])) {
@@ -11,24 +16,34 @@ if (isset($_GET['page'])) {
 
             // ^ ======================= HOMEPAGE IN/OUT =======================
 
-        case '':
         case 'home':
 
             // * View 
             if (isset($_SESSION['email'])) {
-                $view = 'controllers/contes/contes.php';
+                $view =  'controllers/contes/contesController.php';
             } else {
-                $view = 'controllers/home.php';
+                $view =  'views/pages/homeView.php';
             }
 
             // * Ressource CSS 
-            $css = array('assets/css/home.css');
+            $css = array(
+                'assets/css/home.css',
+                'assets/css/catalogue.css'
+            );
 
             // * JS
-            $js = [
-                'assets/js/slide-homepage.js',
-                'assets/js/avatar.js'
-            ];
+            if (isset($_SESSION['email'])) {
+                $js = array(
+                    'assets/js/grand-slider-catalogue.js',
+                    'assets/js/mon-petit-slider.js'
+                );
+            } else {
+                $js = array(
+                    'assets/js/slide-homepage.js',
+                    'assets/js/localStorage.js'
+
+                );
+            }
 
             break;
 
@@ -37,15 +52,19 @@ if (isset($_GET['page'])) {
         case 'signup':
 
             // * View 
-            $view = 'controllers/session/signupController.php';
+            $view =  'controllers/session/signupController.php';
 
             // * Ressource CSS 
-            $css = [
+            $css = array(
+                'assets/css/createProfil.css',
                 'assets/css/signup.css'
-            ];
+            );
 
             // * JS
-            $js = [];
+            $js = array(
+                'assets/js/input.js',
+                'assets/js/localStorage.js'
+            );
 
             break;
 
@@ -54,17 +73,18 @@ if (isset($_GET['page'])) {
         case 'profile':
 
             // * View 
-            $view = 'controllers/profil/profileController.php';
+            $view =  'controllers/profil/profileController.php';
 
             // * Ressource CSS 
-            $css = [
+            $css = array(
+                'assets/css/createProfil.css',
                 'assets/css/profile.css'
-            ];
+            );
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array(
+                'assets/js/avatar.js',
+            );
 
             break;
 
@@ -72,17 +92,17 @@ if (isset($_GET['page'])) {
         case 'createProfile':
 
             // * View 
-            $view = 'controllers/profil/createProfileController.php';
+            $view =  'controllers/profil/createProfileController.php';
 
             // * Ressource CSS 
-            $css = [
-                '<link rel="stylesheet" href="assets/css/createProfil.css">'
-            ];
+            $css = array(
+                'assets/css/createProfil.css'
+            );
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array(
+                'assets/js/avatar.js',
+            );
 
             break;
 
@@ -91,17 +111,17 @@ if (isset($_GET['page'])) {
         case 'updateProfile':
 
             // * View 
-            $view = 'controllers/profil/updateProfileController.php';
+            $view =  'controllers/profil/updateProfileController.php';
 
             // * Ressource CSS 
-            $css = [
-                '<link rel="stylesheet" href="assets/css/createProfil.css">'
-            ];
+            $css = array(
+                'assets/css/createProfil.css'
+            );
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array(
+                'assets/js/avatar.js'
+            );
 
             break;
 
@@ -110,17 +130,13 @@ if (isset($_GET['page'])) {
         case 'account':
 
             // * View
-            $view = 'controllers/user/account.php';
+            $view =  'controllers/user/account.php';
 
             // * Ressource CSS
-            $css = [
-                ''
-            ];
+            $css = array();
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -129,17 +145,13 @@ if (isset($_GET['page'])) {
         case 'updateaccount':
 
             // * View
-            $view = 'controllers/user/updateAccount.php';
+            $view =  'controllers/user/updateAccount.php';
 
             // * Ressource CSS
-            $css = [
-                ''
-            ];
+            $css = array();
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -148,17 +160,16 @@ if (isset($_GET['page'])) {
         case 'login':
 
             // * View
-            $view = 'controllers/session/loginController.php';
+            $view =  'controllers/session/loginController.php';
 
             // * Ressource CSS
-            $css = [
+            $css = array(
+                'assets/css/createProfil.css',
                 'assets/css/login.css'
-            ];
+            );
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -167,17 +178,13 @@ if (isset($_GET['page'])) {
         case 'logout':
 
             // * View
-            $view = 'controllers/session/logoutController.php';
+            $view =  'controllers/session/logoutController.php';
 
             // * Ressource CSS
-            $css = [
-                ''
-            ];
+            $css = array();
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -186,17 +193,15 @@ if (isset($_GET['page'])) {
         case 'fiche':
 
             // * View
-            $view = 'controllers/contes/fiche.php';
+            $view =  'controllers/contes/ficheController.php';
 
             // * Ressource CSS
-            $css = [
+            $css = array(
                 'assets/css/fiche.css'
-            ];
+            );
 
             // * JS      
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -205,17 +210,13 @@ if (isset($_GET['page'])) {
         case 'video':
 
             // * View
-            $view = 'controllers/contes/video.php';
+            $view =  'controllers/contes/videoController.php';
 
             // * Ressource CSS
-            $css = [
-                ''
-            ];
+            $css = array();
 
             // * JS 
-            $js = [
-                ''
-            ];
+            $js = array();
 
             break;
 
@@ -224,17 +225,67 @@ if (isset($_GET['page'])) {
         case 'contes':
 
             // * View
-            $view = 'controllers/contes/contes.php';
+            $view =  'controllers/contes/contes.php';
 
             // * Ressource CSS
-            $css = [
+            $css = array(
                 'assets/css/contes.css'
-            ];
+            );
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
+
+            break;
+
+            // ^ ======================= ABOUT =======================
+
+        case 'about':
+
+            // * View
+            $view =  'views/pages/aboutView.php';
+
+            // * Ressource CSS
+            $css = array(
+                'assets/css/about.css'
+            );
+
+            // * JS
+            $js = array();
+
+            break;
+
+            // ^ ======================= CONTACT =======================
+
+        case 'contact':
+
+            // * View
+            $view =  'controllers/pages/contactController.php';
+
+            // * Ressource CSS
+            $css = array(
+                'assets/css/createProfil.css',
+                'assets/css/contact.css'
+            );
+
+            // * JS
+            $js = array();
+
+            break;
+
+            // ^ ======================= RGPD =======================
+
+        case 'rgpd':
+
+            // * View
+            $view =  'views/pages/rgpdView.php';
+
+            // * Ressource CSS
+            $css = array(
+                'assets/css/rgpd.css'
+            );
+
+            // * JS
+            $js = array();
 
             break;
 
@@ -243,17 +294,20 @@ if (isset($_GET['page'])) {
         default:
 
             // * View
-            $view = 'views/errors/fourofour.php';
+            $view =  'views/errors/fourofour.php';
 
             // * Ressource CSS
-            $css = [
-                ''
-            ];
+            $css = array();
 
             // * JS
-            $js = [
-                ''
-            ];
+            $js = array();
             break;
+    }
+} else {
+    // * View 
+    if (isset($_SESSION['email'])) {
+        $view =  'controllers/contes/contesController.php';
+    } else {
+        $view =  'views/pages/homeView.php';
     }
 }
